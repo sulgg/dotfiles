@@ -26,3 +26,7 @@ export EDITOR=/usr/bin/vim
 #export PILOTRATE=115200
 
 test -s ~/.alias && . ~/.alias || true
+
+#mi promt
+#PS1="\[\n$(ppwd)\033[36m\]\[\033[1;36m\u@\[\033[1;36m\h: \[\033[0;33m\]\w\n\[\033[1;36m\$ \[\033[0m\]"
+PS1="\[\n$(ppwd)\[\033[1;31m\]\w\n\[\[\033[1;36m\]\$ \[\033[0m\]"
