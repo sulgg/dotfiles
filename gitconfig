@@ -1,0 +1,35 @@
+[user]
+	name = Saul Guillermo
+	email = saulguilllermo@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+	editor = vim
+	pager = less --quit-if-one-screen --no-init
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        ba = branch -a
+	d = diff
+	dt= difftool
+
+        l = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+        l5 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=5
+        l1 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=10
+        l2 = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=20
+        ll = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --all
+
+        type = cat-file -t
+        dump = cat-file -p
+
+        pagerless = config --local less
+        pagercat = config --local cat
+        pagerdefault = config --local less --quit-if-one-screen --no-init
