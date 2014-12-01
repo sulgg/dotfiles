@@ -80,3 +80,22 @@ nmap <leader>z :bn<CR>
 
 "previous buffer
 nmap <leader>< :bprev<CR>
+
+"disable arrow keys in normal mode
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+"disable arrow keys in insert mode
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+"disable arrow keys in visual mode
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <right> <nop>
+
