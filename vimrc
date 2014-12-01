@@ -39,3 +39,15 @@ set textwidth=79
 
 "clipboard commands between vim and linux gui
 set clipboard=unnamedplus
+
+"Do smart case matching
+set smartcase
+
+"Incremental search
+set incsearch
+
+"Select case-sensitiv search
+set ignorecase
+
+"highlight definitions (gd command, asterisk commmand)
+set hlsearch
