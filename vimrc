@@ -72,6 +72,12 @@ if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j 
 endif
 
+"Keep folds when file closes
+if has("autocmd")
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent loadview
+endif
+
 "---MAPPINGS-------------------------------------------------------------------
 
 "mapping <LEADER> from '\' to
