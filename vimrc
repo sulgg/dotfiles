@@ -78,6 +78,9 @@ if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j 
 endif
 
+"Tells Vim what the background color looks like
+set background=dark
+
 "---MAPPINGS-------------------------------------------------------------------
 
 "mapping <LEADER> from '\' to
