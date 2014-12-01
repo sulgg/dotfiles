@@ -66,3 +66,17 @@ set softtabstop=4
 
 "Change the number of space characters inserted for indentation
 set shiftwidth=4
+
+"---MAPPINGS-------------------------------------------------------------------
+
+"mapping <LEADER> from '\' to
+let mapleader = ","
+
+"make easy as possible to open vimrc file
+nmap <leader>v :vsplit $MYVIMRC<CR>
+
+"next buffer
+nmap <leader>z :bn<CR>
+
+"previous buffer
+nmap <leader>< :bprev<CR>
