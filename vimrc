@@ -66,6 +66,11 @@ set softtabstop=4
 
 "Change the number of space characters inserted for indentation
 set shiftwidth=4
+ 
+"Delete comment character when joining commented lines
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j 
+endif
 
 "---MAPPINGS-------------------------------------------------------------------
 
