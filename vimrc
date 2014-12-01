@@ -70,6 +70,9 @@ set shiftwidth=4
 "Show the line and column number of the cursor position, separated by a comma
 set ruler
  
+"Make Vim use 256 colors
+set t_Co=256
+
 "Delete comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j 
