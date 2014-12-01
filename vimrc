@@ -51,3 +51,18 @@ set ignorecase
 
 "highlight definitions (gd command, asterisk commmand)
 set hlsearch
+
+"Insert space characters whenever the tab key is pressed
+set expandtab
+
+"Inserts blanks according to 'shiftwidth'
+set smarttab
+
+"Number of space characters inserted when the tab key is pressed
+set tabstop=4
+
+"Number of spaces that a <Tab> counts for while editing operations
+set softtabstop=4
+
+"Change the number of space characters inserted for indentation
+set shiftwidth=4
