@@ -23,6 +23,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
@@ -94,10 +95,10 @@ if v:version > 703 || v:version == 703 && has("patch541")
 endif
 
 "Tells Vim what the background color looks like
-set background=dark
+set background=light
 
 "Set a color scheme
-colorscheme default 
+colorscheme solarized 
 
 "---MAPPINGS-------------------------------------------------------------------
 
