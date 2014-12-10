@@ -118,10 +118,8 @@ nmap <leader>z :bn<CR>
 nmap <leader>< :bprev<CR>
 
 "switch between light and dark background modes
-nmap <leader>b :call FuncBackground()<CR>
-function! FuncBackground()
-    let &background = ( &background == "dark"? "light" : "dark" )
-endfunction
+"(provided by altercation/vim-colors-solarized)
+call togglebg#map("<F5>")
 
 "toggle the indent lines (provided by Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
