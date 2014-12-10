@@ -120,11 +120,7 @@ nmap <leader>< :bprev<CR>
 "switch between light and dark background modes
 nmap <leader>b :call FuncBackground()<CR>
 function! FuncBackground()
-    if (&background == "dark")
-        let &background = "light"
-    else
-        let &background = "dark"
-    endif
+    let &background = ( &background == "dark"? "light" : "dark" )
 endfunction
 
 "toggle the indent lines (provided by Yggdroot/indentLine)
