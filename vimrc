@@ -96,6 +96,9 @@ endif
 "Tells Vim what the background color looks like
 set background=dark
 
+"Set a color scheme
+colorscheme default 
+
 "---MAPPINGS-------------------------------------------------------------------
 
 "mapping <LEADER> from '\' to
