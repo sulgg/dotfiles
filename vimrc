@@ -24,6 +24,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 
@@ -131,4 +132,28 @@ vnoremap <up> <nop>
 vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
+
+"---PLUGINS CONFIGURATION------------------------------------------------------
+
+"---bling/vim-airline---
+"Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
+set noshowmode
+
+"use powerline fonts (meslo in my case)
+let g:airline_powerline_fonts = 1
+
+"show buffers tabs
+let g:airline#extensions#tabline#enabled = 1
+
+"enable/disable displaying index of the buffer. Up to 9 mappings will be exposed
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+
+"configure whether buffer numbers should be shown
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"configure how buffer numbers should be formatted with |printf|. >
+let g:airline#extensions#tabline#buffer_nr_format = '%s '
+
+"color theme
+let g:airline_theme = 'light'
 
