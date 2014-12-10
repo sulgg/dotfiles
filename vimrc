@@ -7,7 +7,7 @@ filetype off
 "enable syntax highlighting
 syntax on
 
-"Highlight the line containing the cursor
+"Show line numbers
 set number
 
 "Highlight line at cursor
