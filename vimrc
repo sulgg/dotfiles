@@ -25,6 +25,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'kshenoy/vim-signature'
 
 call vundle#end()
 
@@ -156,4 +157,9 @@ let g:airline#extensions#tabline#buffer_nr_format = '%s '
 
 "color theme
 let g:airline_theme = 'light'
+
+"---kshenoy/vim-signature---
+
+"Asks for confirmation before deleting all marks/markers
+let g:SignaturePurgeConfirmation = 1
 
