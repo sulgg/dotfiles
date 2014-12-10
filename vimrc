@@ -13,6 +13,21 @@ set number
 "Highlight line at cursor
 set cursorline
 
+"--PLUGINS---------------------------------------------------------------------
+
+"Plugins must be added before 'call vundle#end() and 'filetype plugin indent on
+
+"Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+call vundle#end()
+
+"--END_OF_PLUGINS--------------------------------------------------------------
+
 "indent and plugin detection for filetypes
 filetype plugin indent on
 
