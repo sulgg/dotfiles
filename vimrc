@@ -117,6 +117,11 @@ nmap <leader>z :bn<CR>
 "previous buffer
 nmap <leader>< :bprev<CR>
 
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+    nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
 "switch between light and dark background modes
 "(provided by altercation/vim-colors-solarized)
 call togglebg#map("<F5>")
