@@ -27,6 +27,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'kshenoy/vim-signature'
 Plugin 'Yggdroot/indentLine'
+Plugin 'mattn/emmet-vim'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -88,20 +91,20 @@ set shiftwidth=4
 
 "Show the line and column number of the cursor position, separated by a comma
 set ruler
- 
+
 "Make Vim use 256 colors
 set t_Co=256
 
 "Delete comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
-  set formatoptions+=j 
+  set formatoptions+=j
 endif
 
 "Tells Vim what the background color looks like
-set background=light
+set background=dark
 
 "Set a color scheme
-colorscheme solarized 
+colorscheme solarized
 
 "---MAPPINGS-------------------------------------------------------------------
 
@@ -109,18 +112,24 @@ colorscheme solarized
 let mapleader = ","
 
 "make easy as possible to open vimrc file
-nmap <leader>v :vsplit $MYVIMRC<CR>
+nmap <leader>r :vsplit $MYVIMRC<CR>
 
 "next buffer
-nmap <leader>z :bn<CR>
+nmap <leader>l <C-^>
 
 "previous buffer
-nmap <leader>< :bprev<CR>
+"nmap <leader>x :bprev<CR>
+
+"highlight traling whitespaces
+nmap <leader>t /\s\+$ <CR>
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
+
+"in visual mode to paste the same thing a second time
+xnoremap <leader>p "_dP
 
 "switch between light and dark background modes
 "(provided by altercation/vim-colors-solarized)
@@ -166,7 +175,7 @@ vnoremap <right> <nop>
 set noshowmode
 
 "use powerline fonts (meslo in my case)
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 "show buffers tabs
 let g:airline#extensions#tabline#enabled = 1
@@ -181,7 +190,20 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_nr_format = '%s '
 
 "color theme
-let g:airline_theme = 'light'
+let g:airline_theme = 'luna'
+
+"define the dictionary of unicode symbols first before setting values
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+"unicode symbols
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.whitespace = 'Ξ'
 
 "---kshenoy/vim-signature---
 

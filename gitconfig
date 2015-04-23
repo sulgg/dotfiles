@@ -6,6 +6,9 @@
 	safecrlf = true
 	editor = vim
 	pager = less --quit-if-one-screen --no-init
+	excludesfile = /home/sg/.gitignore_global
+[color]
+	ui = auto
 [diff]
 	tool = vimdiff
 [difftool]

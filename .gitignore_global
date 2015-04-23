@@ -1,0 +1,6 @@
+#octocat / .gitignore tiene algunas sugerencias para este archivo#
+##################################################################
+
+#vim swap files#
+################
+*.swp
