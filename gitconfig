@@ -1,51 +1,51 @@
 [user]
-	name = Saul Guillermo
-	email = saulguilllermo@gmail.com
+    name = Saul Guillermo
+    email = saulguilllermo@gmail.com
 [core]
-	autocrlf = input
-	safecrlf = true
-	editor = vim
-	pager = less --quit-if-one-screen --no-init
-	excludesfile = /home/sg/.gitignore_global
+    autocrlf = input
+    safecrlf = true
+    editor = vim
+    pager = less --quit-if-one-screen --no-init
+    excludesfile = /home/sg/.gitignore_global
 [push]
-	default = simple
+    default = simple
 [color]
-	ui = auto
+    ui = auto
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [alias]
-        co = checkout
-        ci = commit
-        st = status
-        br = branch
-        ba = branch -a
-	d = diff
-	dt= difftool
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    ba = branch -a
+    d = diff
+    dt= difftool
 
-        #log example
-        #lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    #log example
+    #lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
-        #log
-        l  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph
-        ll = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --all
-        l5 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=5
-        l1 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=10
-        l2 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=20
+    #log
+    l  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph
+    ll = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --all
+    l5 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=5
+    l1 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=10
+    l2 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=20
 
-        #log (blame)
-        lb  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph
-        llb = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all
-        l5b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=5
-        l1b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=10
-        l2b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=20
+    #log (blame)
+    lb  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph
+    llb = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all
+    l5b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=5
+    l1b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=10
+    l2b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=20
 
-        type = cat-file -t
-        dump = cat-file -p
+    type = cat-file -t
+    dump = cat-file -p
 
-        pagerless = config --local less
-        pagercat = config --local cat
-        pagerdefault = config --local less --quit-if-one-screen --no-init
+    pagerless = config --local less
+    pagercat = config --local cat
+    pagerdefault = config --local less --quit-if-one-screen --no-init
