@@ -30,15 +30,15 @@
     #lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
     #log
-    l  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph
-    ll = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --all
+    ll  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph
+    l = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --all
     l5 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=5
     l1 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=10
     l2 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr)' --graph --max-count=20
 
     #log (blame)
-    lb  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph
-    llb = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all
+    llb  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph
+    lb = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all
     l5b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=5
     l1b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=10
     l2b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=20
