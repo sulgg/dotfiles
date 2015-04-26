@@ -184,7 +184,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
 "configure whether buffer numbers should be shown
-let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_show = 0
 
 "configure how buffer numbers should be formatted with |printf|. >
 let g:airline#extensions#tabline#buffer_nr_format = '%s '
