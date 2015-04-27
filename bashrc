@@ -47,6 +47,8 @@ HISTFILESIZE=20000
 alias l='ls -l'
 alias ll='ls -alF'
 alias ld='ls -ld'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 alias za='cd /home/sg/gd'
 alias az='cd /home/sg/gd'
