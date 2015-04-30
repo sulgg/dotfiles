@@ -159,7 +159,7 @@ On_IWhite='\e[0;107m'   # White
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[0;31m\]\[\033[01;31m\]\w\[\033[01;36m\]\$ \[\033[0m\]'
+    PS1="${debian_chroot:+($debian_chroot)}$Black$On_Green\w\$ $Color_Off"
     #PS1="\[\n$(ppwd)\[\033[0;31m\]\w\n\[\[\033[0;36m\]\$ \[\033[0m\]"
     #PS1="\[\n$(ppwd)\033[36m\]\[\033[1;36m\u@\[\033[1;36m\h: \[\033[0;33m\]\w\n\[\033[1;36m\$ \[\033[0m\]"
 else
