@@ -32,16 +32,16 @@
     #log
     ll  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph
     l = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --all
-    l5 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --max-count=5
-    l1 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --max-count=10
-    l2 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --max-count=20
+    l5 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --all --max-count=5
+    l1 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --all --max-count=10
+    l2 = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s' --graph --all --max-count=20
 
     #log (blame)
     llb  = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph
     lb = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all
-    l5b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=5
-    l1b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=10
-    l2b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --max-count=20
+    l5b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all --max-count=5
+    l1b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all --max-count=10
+    l2b = log --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset %s (%cr) <%an>' --graph --all --max-count=20
 
     type = cat-file -t
     dump = cat-file -p
