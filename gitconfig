@@ -37,11 +37,11 @@
     l2 = log --oneline --decorate --graph --all --max-count=20
 
     #log (blame)
-    llb = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s (%cr) <%an>' --graph
-    lb  = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s (%cr) <%an>' --graph --all
-    l5b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s (%cr) <%an>' --graph --all --max-count=5
-    l1b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s (%cr) <%an>' --graph --all --max-count=10
-    l2b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s (%cr) <%an>' --graph --all --max-count=20
+    llb = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph
+    lb  = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all
+    l5b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=5
+    l1b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=10
+    l2b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=20
 
     type = cat-file -t
     dump = cat-file -p
