@@ -30,6 +30,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'mattn/emmet-vim'
 Plugin 'Valloric/MatchTagAlways'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mrtazz/simplenote.vim'
 
 call vundle#end()
 
@@ -223,3 +224,6 @@ endif
 "Specify terminal vim indent line color. Gray scale from 232 (black) to 255 (white)
 let g:indentLine_color_term = 243
 
+"---mrtazz/simplenote.vim
+let g:SimplenoteUsername = "saulguillermo@gmail.com"
+let g:SimplenotePassword = "SnKatoKato1985"
