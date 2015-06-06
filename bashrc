@@ -184,34 +184,28 @@ esac
 #################
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
+    alias ls='ls -G'
 
-    alias l='ls -l --color=auto'
-    alias ll='ls -alF --color=auto'
-    alias ld='ls -ld --color=auto'
+    alias l='ls -lG'
+    alias ll='ls -alFG'
+    alias ld='ls -ldG'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
-fi
 
-alias za='cd /home/sg/gd'
-alias az='cd /home/sg/gd'
-alias xs='cd /home/sg/sb'
-alias sx='cd /home/sg/sb'
-alias dw='cd /home/sg/Downloads'
-alias wd='cd /home/sg/Downloads'
-alias vf='cd /home/sg/src'
-alias fv='cd /home/sg/src'
-alias gh='cd /home/sg/src'
-alias dr='cd /home/sg/Dropbox'
+alias za='cd /Users/sg/gd'
+alias az='cd /Users/sg/gd'
+alias xs='cd /Users/sg/sb'
+alias sx='cd /Users/sg/sb'
+alias dw='cd /Users/sg/Downloads'
+alias wd='cd /Users/sg/Downloads'
+alias vf='cd /Users/sg/src'
+alias fv='cd /Users/sg/src'
+alias gh='cd /Users/sg/src'
+alias dr='cd /Users/sg/Dropbox'
 alias win='cd /windows/usuarios/Saul/Desktop'
 
 alias gti='git'
 alias gi='git'
-alias kdo='kde-open'
 alias miw='cd /home/sg/gd/miwiki && make html'
