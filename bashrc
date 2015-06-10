@@ -197,15 +197,10 @@ esac
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 
-alias za='cd ~/gd'
-alias az='cd ~/gd'
-alias xs='cd ~/sb'
-alias sx='cd ~/sb'
 alias dw='cd ~/Downloads'
 alias wd='cd ~/Downloads'
 alias vf='cd ~/src'
 alias fv='cd ~/src'
-alias gh='cd ~/src'
 alias dr='cd ~/Dropbox'
 alias win='cd /windows/usuarios/Saul/Desktop'
 
