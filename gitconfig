@@ -26,22 +26,19 @@
     d = diff
     dt= difftool
 
-    #log example
-    #lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-
     #log
-    ll = log --oneline --decorate --graph
-    l  = log --oneline --decorate --graph --all
     l5 = log --oneline --decorate --graph --all --max-count=5
-    l1 = log --oneline --decorate --graph --all --max-count=10
+    l  = log --oneline --decorate --graph --all --max-count=10
     l2 = log --oneline --decorate --graph --all --max-count=20
+    l3 = log --oneline --decorate --graph --all --max-count=30
+    la = log --oneline --decorate --graph --all
 
-    #log (blame)
-    llb = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph
-    lb  = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all
-    l5b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=5
-    l1b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=10
-    l2b = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=20
+    #log (shows author and date)
+    ll5 = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=5
+    ll  = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=10
+    ll2 = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=20
+    ll3 = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=30
+    lla = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all
 
     type = cat-file -t
     dump = cat-file -p
