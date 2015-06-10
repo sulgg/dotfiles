@@ -187,15 +187,15 @@ esac
 #################
 
 # enable color support of ls and also add handy aliases
-    alias ls='ls -G'
+alias ls='ls -G'
 
-    alias l='ls -lG'
-    alias ll='ls -alFG'
-    alias ld='ls -ldG'
+alias l='ls -lG'
+alias ll='ls -alFG'
+alias ld='ls -ldG'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 alias dw='cd ~/Downloads'
 alias wd='cd ~/Downloads'
