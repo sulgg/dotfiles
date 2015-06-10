@@ -6,7 +6,7 @@
     safecrlf = true
     editor = vim
     pager = less --quit-if-one-screen --no-init
-    excludesfile = /Users/sg/.gitignore_global
+    excludesfile = ~/.gitignore_global
 [push]
     default = simple
 [color]
