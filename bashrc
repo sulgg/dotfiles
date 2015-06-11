@@ -204,6 +204,8 @@ alias fv='cd ~/src'
 alias dr='cd ~/Dropbox'
 alias win='cd /windows/usuarios/Saul/Desktop'
 
+alias gitl='git log --oneline --decorate --graph --all --max-count=10'
+alias gtil='git log --oneline --decorate --graph --all --max-count=10'
 alias gti='git'
 alias gi='git'
 alias miw='cd /home/sg/gd/miwiki && make html'
