@@ -172,6 +172,12 @@ vnoremap <right> <nop>
 "---PLUGINS CONFIGURATION------------------------------------------------------
 
 "---bling/vim-airline---
+"custom function to show a clock in airline
+function! AirlineInit()
+    let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("  %H:%M")}'])
+endfunction
+autocmd VimEnter * call AirlineInit()
+
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
 set noshowmode
 
