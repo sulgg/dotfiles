@@ -28,7 +28,6 @@ Plugin 'bling/vim-airline'
 Plugin 'kshenoy/vim-signature'
 Plugin 'Yggdroot/indentLine'
 Plugin 'mattn/emmet-vim'
-Plugin 'Valloric/MatchTagAlways'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mrtazz/simplenote.vim'
 
