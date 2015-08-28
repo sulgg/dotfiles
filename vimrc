@@ -33,6 +33,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'mrtazz/simplenote.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
+Plugin 'glts/vim-textobj-comment'
 
 call vundle#end()
 
