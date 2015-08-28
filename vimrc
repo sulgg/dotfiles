@@ -92,6 +92,9 @@ set shiftwidth=4
 "Show the line and column number of the cursor position, separated by a comma
 set ruler
 
+"Treat all numerals as decimal (when using Ctrl-a or Ctrl-x)
+set nrformats=
+
 "Make Vim use 256 colors
 set t_Co=256
 
