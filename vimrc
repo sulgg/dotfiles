@@ -29,6 +29,7 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'Yggdroot/indentLine'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 Plugin 'mrtazz/simplenote.vim'
 
 call vundle#end()
