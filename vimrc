@@ -34,6 +34,7 @@ Plugin 'mrtazz/simplenote.vim'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'glts/vim-textobj-comment'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
