@@ -100,6 +100,9 @@ set ruler
 "Treat all numerals as decimal (when using Ctrl-a or Ctrl-x)
 set nrformats=
 
+"Ex commands history limit to 200 (default is 20)
+set history=200
+
 "Make Vim use 256 colors
 set t_Co=256
 
