@@ -179,6 +179,10 @@ vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
 
+"let C-p and C-n filter command history
+cnoremap <C-p> <up>
+cnoremap <C-n> <down>
+
 "---PLUGINS CONFIGURATION------------------------------------------------------
 
 "---bling/vim-airline---
