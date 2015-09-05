@@ -125,7 +125,7 @@ let mapleader = ","
 "make easy as possible to open vimrc file
 nmap <leader>r :vsplit $MYVIMRC<CR>
 
-"next buffer
+"toggle between the current and alternate buffer
 nmap <leader>l <C-^>
 
 "previous buffer
