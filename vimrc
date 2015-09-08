@@ -128,19 +128,10 @@ nmap <leader>r :vsplit $MYVIMRC<CR>
 "toggle between the current and alternate buffer
 nmap <leader>l <C-^>
 
-"previous buffer
-"nmap <leader>x :bprev<CR>
-
-"highlight traling whitespaces
-nmap <leader>t /\s\+$ <CR>
-
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
-
-"in visual mode to paste the same thing a second time
-xnoremap <leader>p "_dP
 
 "switch between light and dark background modes
 "(provided by altercation/vim-colors-solarized)
