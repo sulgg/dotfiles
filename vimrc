@@ -184,7 +184,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_nr_format = '%s.'
 
 "configure the formatting of filenames (see |filename-modifiers|). >
-let g:airline#extensions#tabline#fnamemod = ':p:.'
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 "configure collapsing parent directories in buffer name. >
 let g:airline#extensions#tabline#fnamecollapse = 0
