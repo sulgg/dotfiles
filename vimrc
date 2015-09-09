@@ -140,18 +140,6 @@ call togglebg#map("<F5>")
 "toggle the indent lines (provided by Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
 
-"index of the buffer. Up to 9 mappings will be exposed
-"(provided by bling/vim-airline)
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -186,23 +174,20 @@ autocmd VimEnter * call AirlineInit()
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
 set noshowmode
 
-"use powerline fonts (meslo in my case)
-let g:airline_powerline_fonts = 0
-
 "show buffers tabs
 let g:airline#extensions#tabline#enabled = 1
 
-"enable/disable displaying index of the buffer. Up to 9 mappings will be exposed
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-
 "configure whether buffer numbers should be shown
-let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "configure how buffer numbers should be formatted with |printf|. >
-let g:airline#extensions#tabline#buffer_nr_format = '%s '
+let g:airline#extensions#tabline#buffer_nr_format = '%s.'
 
 "color theme
 let g:airline_theme = 'luna'
+
+"tabs separator character (space is the most clean)
+let g:airline#extensions#tabline#left_alt_sep = ' '
 
 "define the dictionary of unicode symbols first before setting values
 if !exists('g:airline_symbols')
