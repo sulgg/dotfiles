@@ -183,6 +183,12 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "configure how buffer numbers should be formatted with |printf|. >
 let g:airline#extensions#tabline#buffer_nr_format = '%s.'
 
+"configure the formatting of filenames (see |filename-modifiers|). >
+let g:airline#extensions#tabline#fnamemod = ':p:.'
+
+"configure collapsing parent directories in buffer name. >
+let g:airline#extensions#tabline#fnamecollapse = 0
+
 "color theme
 let g:airline_theme = 'luna'
 
