@@ -36,6 +36,7 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'glts/vim-textobj-comment'
 Plugin 'kien/ctrlp.vim'
+Plugin 'jeetsukumaran/vim-buffergator'
 
 call vundle#end()
 
