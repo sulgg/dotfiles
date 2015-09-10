@@ -135,6 +135,11 @@ if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
 
+"open/close buffergator catalog (jeetsukumaran/vim-buffergator)
+if !exists('g:buffergator_suppress_keymaps') || !g:buffergator_suppress_keymaps
+    nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
+endif
+
 "switch between light and dark background modes
 "(provided by altercation/vim-colors-solarized)
 call togglebg#map("<F5>")
@@ -209,6 +214,13 @@ let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
+
+"---jeetsukumaran/vim-buffergator---
+
+"if true, will not automatically map <Leader>b to open Buffergator
+"it must be true in order to remap <leader>b to BuffergatorToggle
+"this line must be after the remap of <leader>b
+let g:buffergator_suppress_keymaps = 1
 
 "---kshenoy/vim-signature---
 
