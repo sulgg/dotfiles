@@ -183,7 +183,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "configure how buffer numbers should be formatted with |printf|. >
-let g:airline#extensions#tabline#buffer_nr_format = '%s.'
+let g:airline#extensions#tabline#buffer_nr_format = '%s)'
 
 "configure the formatting of filenames (see |filename-modifiers|). >
 let g:airline#extensions#tabline#fnamemod = ':t'
