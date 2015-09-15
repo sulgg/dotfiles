@@ -165,7 +165,7 @@ if [ "$color_prompt" = yes ]; then
     #PS1="${debian_chroot:+($debian_chroot)}$Black$On_Green\w\$ $Color_Off"
     #Usin __git_ps1() function to show current git branch when apply
     #PS1="$Black$On_Green\w $On_Cyan\$(__git_ps1)$Color_Off\$ "
-    PS1="\[$UGreen\]\w \[$UCyan\]\$(__git_ps1)\[$Color_Off\]\$ "
+    PS1="\[$UBlue\]\w \[$URed\]\$(__git_ps1)\[$Color_Off\]\$ "
     #PS1="\[\n$(ppwd)\[\033[0;31m\]\w\n\[\[\033[0;36m\]\$ \[\033[0m\]"
     #PS1="\[\n$(ppwd)\033[36m\]\[\033[1;36m\u@\[\033[1;36m\h: \[\033[0;33m\]\w\n\[\033[1;36m\$ \[\033[0m\]"
 else
