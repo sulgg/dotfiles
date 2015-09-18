@@ -36,7 +36,7 @@ Plugin 'kana/vim-textobj-entire'
 Plugin 'glts/vim-textobj-comment'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Yggdroot/indentLine'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 
@@ -142,6 +142,9 @@ if !exists('g:buffergator_suppress_keymaps') || !g:buffergator_suppress_keymaps
     nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
 endif
 
+"toggle the indent lines (provided by Yggdroot/indentLine)
+nmap <leader>i :IndentLinesToggle<CR>
+
 "switch between light and dark background modes
 "(provided by altercation/vim-colors-solarized)
 call togglebg#map("<F5>")
@@ -228,6 +231,11 @@ let g:buffergator_suppress_keymaps = 1
 
 "Asks for confirmation before deleting all marks/markers
 let g:SignaturePurgeConfirmation = 1
+
+"---Yggdroot/indentLine---
+
+"Specify whether to enable indentLine plugin by default
+let g:indentLine_enabled = 0
 
 "---mrtazz/simplenote.vim
 let g:SimplenoteUsername = "saulguillermo@gmail.com"
