@@ -38,6 +38,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
@@ -145,6 +146,9 @@ endif
 "(provided by altercation/vim-colors-solarized)
 call togglebg#map("<F5>")
 
+"toggle the Tagbar window (majutsushi/tagbar)
+nmap <F8> :TagbarToggle<CR>
+
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -228,3 +232,4 @@ let g:SignaturePurgeConfirmation = 1
 "---mrtazz/simplenote.vim
 let g:SimplenoteUsername = "saulguillermo@gmail.com"
 let g:SimplenotePassword = "SnKatoKato1985"
+
