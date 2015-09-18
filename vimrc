@@ -37,6 +37,7 @@ Plugin 'glts/vim-textobj-comment'
 Plugin 'kien/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
