@@ -126,7 +126,7 @@ colorscheme solarized
 let mapleader = ","
 
 "make easy as possible to open vimrc file
-nmap <leader>r :vsplit $MYVIMRC<CR>
+nmap <leader>r :e $MYVIMRC<CR>
 
 "toggle between the current and alternate buffer
 nmap <leader>l <C-^>
