@@ -236,8 +236,3 @@ let g:SignaturePurgeConfirmation = 1
 
 "Specify whether to enable indentLine plugin by default
 let g:indentLine_enabled = 0
-
-"---mrtazz/simplenote.vim
-let g:SimplenoteUsername = "saulguillermo@gmail.com"
-let g:SimplenotePassword = "SnKatoKato1985"
-
