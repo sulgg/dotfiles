@@ -68,9 +68,6 @@ set wildmenu
 "A longer line will be broken after white space to get this width
 set textwidth=79
 
-"clipboard commands between vim and linux gui
-set clipboard=unnamedplus
-
 "Do smart case matching
 set smartcase
 
