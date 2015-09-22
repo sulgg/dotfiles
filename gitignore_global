@@ -4,4 +4,5 @@
 #vim swap files#
 ################
 *.swp
+*.class
 .DS_Store
