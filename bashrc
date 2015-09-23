@@ -210,3 +210,11 @@ alias gti='git'
 alias gi='git'
 alias miw='cd /home/sg/gd/miwiki && make html'
 alias tra='rm -rf ~/.Trash/* && echo "Trash is now empty"'
+
+###################
+###MIS VARIABLES###
+###################
+
+#eclipse path for eclim in OSX
+export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse
+
