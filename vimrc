@@ -108,6 +108,9 @@ set history=200
 "delay when switching insert mode to normal mode using esc key
 set ttimeoutlen=10
 
+"allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
 "Make Vim use 256 colors
 set t_Co=256
 
