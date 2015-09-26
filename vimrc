@@ -174,6 +174,9 @@ vnoremap <right> <nop>
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
 
+"Q do nothing to avoid entering Ex mode by accident
+nnoremap Q <nop>
+
 "---PLUGINS CONFIGURATION------------------------------------------------------
 
 "---bling/vim-airline---
