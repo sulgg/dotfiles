@@ -26,6 +26,17 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
+#turn on Bash Smart Completion on OSX
+#bash-completation must be installed first through brew:
+#brew install bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+	. $(brew --prefix)/etc/bash_completion
+fi
+
+# make bash autocomplete with up arrow 
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
