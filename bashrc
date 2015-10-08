@@ -168,8 +168,10 @@ On_IPurple='\e[0;105m'  # Purple
 On_ICyan='\e[0;106m'    # Cyan
 On_IWhite='\e[0;107m'   # White
 
-source /usr/local/git/contrib/completion/git-prompt.sh
-source /usr/local/git/contrib/completion/git-completion.bash
+#location of git prompt and completion scripts for OSX 10.11 brew git
+#this helps PS1 var to display locatin of HEAD
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
