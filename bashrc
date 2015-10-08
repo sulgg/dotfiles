@@ -233,3 +233,5 @@ alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $
 #eclipse path for eclim in OSX
 export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse
 
+#path for gnu coreutils
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
