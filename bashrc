@@ -33,7 +33,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 	. $(brew --prefix)/etc/bash_completion
 fi
 
-# make bash autocomplete with up arrow 
+# make bash autocomplete with up arrow
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
 
@@ -200,11 +200,11 @@ esac
 #################
 
 # enable color support of ls and also add handy aliases
-alias ls='ls -G'
+#ls is based in gnu ls command not bsd
+alias ls='ls --color=auto'
 
-alias l='ls -lG'
-alias ll='ls -alFG'
-alias ld='ls -ldG'
+alias l='ls -l'
+alias ll='ls -al'
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
