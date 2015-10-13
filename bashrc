@@ -199,8 +199,14 @@ esac
 ###MIS ALIASES###
 #################
 
+#colors for gnu ls command
+#.dir_colors directory must be a soft link to dircolors-solarized directory
+#wich must be a repo of https://github.com/seebi/dircolors-solarized.git
+#gdircolors is the "brew way" to call the gnu dircolors command
+eval `gdircolors ~/.dir_colors/dircolors.256dark`
+
 # enable color support of ls and also add handy aliases
-#ls is based in gnu ls command not bsd
+#ls is based on gnu ls command not bsd
 alias ls='ls --color=auto'
 
 alias l='ls -l'
