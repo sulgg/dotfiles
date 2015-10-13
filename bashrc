@@ -203,7 +203,7 @@ esac
 #.dir_colors directory must be a soft link to dircolors-solarized directory
 #wich must be a repo of https://github.com/seebi/dircolors-solarized.git
 #gdircolors is the "brew way" to call the gnu dircolors command
-eval `gdircolors ~/.dir_colors/dircolors.256dark`
+eval `gdircolors ~/.dir_colors/dircolors.ansi-dark`
 
 # enable color support of ls and also add handy aliases
 #ls is based on gnu ls command not bsd
