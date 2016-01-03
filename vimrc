@@ -30,7 +30,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-surround'
-Plugin 'mrtazz/simplenote.vim'
+Plugin 'Raimondi/delimitMate'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kana/vim-textobj-entire'
 Plugin 'glts/vim-textobj-comment'
@@ -39,7 +39,7 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'Yggdroot/indentLine'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
-Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 
@@ -243,3 +243,7 @@ let g:SignaturePurgeConfirmation = 1
 
 "Specify whether to enable indentLine plugin by default
 let g:indentLine_enabled = 0
+
+"--Raimondi/delimitMate--
+"Turns on/off the expansion of <CR>
+let delimitMate_expand_cr = 1
