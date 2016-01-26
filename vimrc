@@ -160,6 +160,9 @@ nmap <F8> :TagbarToggle<CR>
 "insert a semicolon at the end of line from normal mode
 nmap <leader>; A;<C-[>
 
+"rename js variable with Tern
+nmap <leader>c :TernRename<CR>
+
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
