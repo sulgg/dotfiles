@@ -22,7 +22,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'w0ng/vim-hybrid'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kshenoy/vim-signature'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-fugitive'
@@ -123,7 +125,15 @@ endif
 set background=dark
 
 "Set a color scheme
-" colorscheme solarized
+colorscheme hybrid
+
+"color theme
+let g:airline_theme = 'hybrid'
+
+"conf for w0ng/vim-hybrid color theme in iterm2
+let g:hybrid_custom_term_colors = 1
+"w0ng/vim-hybrid set to reduced contrast in iterm2
+let g:hybrid_reduced_contrast = 1
 
 "---MAPPINGS-------------------------------------------------------------------
 
