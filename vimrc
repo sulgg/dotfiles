@@ -127,6 +127,10 @@ set background=dark
 "Set a color scheme
 colorscheme hybrid
 
+"When writing a file and a backup is made,
+"make a copy of the file and overwrite the original one
+set backupcopy=yes
+
 "color theme
 let g:airline_theme = 'hybrid'
 
