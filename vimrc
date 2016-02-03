@@ -215,9 +215,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "configure collapsing parent directories in buffer name. >
 let g:airline#extensions#tabline#fnamecollapse = 0
 
-"color theme
-let g:airline_theme = 'luna'
-
 "tabs separator character (space is the most clean)
 let g:airline#extensions#tabline#left_alt_sep = ' '
 
