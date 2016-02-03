@@ -22,7 +22,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'kshenoy/vim-signature'
 Plugin 'mattn/emmet-vim'
@@ -124,7 +123,7 @@ endif
 set background=dark
 
 "Set a color scheme
-colorscheme solarized
+" colorscheme solarized
 
 "---MAPPINGS-------------------------------------------------------------------
 
@@ -149,10 +148,6 @@ endif
 
 "toggle the indent lines (provided by Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
-
-"switch between light and dark background modes
-"(provided by altercation/vim-colors-solarized)
-call togglebg#map("<F5>")
 
 "toggle the Tagbar window (majutsushi/tagbar)
 nmap <F8> :TagbarToggle<CR>
