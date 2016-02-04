@@ -276,6 +276,13 @@ let g:airline_symbols.whitespace = 'Ξ'
 "this line must be after the remap of <leader>b
 let g:buffergator_suppress_keymaps = 1
 
+"Determines how a new Buffergator window will be opened.
+" 'T' horizontal top (full screen width)
+let g:buffergator_viewport_split_policy = 'T'
+
+"height of the Buffergator window in any horizontal splitting mode
+let g:buffergator_hsplit_size = 10
+
 "---kshenoy/vim-signature---
 
 "Asks for confirmation before deleting all marks/markers
