@@ -158,6 +158,16 @@ BIPurple='\e[1;95m'     # Purple
 BICyan='\e[1;96m'       # Cyan
 BIWhite='\e[1;97m'      # White
 
+# High Intensity Underline
+UIBlack='\e[4;90m'       # Black
+UIRed='\e[4;91m'         # Red
+UIGreen='\e[4;92m'       # Green
+UIYellow='\e[4;93m'      # Yellow
+UIBlue='\e[4;94m'        # Blue
+UIPurple='\e[4;95m'      # Purple
+UICyan='\e[4;96m'        # Cyan
+UIWhite='\e[4;97m'       # White
+
 # High Intensity backgrounds
 On_IBlack='\e[0;100m'   # Black
 On_IRed='\e[0;101m'     # Red
@@ -178,7 +188,7 @@ if [ "$color_prompt" = yes ]; then
     #PS1="${debian_chroot:+($debian_chroot)}$Black$On_Green\w\$ $Color_Off"
     #Usin __git_ps1() function to show current git branch when apply
     #PS1="$Black$On_Green\w $On_Cyan\$(__git_ps1)$Color_Off\$ "
-    PS1="\[$UBlue\]\w \[$URed\]\$(__git_ps1)\[$Color_Off\]\$ "
+    PS1="\[$UIBlue\]\w \[$UIRed\]\$(__git_ps1)\[$Color_Off\]\$ "
     #PS1="\[\n$(ppwd)\[\033[0;31m\]\w\n\[\[\033[0;36m\]\$ \[\033[0m\]"
     #PS1="\[\n$(ppwd)\033[36m\]\[\033[1;36m\u@\[\033[1;36m\h: \[\033[0;33m\]\w\n\[\033[1;36m\$ \[\033[0m\]"
 else
