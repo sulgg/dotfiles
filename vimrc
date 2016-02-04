@@ -172,6 +172,12 @@ nmap <leader>; A;<C-[>
 "rename js variable with Tern
 nmap <leader>c :TernRename<CR>
 
+"move to next buffer
+nmap <leader><right> :bnext<CR>
+
+"move to previous buffer
+nmap <leader><left> :bprevious<CR>
+
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
