@@ -206,11 +206,25 @@ nnoremap Q <nop>
 "---PLUGINS CONFIGURATION------------------------------------------------------
 
 "---bling/vim-airline---
-"custom function to show a clock in airline
+
+"section c: show filetype
+"section x: custom function to show a clock
 function! AirlineInit()
-    let g:airline_section_y = airline#section#create(['ffenc', '%{strftime("  %H:%M")}'])
+    let g:airline_section_c = airline#section#create(['filetype'])
+    let g:airline_section_x = airline#section#create(['%{strftime("  %H:%M")}'])
 endfunction
 autocmd VimEnter * call AirlineInit()
+
+"control which sections get truncated and at what width
+"sections a and b never get truncated
+let g:airline#extensions#default#section_truncate_width = {
+            \ 'c': 70,
+            \ 'x': 55,
+            \ 'y': 100,
+            \ 'z': 45,
+            \ 'warning': 100,
+            \ 'error': 100,
+            \ }
 
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
 set noshowmode
@@ -232,6 +246,14 @@ let g:airline#extensions#tabline#fnamecollapse = 0
 
 "tabs separator character (space is the most clean)
 let g:airline#extensions#tabline#left_alt_sep = ' '
+
+"enable/disable fugitive/lawrencium integration
+"show or not branch name in section b
+let g:airline#extensions#branch#enabled = 1
+
+"enable/disable tagbar integration
+"show or not element name in section x
+let g:airline#extensions#tagbar#enabled = 0
 
 "define the dictionary of unicode symbols first before setting values
 if !exists('g:airline_symbols')
