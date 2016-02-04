@@ -170,6 +170,21 @@ nmap <leader><right> :bnext<CR>
 "move to previous buffer
 nmap <leader><left> :bprevious<CR>
 
+"open fugitive Git status
+nmap <leader>gs :Gstatus<CR>
+
+"save and stage file with fugitive
+nmap <leader>gw :Gwrite<CR>
+
+"commit changes with fugitive
+nmap <leader>gc :Gcommit<CR>
+
+"show vertical diff with fugitive
+nmap <leader>gd :Gvdiff<CR>
+
+"execute shell git log command
+nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=40<CR>
+
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
