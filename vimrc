@@ -131,14 +131,6 @@ colorscheme hybrid
 "make a copy of the file and overwrite the original one
 set backupcopy=yes
 
-"color theme
-let g:airline_theme = 'hybrid'
-
-"conf for w0ng/vim-hybrid color theme in iterm2
-let g:hybrid_custom_term_colors = 1
-"w0ng/vim-hybrid set to reduced contrast in iterm2
-let g:hybrid_reduced_contrast = 1
-
 "---MAPPINGS-------------------------------------------------------------------
 
 "mapping <LEADER> from '\' to
@@ -269,6 +261,10 @@ let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+"---vim-airline/vim-airline-themes---
+"airline color theme
+let g:airline_theme = 'hybrid'
+
 "---jeetsukumaran/vim-buffergator---
 
 "if true, will not automatically map <Leader>b to open Buffergator
@@ -296,3 +292,8 @@ let g:indentLine_enabled = 0
 "--Raimondi/delimitMate--
 "Turns on/off the expansion of <CR>
 let delimitMate_expand_cr = 1
+
+"---w0ng/vim-hybrid---
+"let hybrid theme work in vim no matter the iterm2 color theme
+let g:hybrid_custom_term_colors = 1
+
