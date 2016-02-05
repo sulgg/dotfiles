@@ -229,8 +229,8 @@ let g:airline#extensions#default#section_truncate_width = {
             \ 'x': 55,
             \ 'y': 100,
             \ 'z': 45,
-            \ 'warning': 100,
-            \ 'error': 100,
+            \ 'warning': 80,
+            \ 'error': 80,
             \ }
 
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
