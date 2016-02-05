@@ -183,6 +183,9 @@ On_IWhite='\e[0;107m'   # White
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+GIT_PS1_SHOWDIRTYSTATE='1'
+GIT_PS1_SHOWSTASHSTATE='1'
+GIT_PS1_SHOWUNTRACKEDFILES='1'
 if [ "$color_prompt" = yes ]; then
     #Usin __git_ps1() function to show current git branch when apply
     PS1="\[$UIBlue\]\w \[$UIRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
