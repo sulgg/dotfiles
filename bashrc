@@ -185,7 +185,7 @@ source /usr/local/etc/bash_completion.d/git-completion.bash
 
 if [ "$color_prompt" = yes ]; then
     #Usin __git_ps1() function to show current git branch when apply
-    PS1="\[$UIBlue\]\w \[$UIRed\]\$(__git_ps1)\[$Color_Off\]\$ "
+    PS1="\[$UIBlue\]\w \[$UIRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
