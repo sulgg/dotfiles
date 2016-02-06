@@ -210,7 +210,7 @@ esac
 #colors for gnu ls command
 #.dir_colors directory must be a soft link to ~/src/dotfiles/dircolors
 #gdircolors is the "brew way" to call the gnu dircolors command
-# eval `gdircolors ~/.dir_colors`
+eval `gdircolors ~/.dir_colors`
 
 # enable color support of ls and also add handy aliases
 #ls is based on gnu ls command not bsd
