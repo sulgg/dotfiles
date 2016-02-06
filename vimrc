@@ -23,7 +23,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'w0ng/vim-hybrid'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kshenoy/vim-signature'
 Plugin 'mattn/emmet-vim'
