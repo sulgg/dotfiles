@@ -212,6 +212,10 @@ esac
 #gdircolors is the "brew way" to call the gnu dircolors command
 eval `gdircolors ~/.dir_colors`
 
+#cd typos resolved
+alias cd..='cd ..'
+alias cd...='cd ..'
+
 # enable color support of ls and also add handy aliases
 #ls is based on gnu ls command not bsd
 alias ls='ls --color=auto'
