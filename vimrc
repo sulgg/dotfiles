@@ -183,7 +183,7 @@ nmap <leader>gc :Gcommit<CR>
 nmap <leader>gd :Gvdiff<CR>
 
 "execute shell git log command
-nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=40<CR>
+nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=30<CR>
 
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
