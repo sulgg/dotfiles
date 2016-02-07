@@ -182,6 +182,9 @@ nmap <leader>gc :Gcommit<CR>
 "show vertical diff with fugitive
 nmap <leader>gd :Gvdiff<CR>
 
+"revert hunk in line with GitGutter
+nmap <leader>gr :GitGutterRevertHunk<CR>
+
 "execute shell git log command
 nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=30<CR>
 
