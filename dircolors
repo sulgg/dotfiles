@@ -115,7 +115,7 @@ OTHER_WRITABLE 34;42
 # dir with the sticky bit set (+t) and not other-writable
 STICKY 37;44
 # This is for files with execute permission:
-EXEC 01;33
+EXEC 01;31
 
 # Source Code Related
 .0 01;32
