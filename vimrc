@@ -140,7 +140,13 @@ let mapleader = ","
 nmap <leader>r :e $MYVIMRC<CR>
 
 "toggle between the current and alternate buffer
-nmap <leader>l <C-^>
+nmap <leader>a <C-^>
+
+"move to next buffer
+nmap <leader>j :bnext<CR>
+
+"move to previous buffer
+nmap <leader>f :bprevious<CR>
 
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
@@ -163,12 +169,6 @@ nmap <leader>; A;<C-[>
 
 "rename js variable with Tern
 nmap <leader>c :TernRename<CR>
-
-"move to next buffer
-nmap <leader><right> :bnext<CR>
-
-"move to previous buffer
-nmap <leader><left> :bprevious<CR>
 
 "open fugitive Git status
 nmap <leader>gs :Gstatus<CR>
