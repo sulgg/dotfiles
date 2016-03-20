@@ -257,3 +257,9 @@ export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse
 
 #path for gnu coreutils
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+
+# To use the DocBook package in your XML toolchain
+# or if you intend to process AsciiDoc files through an XML stage
+# (such as a2x for manpage generation)
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
+
