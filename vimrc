@@ -153,40 +153,18 @@ if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
 
-"open/close buffergator catalog (jeetsukumaran/vim-buffergator)
-if !exists('g:buffergator_suppress_keymaps') || !g:buffergator_suppress_keymaps
-    nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
-endif
-
-"toggle the indent lines (provided by Yggdroot/indentLine)
-nmap <leader>i :IndentLinesToggle<CR>
-
-"toggle the Tagbar window (majutsushi/tagbar)
-nmap <F8> :TagbarToggle<CR>
-
 "insert a semicolon at the end of line from normal mode
 nmap <leader>; A;<C-[>
 
-"rename js variable with Tern
-nmap <leader>c :TernRename<CR>
-
-"open fugitive Git status
-nmap <leader>gs :Gstatus<CR>
-
-"save and stage file with fugitive
-nmap <leader>gw :Gwrite<CR>
-
-"commit changes with fugitive
-nmap <leader>gc :Gcommit<CR>
-
-"show vertical diff with fugitive
-nmap <leader>gd :Gvdiff<CR>
-
-"revert hunk in line with GitGutter
-nmap <leader>gr :GitGutterRevertHunk<CR>
-
 "execute shell git log command
 nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=30<CR>
+
+"let C-p and C-n filter command history
+cnoremap <C-p> <up>
+cnoremap <C-n> <down>
+
+"Q do nothing to avoid entering Ex mode by accident
+nnoremap Q <nop>
 
 "disable arrow keys in normal mode
 nnoremap <up> <nop>
@@ -206,12 +184,36 @@ vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
 
-"let C-p and C-n filter command history
-cnoremap <C-p> <up>
-cnoremap <C-n> <down>
+"---PLUGIN KEY MAPPINGS--------------------------------------------------------
 
-"Q do nothing to avoid entering Ex mode by accident
-nnoremap Q <nop>
+"open fugitive Git status
+nmap <leader>gs :Gstatus<CR>
+
+"save and stage file with fugitive
+nmap <leader>gw :Gwrite<CR>
+
+"commit changes with fugitive
+nmap <leader>gc :Gcommit<CR>
+
+"show vertical diff with fugitive
+nmap <leader>gd :Gvdiff<CR>
+
+"revert hunk in line with GitGutter
+nmap <leader>gr :GitGutterRevertHunk<CR>
+
+"toggle the Tagbar window (majutsushi/tagbar)
+nmap <F8> :TagbarToggle<CR>
+
+"toggle the indent lines (provided by Yggdroot/indentLine)
+nmap <leader>i :IndentLinesToggle<CR>
+
+"open/close buffergator catalog (jeetsukumaran/vim-buffergator)
+if !exists('g:buffergator_suppress_keymaps') || !g:buffergator_suppress_keymaps
+    nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
+endif
+
+"rename js variable with Tern
+nmap <leader>c :TernRename<CR>
 
 "---PLUGINS CONFIGURATION------------------------------------------------------
 
