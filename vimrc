@@ -1,4 +1,4 @@
-"no compatibility with vi
+no compatibility with vi
 set nocompatible
 
 "disable file type detection but keep the flags for 'plugin' and 'indent' unchanged
@@ -157,6 +157,7 @@ endif
 nmap <leader>; A;<C-[>
 
 "execute shell git log command
+"works only when file is inside project directory
 nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=30<CR>
 
 "improve omni completion keys, used for tern
