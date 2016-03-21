@@ -159,6 +159,9 @@ nmap <leader>; A;<C-[>
 "execute shell git log command
 nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=30<CR>
 
+"improve omni completion keys, used for tern
+inoremap <leader>, <C-x><C-o>
+
 "let C-p and C-n filter command history
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
