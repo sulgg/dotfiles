@@ -142,12 +142,6 @@ nmap <leader>r :e $MYVIMRC<CR>
 "toggle between the current and alternate buffer
 nmap <leader>a <C-^>
 
-"move to next buffer
-nmap <leader>j :bnext<CR>
-
-"move to previous buffer
-nmap <leader>f :bprevious<CR>
-
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
     nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
