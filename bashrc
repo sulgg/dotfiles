@@ -263,3 +263,5 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 # (such as a2x for manpage generation)
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
+#enable bash completion with pandoc
+eval "$(pandoc --bash-completion)"
