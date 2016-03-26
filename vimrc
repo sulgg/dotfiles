@@ -315,3 +315,5 @@ let delimitMate_expand_cr = 1
 "let hybrid theme work in vim no matter the iterm2 color theme
 let g:hybrid_custom_term_colors = 1
 
+"% command moves between html tags
+runtime macros/matchit.vim
