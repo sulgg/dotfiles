@@ -199,6 +199,9 @@ nmap <leader>gd :Gvdiff<CR>
 "revert hunk in line with GitGutter
 nmap <leader>gr :GitGutterRevertHunk<CR>
 
+"jump to the next marked hunk.  Takes a count.
+nmap <leader>gn :GitGutterNextHunk<CR>
+
 "toggle the Tagbar window (majutsushi/tagbar)
 nmap <F8> :TagbarToggle<CR>
 
