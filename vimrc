@@ -199,8 +199,8 @@ nmap <leader>gc :Gcommit<CR>
 "show vertical diff with fugitive
 nmap <leader>gd :Gvdiff<CR>
 
-"revert hunk in line with GitGutter
-nmap <leader>gr :GitGutterRevertHunk<CR>
+"undo hunk in line with GitGutter
+nmap <leader>gu :GitGutterUndoHunk<CR>
 
 "jump to the next marked hunk.  Takes a count.
 nmap <leader>gn :GitGutterNextHunk<CR>
