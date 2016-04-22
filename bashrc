@@ -252,6 +252,9 @@ alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $
 ###MIS VARIABLES###
 ###################
 
+#path for sbin - brew asks for it
+export PATH="/usr/local/sbin:$PATH"
+
 #eclipse path for eclim in OSX
 export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse
 
