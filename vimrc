@@ -237,14 +237,12 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 "control which sections get truncated and at what width
-"sections a and b never get truncated
+"sections a, b, warning and error never get truncated
 let g:airline#extensions#default#section_truncate_width = {
             \ 'c': 70,
             \ 'x': 55,
             \ 'y': 100,
             \ 'z': 45,
-            \ 'warning': 80,
-            \ 'error': 80,
             \ }
 
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
