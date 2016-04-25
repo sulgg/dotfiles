@@ -142,7 +142,7 @@ runtime macros/matchit.vim
 let mapleader = ","
 
 "make easy as possible to open vimrc file
-nmap <leader>r :e $MYVIMRC<CR>
+nmap <leader>rc :e $MYVIMRC<CR>
 
 "toggle between the current and alternate buffer
 nmap <leader>a <C-^>
