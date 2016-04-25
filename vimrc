@@ -270,6 +270,9 @@ let g:airline#extensions#tabline#left_alt_sep = ' '
 "show or not branch name in section b
 let g:airline#extensions#branch#enabled = 1
 
+"enable/disable syntastic integration
+let g:airline#extensions#syntastic#enabled = 1
+
 "enable/disable tagbar integration
 "show or not element name in section x
 let g:airline#extensions#tagbar#enabled = 0
