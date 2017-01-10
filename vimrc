@@ -41,7 +41,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'ternjs/tern_for_vim'
 
 call vundle#end()
 
