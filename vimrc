@@ -40,7 +40,6 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'Yggdroot/indentLine'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
-Plugin 'jelera/vim-javascript-syntax'
 
 call vundle#end()
 
