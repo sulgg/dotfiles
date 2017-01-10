@@ -42,7 +42,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ternjs/tern_for_vim'
-Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
