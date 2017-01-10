@@ -326,19 +326,3 @@ let delimitMate_expand_cr = 1
 "---w0ng/vim-hybrid---
 "let hybrid theme work in vim no matter the iterm2 color theme
 let g:hybrid_custom_term_colors = 1
-
-"---scrooloose/syntastic---
-"checkers for javascript filetypes
-"eslint must be installed via npm
-let g:syntastic_javascript_checkers = ['eslint']
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height = 5
-
