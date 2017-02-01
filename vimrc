@@ -225,23 +225,6 @@ nmap <leader>c :TernRename<CR>
 
 "---bling/vim-airline---
 
-"section c: show filetype
-"section x: custom function to show a clock
-function! AirlineInit()
-    let g:airline_section_c = airline#section#create(['filetype'])
-    let g:airline_section_x = airline#section#create(['%{strftime("  %H:%M")}'])
-endfunction
-autocmd VimEnter * call AirlineInit()
-
-"control which sections get truncated and at what width
-"sections a, b, warning and error never get truncated
-let g:airline#extensions#default#section_truncate_width = {
-            \ 'c': 70,
-            \ 'x': 55,
-            \ 'y': 100,
-            \ 'z': 45,
-            \ }
-
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
 set noshowmode
 
