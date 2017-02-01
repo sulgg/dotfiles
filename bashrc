@@ -274,3 +274,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 #enable bash completion with pandoc
 eval "$(pandoc --bash-completion)"
+
+#Gruvbox contains shellscript (default and osx-iterm2 versions), which would
+# overload system default 256-color palette with precise gruvbox colors
+source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh"
