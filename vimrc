@@ -163,8 +163,8 @@ inoremap <leader>, <C-x><C-o>
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
 
-"write file, clear terminal and run js script with node.js
-nmap <leader>. :w <bar> !clear && node %<CR>
+"write file, clear terminal, scalac and run Run.scala
+nmap <leader>. :w <bar> !clear && scalac *scala && scala Run<CR>
 
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
