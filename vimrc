@@ -22,7 +22,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'w0ng/vim-hybrid'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kshenoy/vim-signature'
@@ -123,7 +122,7 @@ endif
 set background=dark
 
 "Set a color scheme
-colorscheme hybrid
+" colorscheme hybrid
 
 "When writing a file and a backup is made,
 "make a copy of the file and overwrite the original one
@@ -273,7 +272,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 "---vim-airline/vim-airline-themes---
 "airline color theme
-let g:airline_theme = 'hybrid'
+" let g:airline_theme = 'hybrid'
 
 "---jeetsukumaran/vim-buffergator---
 
@@ -303,6 +302,3 @@ let g:indentLine_enabled = 0
 "Turns on/off the expansion of <CR>
 let delimitMate_expand_cr = 1
 
-"---w0ng/vim-hybrid---
-"let hybrid theme work in vim no matter the iterm2 color theme
-let g:hybrid_custom_term_colors = 1
