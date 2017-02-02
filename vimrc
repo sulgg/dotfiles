@@ -273,7 +273,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 "---vim-airline/vim-airline-themes---
 "airline color theme
-let g:airline_theme = 'dark'
+let g:airline_theme = 'gruvbox'
 
 "---jeetsukumaran/vim-buffergator---
 
