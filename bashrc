@@ -228,11 +228,8 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias dw='cd ~/Downloads'
-alias wd='cd ~/Downloads'
 alias vf='cd ~/src'
-alias fv='cd ~/src'
 alias dr='cd ~/Dropbox'
-alias win='cd /windows/usuarios/Saul/Desktop'
 
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 alias gtil='git log --oneline --decorate --graph --all --max-count=10'
