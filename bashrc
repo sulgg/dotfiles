@@ -230,6 +230,7 @@ alias egrep='egrep --color=auto'
 alias dw='cd ~/Downloads'
 alias vf='cd ~/src'
 alias dr='cd ~/Dropbox'
+alias fe='cd ~/ownCloud'
 
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 alias gtil='git log --oneline --decorate --graph --all --max-count=10'
