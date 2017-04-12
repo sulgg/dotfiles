@@ -264,8 +264,8 @@ export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 # (such as a2x for manpage generation)
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
-#path to java jdk1.8.0_111.jdk
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home'
+#path to java jdk1.8.0_121.jdk
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home'
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
 export PATH=$JAVA_HOME/bin:$PATH
