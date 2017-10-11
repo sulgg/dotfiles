@@ -233,9 +233,6 @@ alias dr='cd ~/Dropbox'
 alias fe='cd ~/ownCloud'
 
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
-alias gtil='git log --oneline --decorate --graph --all --max-count=10'
-alias gti='git'
-alias gi='git'
 alias miw='cd /home/sg/gd/miwiki && make html'
 alias tra='rm -rf ~/.Trash/* && echo "Trash is now empty"'
 
