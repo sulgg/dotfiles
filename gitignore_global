@@ -1,10 +1,13 @@
-#octocat / .gitignore tiene algunas sugerencias para este archivo#
-##################################################################
-
 #vim swap files#
-################
 *.swp
+
+#java class files#
 *.class
+
+#macos custom attributes of containing directory
 .DS_Store
+
+#eclipse workspace (system dependable)
+#si se utiliza eclipse evaluar el uso de la siguiente linea
 workbench.xmi
 
