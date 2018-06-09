@@ -36,7 +36,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'Yggdroot/indentLine'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
@@ -204,9 +203,6 @@ nmap <leader>gu :GitGutterUndoHunk<CR>
 "jump to the next marked hunk.  Takes a count.
 nmap <leader>gn :GitGutterNextHunk<CR>
 
-"toggle the Tagbar window (majutsushi/tagbar)
-nmap <F8> :TagbarToggle<CR>
-
 "toggle the indent lines (provided by Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
 
@@ -231,10 +227,6 @@ let g:airline#extensions#branch#enabled = 1
 
 "enable/disable syntastic integration
 let g:airline#extensions#syntastic#enabled = 1
-
-"enable/disable tagbar integration
-"show or not element name in section x
-let g:airline#extensions#tagbar#enabled = 0
 
 "define the dictionary of unicode symbols first before setting values
 if !exists('g:airline_symbols')
