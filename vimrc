@@ -21,20 +21,51 @@ set cursorline
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+"Vundle is short for Vim bundle and is a Vim plugin manager
 Plugin 'VundleVim/Vundle.vim'
+
+"lean & mean status/tabline for vim that's light as air
 Plugin 'vim-airline/vim-airline'
+
+"plugin to toggle, display and navigate marks.
+"view mappings --> :h SignatureMappings
 Plugin 'kshenoy/vim-signature'
+
+"a Git wrapper so awesome, it should be illegal
 Plugin 'tpope/vim-fugitive'
+
+"comment stuff out. Use gcc to comment out a line
 Plugin 'tpope/vim-commentary'
+
+"pairs of handy bracket key mappings like [b
 Plugin 'tpope/vim-unimpaired'
+
+"quoting/parenthesizing made simple Press cs<' inside <Hello world!>
 Plugin 'tpope/vim-surround'
+
+"provides insert mode auto-completion for quotes, parens, brackets, etc
 Plugin 'Raimondi/delimitMate'
+
+"create your own text objects
 Plugin 'kana/vim-textobj-user'
+
+"provide text objects (ae and ie by default) to select the entire content
 Plugin 'kana/vim-textobj-entire'
+
+"provides text objects for comments. ac selects a comment including the
+"comment delimiters and ic selects just the comment content.
 Plugin 'glts/vim-textobj-comment'
+
+"Fuzzy file, buffer, mru, tag, etc finder. just press Ctrl+P
 Plugin 'kien/ctrlp.vim'
+
+"list, select and switch between buffers
 Plugin 'jeetsukumaran/vim-buffergator'
+
+"display the indention levels with thin vertical lines
 Plugin 'Yggdroot/indentLine'
+
+"shows a git diff in the gutter (sign column) and stages/undoes hunks
 Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
