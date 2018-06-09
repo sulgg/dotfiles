@@ -249,9 +249,6 @@ set noshowmode
 "show or not branch name in section b
 let g:airline#extensions#branch#enabled = 1
 
-"enable/disable syntastic integration
-let g:airline#extensions#syntastic#enabled = 1
-
 "define the dictionary of unicode symbols first before setting values
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
