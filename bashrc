@@ -70,10 +70,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -230,14 +226,9 @@ alias egrep='egrep --color=auto'
 alias dw='cd ~/Downloads'
 alias vf='cd ~/src'
 alias dr='cd ~/Dropbox'
-alias fe='cd ~/ownCloud'
 
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 alias miw='cd /home/sg/gd/miwiki && make html'
-alias tra='rm -rf ~/.Trash/* && echo "Trash is now empty"'
-
-#use vimrc for nvim
-alias nvim='nvim -u ~/.vimrc'
 
 # here's a hacky way to use GNU manpages for programs that are GNU ones, and
 # fallback to OSX manpages otherwise
@@ -250,26 +241,11 @@ alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $
 #path for sbin - brew asks for it
 export PATH="/usr/local/sbin:$PATH"
 
-#eclipse path for eclim in OSX
-export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse
-
 #path for gnu coreutils
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
-
-# To use the DocBook package in your XML toolchain
-# or if you intend to process AsciiDoc files through an XML stage
-# (such as a2x for manpage generation)
-export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
 
 #path to java jdk1.8.0_121.jdk
 export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
 export PATH=$JAVA_HOME/bin:$PATH
-
-#enable bash completion with pandoc
-eval "$(pandoc --bash-completion)"
-
-#Gruvbox contains shellscript (default and osx-iterm2 versions), which would
-# overload system default 256-color palette with precise gruvbox colors
-source "$HOME/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh"
