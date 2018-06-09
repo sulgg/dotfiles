@@ -156,10 +156,6 @@ set background=light
 "make a copy of the file and overwrite the original one
 set backupcopy=yes
 
-"---vim macros----------------------------------------------------------------
-"% command moves between html tags
-runtime macros/matchit.vim
-
 "---MAPPINGS-------------------------------------------------------------------
 
 "mapping <LEADER> from '\' to
