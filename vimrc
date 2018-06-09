@@ -245,10 +245,6 @@ endif
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
 set noshowmode
 
-"enable/disable fugitive/lawrencium integration
-"show or not branch name in section b
-let g:airline#extensions#branch#enabled = 1
-
 "define the dictionary of unicode symbols first before setting values
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
