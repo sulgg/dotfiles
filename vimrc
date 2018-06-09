@@ -23,7 +23,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kshenoy/vim-signature'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-fugitive'
@@ -269,10 +268,6 @@ let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
-
-"---vim-airline/vim-airline-themes---
-"airline color theme
-"let g:airline_theme = 'dark'
 
 "---jeetsukumaran/vim-buffergator---
 
