@@ -211,9 +211,6 @@ if !exists('g:buffergator_suppress_keymaps') || !g:buffergator_suppress_keymaps
     nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
 endif
 
-"rename js variable with Tern
-nmap <leader>c :TernRename<CR>
-
 "---PLUGINS CONFIGURATION------------------------------------------------------
 
 "---bling/vim-airline---
