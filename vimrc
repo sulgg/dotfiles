@@ -22,7 +22,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kshenoy/vim-signature'
@@ -120,10 +119,10 @@ if v:version > 703 || v:version == 703 && has("patch541")
 endif
 
 "Tells Vim what the background color looks like
-set background=dark
+set background=light
 
 "Set a color scheme
-colorscheme gruvbox
+"colorscheme gruvbox
 
 "When writing a file and a backup is made,
 "make a copy of the file and overwrite the original one
@@ -273,7 +272,7 @@ let g:airline_symbols.whitespace = 'Ξ'
 
 "---vim-airline/vim-airline-themes---
 "airline color theme
-let g:airline_theme = 'gruvbox'
+"let g:airline_theme = 'dark'
 
 "---jeetsukumaran/vim-buffergator---
 
