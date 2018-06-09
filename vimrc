@@ -226,24 +226,6 @@ nmap <leader>c :TernRename<CR>
 "Hide the default mode text (e.g. -- INSERT -- below statusline) (required)
 set noshowmode
 
-"show buffers tabs
-let g:airline#extensions#tabline#enabled = 1
-
-"configure whether buffer numbers should be shown
-let g:airline#extensions#tabline#buffer_nr_show = 1
-
-"configure how buffer numbers should be formatted with |printf|. >
-let g:airline#extensions#tabline#buffer_nr_format = '%s)'
-
-"configure the formatting of filenames (see |filename-modifiers|). >
-let g:airline#extensions#tabline#fnamemod = ':t'
-
-"configure collapsing parent directories in buffer name. >
-let g:airline#extensions#tabline#fnamecollapse = 0
-
-"tabs separator character (space is the most clean)
-let g:airline#extensions#tabline#left_alt_sep = ' '
-
 "enable/disable fugitive/lawrencium integration
 "show or not branch name in section b
 let g:airline#extensions#branch#enabled = 1
