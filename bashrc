@@ -249,3 +249,6 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Ho
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
 export PATH=$JAVA_HOME/bin:$PATH
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
