@@ -68,9 +68,18 @@ Plugin 'Yggdroot/indentLine'
 "shows a git diff in the gutter (sign column) and stages/undoes hunks
 Plugin 'airblade/vim-gitgutter'
 
+"color plugin
+"Plugin 'aqui_va_el_color_plugin'
+
 call vundle#end()
 
 "--END_OF_PLUGINS--------------------------------------------------------------
+
+"Tells Vim what the background color looks like
+set background=dark
+
+"Set a color scheme
+"colorscheme aqui_va_el_color_scheme..
 
 "indent and plugin detection for filetypes
 filetype plugin indent on
@@ -145,12 +154,6 @@ set t_Co=256
 if v:version > 703 || v:version == 703 && has("patch541")
   set formatoptions+=j
 endif
-
-"Tells Vim what the background color looks like
-set background=light
-
-"Set a color scheme
-"colorscheme gruvbox
 
 "When writing a file and a backup is made,
 "make a copy of the file and overwrite the original one
