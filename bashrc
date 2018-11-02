@@ -223,7 +223,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias dw='cd ~/Downloads'
+alias dw='cd ~/Desktop'
 alias vf='cd ~/src'
 alias dr='cd ~/Dropbox'
 
