@@ -11,7 +11,7 @@ esac
 
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/nvim
 
 test -s ~/.alias && . ~/.alias || true
 
@@ -184,7 +184,7 @@ GIT_PS1_SHOWSTASHSTATE='1'
 GIT_PS1_SHOWUNTRACKEDFILES='1'
 if [ "$color_prompt" = yes ]; then
     #Usin __git_ps1() function to show current git branch when apply
-    PS1="\[$UIBlue\]\w \[$UIRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
+    PS1="\[$ICyan\]\w \[$IRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -208,6 +208,10 @@ esac
 #gdircolors is the "brew way" to call the gnu dircolors command
 eval `gdircolors ~/.dir_colors`
 
+#vi opens neovim (nvim)
+alias vi='nvim'
+alias vim='nvim'
+
 #cd typos resolved
 alias cd..='cd ..'
 alias cd...='cd ..'
@@ -223,9 +227,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias dw='cd ~/Desktop'
+alias de='cd ~/Desktop'
 alias vf='cd ~/src'
-alias dr='cd ~/Dropbox'
 
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 alias miw='cd /home/sg/gd/miwiki && make html'
@@ -250,5 +253,3 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Ho
 # also should add the following somewhere after the above statement:
 export PATH=$JAVA_HOME/bin:$PATH
 
-# added by Anaconda3 5.2.0 installer
-export PATH="/anaconda3/bin:$PATH"
