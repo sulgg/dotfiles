@@ -1,8 +1,8 @@
 "no compatibility with vi
 set nocompatible
 
-"disable file type detection but keep the flags for 'plugin' and 'indent' unchanged
-filetype off
+"indent and plugin detection for filetypes
+filetype plugin indent on
 
 "enable syntax highlighting
 syntax on
@@ -10,8 +10,7 @@ syntax on
 "Show line numbers
 set number
 
-"16 millones de colores
-"solo funciona en terminales que lo aceptan
+"true color terminal required
 set termguicolors
 
 "Tells Vim what the background color looks like
@@ -21,11 +20,7 @@ set background=dark
 "colorscheme aqui_va_el_color_scheme..
 
 "--PLUGINS---------------------------------------------------------------------
-"probar el package manager con este pana: https://github.com/Shougo/dein.vim
 "--END_OF_PLUGINS--------------------------------------------------------------
-
-"indent and plugin detection for filetypes
-filetype plugin indent on
 
 "Hide buffers when they are abandoned
 set hidden
@@ -89,9 +84,6 @@ set ttimeoutlen=10
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-"Make Vim use 256 colors
-"set t_Co=256
 
 "Delete comment character when joining commented lines
 if v:version > 703 || v:version == 703 && has("patch541")
