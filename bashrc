@@ -11,7 +11,7 @@ esac
 
 # Some applications read the EDITOR variable to determine your favourite text
 # editor. So uncomment the line below and enter the editor of your choice :-)
-export EDITOR=/usr/local/bin/nvim
+EDITOR=/usr/local/bin/nvim
 
 test -s ~/.alias && . ~/.alias || true
 
@@ -161,16 +161,16 @@ alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $
 ###################
 
 #path for sbin - brew asks for it
-export PATH="/usr/local/sbin:$PATH"
+PATH="/usr/local/sbin:$PATH"
 
 #path for gnu coreutils
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 #path to java jdk1.8.0_121.jdk
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
+JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
-export PATH=$JAVA_HOME/bin:$PATH
+PATH=$JAVA_HOME/bin:$PATH
 
 # By default non-brewed cpan modules are installed to the Cellar. If you wish
 # for your modules to persist across updates we recommend using `local::lib`.
