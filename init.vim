@@ -22,6 +22,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 "--END_OF_PLUGINS--------------------------------------------------------------
 
@@ -176,3 +177,5 @@ nmap <leader>gu :GitGutterUndoHunk<CR>
 "jump to the next marked hunk.  Takes a count.
 nmap <leader>gn :GitGutterNextHunk<CR>
 
+"toggle the indent lines (provided by Yggdroot/indentLine)
+nmap <leader>i :IndentLinesToggle<CR>
