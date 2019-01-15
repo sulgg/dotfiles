@@ -1,10 +1,9 @@
 [user]
     name = Saul Guillermo
-    email = saulguilllermo@gmail.com
 [core]
     autocrlf = input
     safecrlf = true
-    editor = vim
+    editor = nvim
     pager = less --quit-if-one-screen --no-init
     excludesfile = ~/.gitignore_global
 [push]
@@ -12,11 +11,11 @@
 [color]
     ui = auto
 [diff]
-    tool = vimdiff
+    tool = vimdiff2
 [difftool]
     prompt = false
 [merge]
-    tool = vimdiff
+    tool = vimdiff2
 [alias]
     co = checkout
     ci = commit
