@@ -184,7 +184,7 @@ GIT_PS1_SHOWSTASHSTATE='1'
 GIT_PS1_SHOWUNTRACKEDFILES='1'
 if [ "$color_prompt" = yes ]; then
     #Usin __git_ps1() function to show current git branch when apply
-    PS1="\[$ICyan\]\w \[$IRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
+    PS1="\[$Blue\]\w \[$IRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
