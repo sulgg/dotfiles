@@ -1,7 +1,7 @@
-#default editor
+# default editor
 EDITOR=/usr/local/bin/nvim
 
-#history
+# history
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
@@ -30,7 +30,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     source $(brew --prefix)/etc/bash_completion
 fi
 
-# git-completion.bash conf vars
+# git-prompt.sh conf vars
 GIT_PS1_SHOWDIRTYSTATE='1'
 GIT_PS1_SHOWSTASHSTATE='1'
 GIT_PS1_SHOWUNTRACKEDFILES='1'
@@ -45,39 +45,41 @@ if [ "$color_prompt" = yes ]; then
 fi
 
 # aliases ####################################################################
-#vi opens neovim (nvim)
+# vi opens neovim (nvim)
 alias vi='nvim'
 alias vim='nvim'
-#typos
+# typos
 alias cd..='cd ..'
 alias cd...='cd ..'
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
-#ls is based on gnu ls command, not bsd
+# ls is based on gnu ls command, not bsd
 alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='ls -al'
-#grep
+# grep
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-#locations
+# locations
 alias de='cd ~/Desktop'
 alias vf='cd ~/src'
 
 # environment variables ######################################################
-# brew ###
-# sbin
-PATH="/usr/local/sbin:$PATH"
-# gnu coreutils
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
-#java
+# java
 JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
 PATH=$JAVA_HOME/bin:$PATH
 
-#borrar el siguiente parrafo aapenas vea que es innecesario
+# [brew] coreutils man pages
+MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+# [brew] sbin
+PATH="$(brew --prefix)/sbin:$PATH"
+# [brew] gnu coreutils
+PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+
+# borrar el siguiente parrafo apenas vea que es innecesario
 # By default non-brewed cpan modules are installed to the Cellar. If you wish
 # for your modules to persist across updates we recommend using `local::lib`.
 # You can set that up like this:
