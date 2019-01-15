@@ -15,10 +15,6 @@ HISTFILESIZE=20000
 # gdircolors is the "brew way" to call the gnu dircolors command
 eval `gdircolors ~/.dircolors`
 
-# [brew] GNU manpages for programs that are GNU ones,
-# fallback to OSX manpages otherwise
-alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
-
 # promt ######################################################################
 
 color_prompt=yes
@@ -72,8 +68,8 @@ JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # also should add the following somewhere after the above statement:
 PATH=$JAVA_HOME/bin:$PATH
 
-# [brew] coreutils man pages
-MANPATH="$(brew --prefix coreutils)/libexec/gnuman:$MANPATH"
+# [brew] coreutils man pages. export and ${var-default_value} must be passed
+export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:${MANPATH-/usr/share/man}"
 # [brew] sbin
 PATH="$(brew --prefix)/sbin:$PATH"
 # [brew] gnu coreutils
