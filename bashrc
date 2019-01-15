@@ -10,37 +10,39 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
+# [brew] colors for gnu ls command
+# .dircolors must be a soft link to ~/src/dotfiles/dircolors
+# gdircolors is the "brew way" to call the gnu dircolors command
+eval `gdircolors ~/.dircolors`
+
+# [brew] GNU manpages for programs that are GNU ones,
+# fallback to OSX manpages otherwise
+alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
+
 # promt ######################################################################
+
 color_prompt=yes
+
+# [brew] bash-completation must be installed.
+# It includes git-prompt.sh and git-completion.bash in order to use
+# __git_ps1() function to show current git branch when apply
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    source $(brew --prefix)/etc/bash_completion
+fi
+
+# git-completion.bash conf vars
 GIT_PS1_SHOWDIRTYSTATE='1'
 GIT_PS1_SHOWSTASHSTATE='1'
 GIT_PS1_SHOWUNTRACKEDFILES='1'
+
+# color constants copied from ~/src/dotfiles/color_constants
 Color_Off='\e[0m'       # Text Reset
 BBlue='\e[1;34m'        # Blue
 BRed='\e[1;31m'         # Red
-#It uses __git_ps1() function to show current git branch when apply
+
 if [ "$color_prompt" = yes ]; then
     PS1="\[$BBlue\]\w \[$BRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
 fi
-
-# brew #######################################################################
-# bash-completation must be installed
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-
-# location of git prompt and completion scripts
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-
-# colors for gnu ls command
-#.dircolors must be a soft link to ~/src/dotfiles/dircolors
-#gdircolors is the "brew way" to call the gnu dircolors command
-eval `gdircolors ~/.dircolors`
-
-# GNU manpages for programs that are GNU ones,
-# fallback to OSX manpages otherwise
-alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
 
 # aliases ####################################################################
 #vi opens neovim (nvim)
