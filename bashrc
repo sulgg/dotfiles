@@ -68,12 +68,13 @@ JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # also should add the following somewhere after the above statement:
 PATH=$JAVA_HOME/bin:$PATH
 
-# [brew] coreutils man pages. export and ${var-default_value} must be passed
+# [brew] man pages. export and ${var-default_value} must be passed
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:${MANPATH-/usr/share/man}"
-# [brew] sbin
+export MANPATH="$(brew --prefix findutils)/libexec/gnuman/:$MANPATH"
+# [brew]
 PATH="$(brew --prefix)/sbin:$PATH"
-# [brew] gnu coreutils
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
 
 # borrar el siguiente parrafo apenas vea que es innecesario
 # By default non-brewed cpan modules are installed to the Cellar. If you wish
