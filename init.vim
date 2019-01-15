@@ -127,7 +127,7 @@ nmap <leader>; A;<C-[>
 
 "execute shell git log command
 "works only when file is inside project directory
-nmap <leader>gl :! clear && git log --pretty=format:'\%C(yellow)\%h\%Creset \%C(auto)\%d\%Creset \%s \%C(yellow)(\%Creset\%cr\%C(yellow))\%Creset' --graph --all --max-count=30<CR>
+nmap <leader>gl :! clear && git log --oneline --decorate --graph --all --max-count=20<CR>
 
 "let C-p and C-n filter command history
 cnoremap <C-p> <up>
