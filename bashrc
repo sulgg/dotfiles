@@ -1,129 +1,81 @@
+#default editor
 EDITOR=/usr/local/bin/nvim
 
+#history
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
-
 # append to the history file, don't overwrite it
 shopt -s histappend
-
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-#[brew]
-#bash-completation must be installed first through brew:
-#brew install bash-completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-fi
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        color_prompt=yes
-    else
-        color_prompt=
-    fi
-fi
-
-#[brew]
-#location of git prompt and completion scripts for OSX 10.11 brew git
-#this helps PS1 var to display locatin of HEAD
-source /usr/local/etc/bash_completion.d/git-prompt.sh
-source /usr/local/etc/bash_completion.d/git-completion.bash
-
-#promt
-#It uses __git_ps1() function to show current git branch when apply
+# promt ######################################################################
+color_prompt=yes
 GIT_PS1_SHOWDIRTYSTATE='1'
 GIT_PS1_SHOWSTASHSTATE='1'
 GIT_PS1_SHOWUNTRACKEDFILES='1'
 Color_Off='\e[0m'       # Text Reset
 BBlue='\e[1;34m'        # Blue
 BRed='\e[1;31m'         # Red
+#It uses __git_ps1() function to show current git branch when apply
 if [ "$color_prompt" = yes ]; then
     PS1="\[$BBlue\]\w \[$BRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
-unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-    xterm*|rxvt*)
-        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-        ;;
-    *)
-        ;;
-esac
+# brew #######################################################################
+# bash-completation must be installed
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
 
-#[brew]
-#colors for gnu ls command
-#.dir_colors directory must be a soft link to ~/src/dotfiles/dircolors
+# location of git prompt and completion scripts
+source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
+# colors for gnu ls command
+#.dircolors must be a soft link to ~/src/dotfiles/dircolors
 #gdircolors is the "brew way" to call the gnu dircolors command
 eval `gdircolors ~/.dircolors`
 
-#################
-###MIS ALIASES###
-#################
-
-#vi opens neovim (nvim)
-alias vi='nvim'
-alias vim='nvim'
-
-#cd typos resolved
-alias cd..='cd ..'
-alias cd...='cd ..'
-
-# enable color support of ls and also add handy aliases
-#ls is based on gnu ls command not bsd
-alias ls='ls --color=auto'
-alias l='ls -l'
-alias ll='ls -al'
-
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-alias de='cd ~/Desktop'
-alias vf='cd ~/src'
-
-alias gitl='git log --oneline --decorate --graph --all --max-count=10'
-alias miw='cd /home/sg/gd/miwiki && make html'
-
-# here's a hacky way to use GNU manpages for programs that are GNU ones, and
+# GNU manpages for programs that are GNU ones,
 # fallback to OSX manpages otherwise
 alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
 
-###################
-###MIS VARIABLES###
-###################
+# aliases ####################################################################
+#vi opens neovim (nvim)
+alias vi='nvim'
+alias vim='nvim'
+#typos
+alias cd..='cd ..'
+alias cd...='cd ..'
+alias gitl='git log --oneline --decorate --graph --all --max-count=10'
+#ls is based on gnu ls command, not bsd
+alias ls='ls --color=auto'
+alias l='ls -l'
+alias ll='ls -al'
+#grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+#locations
+alias de='cd ~/Desktop'
+alias vf='cd ~/src'
 
-#path for sbin - brew asks for it
+# environment variables ######################################################
+# brew ###
+# sbin
 PATH="/usr/local/sbin:$PATH"
-
-#path for gnu coreutils
+# gnu coreutils
 PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
-#path to java jdk1.8.0_121.jdk
+#java
 JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
 PATH=$JAVA_HOME/bin:$PATH
 
+#borrar el siguiente parrafo aapenas vea que es innecesario
 # By default non-brewed cpan modules are installed to the Cellar. If you wish
 # for your modules to persist across updates we recommend using `local::lib`.
 # You can set that up like this:
