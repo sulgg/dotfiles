@@ -172,3 +172,9 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Ho
 # also should add the following somewhere after the above statement:
 export PATH=$JAVA_HOME/bin:$PATH
 
+# By default non-brewed cpan modules are installed to the Cellar. If you wish
+# for your modules to persist across updates we recommend using `local::lib`.
+# You can set that up like this:
+  # PERL_MM_OPT="INSTALL_BASE=$HOME/perl5" cpan local::lib
+#y luego agregar esto:
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
