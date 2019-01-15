@@ -13,14 +13,24 @@ set number
 "true color terminal required
 set termguicolors
 
-"Tells Vim what the background color looks like
-set background=dark
+"--PLUGINS---------------------------------------------------------------------
+" Specify a directory for plugins: ~/.local/share/nvim/plugged
+" Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'ayu-theme/ayu-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+call plug#end()
+"--END_OF_PLUGINS--------------------------------------------------------------
 
 "Set a color scheme
-"colorscheme aqui_va_el_color_scheme..
+let ayucolor="light"
+colorscheme ayu
 
-"--PLUGINS---------------------------------------------------------------------
-"--END_OF_PLUGINS--------------------------------------------------------------
+"vim-airline
+let g:airline_theme='sol'
+let g:airline_powerline_fonts = 1
 
 "Hide buffers when they are abandoned
 set hidden
