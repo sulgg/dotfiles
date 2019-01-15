@@ -1,22 +1,6 @@
-# There are 3 different types of shells in bash: the login shell, normal shell
-# and interactive shell. Login shells read ~/.profile and interactive shells
-# read ~/.bashrc; in our setup, /etc/profile sources ~/.bashrc - thus all
-# settings made here will also take effect in a login shell.
-#
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-    *) return;;
-esac
-
-# Some applications read the EDITOR variable to determine your favourite text
-# editor. So uncomment the line below and enter the editor of your choice :-)
 EDITOR=/usr/local/bin/nvim
 
-test -s ~/.alias && . ~/.alias || true
-
 # don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
 HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
@@ -26,34 +10,12 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-# if ! shopt -oq posix; then
-#     if [ -f /usr/share/bash-completion/bash_completion ]; then
-#         . /usr/share/bash-completion/bash_completion
-#     elif [ -f /etc/bash_completion ]; then
-#         . /etc/bash_completion
-#     fi
-# fi
-
-#turn on Bash Smart Completion on OSX
+#[brew]
 #bash-completation must be installed first through brew:
 #brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
-
-# make bash autocomplete with up arrow
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-#shopt -s checkwinsize
-
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -72,29 +34,20 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        # We have color support; assume it's compliant with Ecma-48
-        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-        # a case would tend to support setf rather than setaf.)
         color_prompt=yes
     else
         color_prompt=
     fi
 fi
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
+#[brew]
 #location of git prompt and completion scripts for OSX 10.11 brew git
 #this helps PS1 var to display locatin of HEAD
 source /usr/local/etc/bash_completion.d/git-prompt.sh
 source /usr/local/etc/bash_completion.d/git-completion.bash
 
+#promt
+#It uses __git_ps1() function to show current git branch when apply
 GIT_PS1_SHOWDIRTYSTATE='1'
 GIT_PS1_SHOWSTASHSTATE='1'
 GIT_PS1_SHOWUNTRACKEDFILES='1'
@@ -102,7 +55,6 @@ Color_Off='\e[0m'       # Text Reset
 BBlue='\e[1;34m'        # Blue
 BRed='\e[1;31m'         # Red
 if [ "$color_prompt" = yes ]; then
-    #Usin __git_ps1() function to show current git branch when apply
     PS1="\[$BBlue\]\w \[$BRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
@@ -118,14 +70,15 @@ case "$TERM" in
         ;;
 esac
 
-#################
-###MIS ALIASES###
-#################
-
+#[brew]
 #colors for gnu ls command
 #.dir_colors directory must be a soft link to ~/src/dotfiles/dircolors
 #gdircolors is the "brew way" to call the gnu dircolors command
 eval `gdircolors ~/.dircolors`
+
+#################
+###MIS ALIASES###
+#################
 
 #vi opens neovim (nvim)
 alias vi='nvim'
@@ -138,7 +91,6 @@ alias cd...='cd ..'
 # enable color support of ls and also add handy aliases
 #ls is based on gnu ls command not bsd
 alias ls='ls --color=auto'
-
 alias l='ls -l'
 alias ll='ls -al'
 
