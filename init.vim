@@ -155,3 +155,17 @@ vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
 
+"---PLUGIN KEY MAPPINGS--------------------------------------------------------
+
+"open fugitive Git status
+nmap <leader>gs :Gstatus<CR>
+
+"save and stage file with fugitive
+nmap <leader>gw :Gwrite<CR>
+
+"commit changes with fugitive
+nmap <leader>gc :Gcommit<CR>
+
+"show vertical diff with fugitive
+nmap <leader>gd :Gvdiff<CR>
+
