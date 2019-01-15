@@ -63,18 +63,18 @@ alias vf='cd ~/src'
 # environment variables ######################################################
 
 # java
-JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
 # To make sure that the correct binaries for that Java version are called, you
 # also should add the following somewhere after the above statement:
-PATH=$JAVA_HOME/bin:$PATH
+export PATH=$JAVA_HOME/bin:$PATH
 
 # [brew] man pages. export and ${var-default_value} must be passed
 export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:${MANPATH-/usr/share/man}"
 export MANPATH="$(brew --prefix findutils)/libexec/gnuman/:$MANPATH"
 # [brew]
-PATH="$(brew --prefix)/sbin:$PATH"
-PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/sbin:$PATH"
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
 
 # borrar el siguiente parrafo apenas vea que es innecesario
 # By default non-brewed cpan modules are installed to the Cellar. If you wish
