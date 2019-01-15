@@ -21,6 +21,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 call plug#end()
