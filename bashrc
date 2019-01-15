@@ -206,7 +206,7 @@ esac
 #colors for gnu ls command
 #.dir_colors directory must be a soft link to ~/src/dotfiles/dircolors
 #gdircolors is the "brew way" to call the gnu dircolors command
-eval `gdircolors ~/.dir_colors`
+eval `gdircolors ~/.dircolors`
 
 #vi opens neovim (nvim)
 alias vi='nvim'
