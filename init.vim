@@ -21,6 +21,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 "--END_OF_PLUGINS--------------------------------------------------------------
 
@@ -168,4 +169,10 @@ nmap <leader>gc :Gcommit<CR>
 
 "show vertical diff with fugitive
 nmap <leader>gd :Gvdiff<CR>
+
+"undo hunk in line with GitGutter
+nmap <leader>gu :GitGutterUndoHunk<CR>
+
+"jump to the next marked hunk.  Takes a count.
+nmap <leader>gn :GitGutterNextHunk<CR>
 
