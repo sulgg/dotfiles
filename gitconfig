@@ -1,5 +1,6 @@
 [user]
     name = Saul Guillermo
+    email = code@saul.gg
 [core]
     autocrlf = input
     safecrlf = true
