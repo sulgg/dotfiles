@@ -1,5 +1,5 @@
 # default editor
-EDITOR=/usr/local/bin/nvim
+export EDITOR=/usr/local/bin/nvim
 
 # history
 # don't put duplicate lines or lines starting with space in the history.
