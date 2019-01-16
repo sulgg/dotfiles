@@ -69,12 +69,13 @@ export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Ho
 export PATH=$JAVA_HOME/bin:$PATH
 
 # [brew] man pages. export and ${var-default_value} must be passed
-export MANPATH="$(brew --prefix coreutils)/libexec/gnuman:${MANPATH-/usr/share/man}"
-export MANPATH="$(brew --prefix findutils)/libexec/gnuman/:$MANPATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH-/usr/share/man}"
+export MANPATH="/usr/local/opt/findutils/libexec/gnuman/:$MANPATH"
 # [brew]
-export PATH="$(brew --prefix)/sbin:$PATH"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # borrar el siguiente parrafo apenas vea que es innecesario
 # By default non-brewed cpan modules are installed to the Cellar. If you wish
