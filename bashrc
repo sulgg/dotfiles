@@ -87,4 +87,10 @@ export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
-
+# [brew][python3]
+# For pkg-config to find openssl you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
+# For pkg-config to find readline you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
+# For pkg-config to find sqlite you may need to set:
+export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
