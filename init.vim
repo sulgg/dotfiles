@@ -23,17 +23,23 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
+Plug 'Raimondi/delimitMate'
 call plug#end()
 "--END_OF_PLUGINS--------------------------------------------------------------
 
 "Set a color scheme
 let ayucolor="light"
 colorscheme ayu
+
+"Raimondi/delimitMate
+"Turns on/off the expansion of <CR>
+let delimitMate_expand_cr = 1
 
 "vim-airline
 let g:airline_theme='sol'
