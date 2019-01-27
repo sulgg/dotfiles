@@ -117,6 +117,8 @@ endif
 "make a copy of the file and overwrite the original one
 set backupcopy=yes
 
+"folds are set by visible text markers rather than invisible manual marks
+:set foldmethod=marker
 "---MAPPINGS-------------------------------------------------------------------
 
 "mapping <LEADER> from '\' to
