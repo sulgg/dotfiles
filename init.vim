@@ -30,6 +30,9 @@ Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'Raimondi/delimitMate'
+"plug opcionales
+Plug 'scrooloose/nerdtree'
+Plug 'storyn26383/vim-vue' "js-vue-syntax
 call plug#end()
 "--END_OF_PLUGINS--------------------------------------------------------------
 
@@ -138,6 +141,9 @@ endif
 "insert a semicolon at the end of line from normal mode
 nmap <leader>; A;<C-[>
 
+"insert a colon at the end of line from normal mode
+nmap <leader>, A,<C-[>
+
 "execute shell git log command
 "works only when file is inside project directory
 nmap <leader>gl :! clear && git log --oneline --decorate --graph --all --max-count=20<CR>
@@ -157,12 +163,6 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-
-"disable arrow keys in insert mode
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
 
 "disable arrow keys in visual mode
 vnoremap <up> <nop>
@@ -192,3 +192,7 @@ nmap <leader>gn :GitGutterNextHunk<CR>
 
 "toggle the indent lines (provided by Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
+
+"open NERDTree panel and highlight actual file
+nmap <leader>m :NERDTreeFind<CR>
+
