@@ -31,6 +31,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 Plug 'Raimondi/delimitMate'
 "plug opcionales
+Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'storyn26383/vim-vue' "js-vue-syntax
 call plug#end()
@@ -47,6 +48,10 @@ let delimitMate_expand_cr = 1
 "vim-airline
 let g:airline_theme='sol'
 let g:airline_powerline_fonts = 1
+
+"Yggdroot/indentLine
+let g:indentLine_setColors = 0 "Indentline manage char color
+let g:indentLine_char = '⋅' "(bullet operator U+2219)
 
 "Hide buffers when they are abandoned
 set hidden
@@ -193,6 +198,6 @@ nmap <leader>gn :GitGutterNextHunk<CR>
 "toggle the indent lines (provided by Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
 
-"open NERDTree panel and highlight actual file
-nmap <leader>m :NERDTreeFind<CR>
+"toggle NERDTree panel
+nmap <leader>m :NERDTreeToggle<CR>
 
