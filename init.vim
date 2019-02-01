@@ -50,7 +50,6 @@ let g:airline_theme='sol'
 let g:airline_powerline_fonts = 1
 
 "Yggdroot/indentLine
-let g:indentLine_setColors = 0 "Indentline manage char color
 let g:indentLine_char = '⋅' "(bullet operator U+2219)
 
 "Hide buffers when they are abandoned
