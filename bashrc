@@ -10,11 +10,6 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# [brew] colors for gnu ls command
-# .dircolors must be a soft link to ~/src/dotfiles/dircolors
-# gdircolors is the "brew way" to call the gnu dircolors command
-eval `gdircolors ~/.dircolors`
-
 # promt ######################################################################
 
 color_prompt=yes
