@@ -49,9 +49,9 @@ alias cd..='cd ..'
 alias cd...='cd ..'
 alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 # ls is based on gnu ls command, not bsd
-alias ls='ls --color=auto'
-alias l='ls -l'
-alias ll='ls -al'
+alias l='exa -l'
+alias ll='exa -la'
+alias lll='exa -la --tree'
 # grep
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
