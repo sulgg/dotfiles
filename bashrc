@@ -89,6 +89,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
 export PKG_CONFIG_PATH="/usr/local/opt/readline/lib/pkgconfig"
 # For pkg-config to find sqlite you may need to set:
 export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
+# Since OS Catalina the default shell is zsh, this avoid the warning:
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # added by Anaconda3 2019.03 installer
 # >>> conda init >>>
