@@ -33,7 +33,7 @@ Plug 'Raimondi/delimitMate'
 "plug opcionales
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
-Plug 'storyn26383/vim-vue' "js-vue-syntax
+Plug 'rust-lang/rust.vim' "rust syntax
 call plug#end()
 "--END_OF_PLUGINS--------------------------------------------------------------
 
