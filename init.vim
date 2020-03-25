@@ -46,11 +46,10 @@ colorscheme ayu
 let delimitMate_expand_cr = 1
 
 "vim-airline
-let g:airline_theme='sol'
-let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
 
 "Yggdroot/indentLine
-let g:indentLine_char = '⋅' "(bullet operator U+2219)
+let g:indentLine_enabled = 0
 
 "Hide buffers when they are abandoned
 set hidden
