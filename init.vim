@@ -149,14 +149,14 @@ nmap <leader>, A,<C-[>
 
 "execute shell git log command
 "works only when file is inside project directory
-nmap <leader>gl :! clear && git log --oneline --decorate --graph --all --max-count=20<CR>
+nmap <leader>gl :!git log --oneline --graph --all --max-count=20<CR>
 
 "let C-p and C-n filter command history
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
 
-"write file, clear terminal, scalac and run Run.scala
-nmap <leader>. :w <bar> !clear && scalac *scala && scala Run<CR>
+"write file, clear terminal and cargo check
+nmap <leader>. :w <bar> !cargo check<CR>
 
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
