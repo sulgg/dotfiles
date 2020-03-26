@@ -29,7 +29,6 @@ Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
-Plug 'Raimondi/delimitMate'
 "plug opcionales
 Plug 'mattn/emmet-vim'
 Plug 'scrooloose/nerdtree'
@@ -44,14 +43,11 @@ colorscheme ayu
 "italics in comments. This line must go after setting the colorscheme
 highlight Comment cterm=italic gui=italic
 
-"Raimondi/delimitMate
-"Turns on/off the expansion of <CR>
-let delimitMate_expand_cr = 1
-
 "vim-airline
 let g:airline_theme='molokai'
 
 "Yggdroot/indentLine
+"off by default. Open with <leader>i to open
 let g:indentLine_enabled = 0
 
 "Hide buffers when they are abandoned
