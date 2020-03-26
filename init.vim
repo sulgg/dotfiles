@@ -41,6 +41,9 @@ call plug#end()
 let ayucolor="light"
 colorscheme ayu
 
+"italics in comments. This line must go after setting the colorscheme
+highlight Comment cterm=italic gui=italic
+
 "Raimondi/delimitMate
 "Turns on/off the expansion of <CR>
 let delimitMate_expand_cr = 1
