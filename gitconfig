@@ -6,7 +6,6 @@
     safecrlf = true
     editor = nvim
     pager = less --quit-if-one-screen --no-init
-    excludesfile = ~/.gitignore_global
 [push]
     default = simple
 [color]
