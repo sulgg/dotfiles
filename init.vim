@@ -18,8 +18,7 @@ set termguicolors
 " Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ayu-theme/ayu-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
@@ -40,11 +39,11 @@ call plug#end()
 let ayucolor="light"
 colorscheme ayu
 
+"no show status mode. It must be in the status bar (powerline likes)
+set noshowmode
+
 "italics in comments. This line must go after setting the colorscheme
 highlight Comment cterm=italic gui=italic
-
-"vim-airline
-let g:airline_theme='molokai'
 
 "Yggdroot/indentLine
 "off by default. Open with <leader>i to open
