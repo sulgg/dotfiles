@@ -113,24 +113,27 @@ nnoremap Q <nop>
 
 "Plugins Key Mappings --------------------------- plugins_key_mappins
 
-"open fugitive Git status
+"open Git status (tpope/vim-sensible)
 nmap <leader>gs :Gstatus<CR>
 
-"show vertical diff with fugitive
+"show vertical diff (tpope/vim-sensible)
 nmap <leader>gd :Gvdiff<CR>
 
-"undo hunk in line with GitGutter
+"undo hunk in line (airblade/vim-gitgutter)
 nmap <leader>gu :GitGutterUndoHunk<CR>
 
-"jump to the next marked hunk.  Takes a count.
+"jump to the next marked hunk (airblade/vim-gitgutter)
 nmap <leader>gn :GitGutterNextHunk<CR>
 
-"toggle the indent lines (provided by Yggdroot/indentLine)
+"toggle the indent lines (Yggdroot/indentLine)
 nmap <leader>i :IndentLinesToggle<CR>
 
-"toggle NERDTree panel
-nmap <leader>m :NERDTreeToggle<CR>
+"toggle NERDTree panel (scrooloose/nerdtree)
+nmap <leader>n :NERDTreeToggle<CR>
 
-"write file and cargo check
+"write file and cargo check (rust-lang/rust.vim)
 nmap <leader>. :w<bar>Ccheck<CR>
+
+"cargo run (rust-lang/rust.vim)
+nmap <leader>m :w<bar>Crun<CR>
 
