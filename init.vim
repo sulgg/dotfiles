@@ -1,22 +1,14 @@
-"no compatibility with vi
-set nocompatible
+"Index
+"global_config
+"plugins_config
+"key_mappings
+"plugins_key_mappins
 
-"indent and plugin detection for filetypes
-filetype plugin indent on
-
-"enable syntax highlighting
-syntax on
-
-"Show line numbers
-set number
-
-"true color terminal required
-set termguicolors
-
-"--PLUGINS---------------------------------------------------------------------
-" Specify a directory for plugins: ~/.local/share/nvim/plugged
-" Avoid using standard Vim directory names like 'plugin'
+"Plugins provided by junegunn/vim-plug 
+"Check options for on-demand loading in:
+" https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'tpope/vim-sensible' "<-set de configuracion basico
 Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
@@ -27,27 +19,34 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
-Plug 'Yggdroot/indentLine'
-"plug opcionales
-Plug 'mattn/emmet-vim'
-Plug 'scrooloose/nerdtree'
-Plug 'rust-lang/rust.vim' "rust syntax
+Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
+"Otros Plugins
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'mattn/emmet-vim', {'for': 'html'}
+Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
-"--END_OF_PLUGINS--------------------------------------------------------------
 
-"Set a color scheme
-let ayucolor="light"
-colorscheme ayu
+"no compatibility with vi
+set nocompatible
+
+"Global Config --------------------------------- global_config
+"indent and plugin detection for filetypes
+filetype plugin indent on
+
+"enable syntax highlighting
+syntax on
+
+"true color terminal required
+set termguicolors
 
 "no show status mode. It must be in the status bar (powerline likes)
 set noshowmode
 
+"Show line numbers
+set number
+
 "italics in comments. This line must go after setting the colorscheme
 highlight Comment cterm=italic gui=italic
-
-"Yggdroot/indentLine
-"off by default. Open with <leader>i to open
-let g:indentLine_enabled = 0
 
 "Hide buffers when they are abandoned
 set hidden
@@ -123,7 +122,24 @@ set backupcopy=yes
 
 "folds are set by visible text markers rather than invisible manual marks
 :set foldmethod=marker
-"---MAPPINGS-------------------------------------------------------------------
+
+"Plugins Config --------------------------------- plugins_config
+
+"rust-lang/rust.vim
+"run cargo commands with ! instead of :terminal
+":terminal opens a new splitted windows
+let g:cargo_shell_command_runner = '!'
+
+"ayu-theme/ayu-vim
+"Ayu Set a color scheme
+let ayucolor="light"
+colorscheme ayu
+
+"Yggdroot/indentLine
+"off by default. Open with <leader>i to open
+let g:indentLine_enabled = 0
+
+"Key Mappings ----------------------------------- key_mappings
 
 "mapping <LEADER> from '\' to
 let mapleader = ","
@@ -153,9 +169,6 @@ nmap <leader>gl :!git log --oneline --graph --all --max-count=20<CR>
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
 
-"write file, clear terminal and cargo check
-nmap <leader>. :w <bar> !cargo check<CR>
-
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
 
@@ -171,7 +184,7 @@ vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
 
-"---PLUGIN KEY MAPPINGS--------------------------------------------------------
+"Plugins Key Mappings --------------------------- plugins_key_mappins
 
 "open fugitive Git status
 nmap <leader>gs :Gstatus<CR>
@@ -196,4 +209,7 @@ nmap <leader>i :IndentLinesToggle<CR>
 
 "toggle NERDTree panel
 nmap <leader>m :NERDTreeToggle<CR>
+
+"write file and cargo check
+nmap <leader>. :w<bar>Ccheck<CR>
 
