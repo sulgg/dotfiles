@@ -1,12 +1,11 @@
-"Index
-"global_config
-"plugins_config
+"Index ------------------------------------------------------------------ index
+"mis_plugins
+"mi_config
 "key_mappings
 "plugins_key_mappins
 
+"Mis Plugins ------------------------------------------------------ mis_plugins
 "Plugins provided by junegunn/vim-plug 
-"Check options for on-demand loading in:
-" https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible' "<-set de configuracion basico<==OJO
 Plug 'ayu-theme/ayu-vim'
@@ -26,57 +25,34 @@ Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
 
-"Global Config --------------------------------- global_config
-
-set expandtab "Insert space characters whenever the tab key is pressed
-set tabstop=4 "Number of space characters inserted when the tab key is pressed
-set softtabstop=4 "Number of spaces that a <Tab> counts for while editing operations
-set shiftwidth=4 "Change the number of space characters inserted for indentation
-
-"true color terminal required
-set termguicolors
-
-"no show status mode. It must be in the status bar (powerline likes)
-set noshowmode
-
-"Show line numbers
-set number
-
-"Hide buffers when they are abandoned
-set hidden
-
-"Show (partial) command in status line
-set showcmd
-
-"A longer line will be broken after white space to get this width
-set textwidth=79
-
-"Do smart case matching
-set smartcase
-
-"Select case-sensitiv search
-set ignorecase
-
-"When writing a file and a backup is made,
-"make a copy of the file and overwrite the original one
-set backupcopy=yes
-
-"folds are set by visible text markers rather than invisible manual marks
-set foldmethod=marker
-
-"Plugins Config --------------------------------- plugins_config
+"Mi Config ---------------------------------------------------------- mi_config
+"Must of the config is in tpope/vim-sensible
+set expandtab "insert space whenever the <Tab> key is pressed
+set tabstop=4 "spaces inserted when <Tab> key is pressed
+set softtabstop=4 "spaces <Tab> counts for while editing operations
+set shiftwidth=4 "spaces inserted for indentation
+set termguicolors "true color terminal required
+set noshowmode "no show status mode. required by powerline likes
+set number "show line numbers
+set hidden "hide buffers when they are abandoned
+set showcmd "show (partial) command in status line
+set textwidth=79 "after this limit line will broke
+set smartcase "do smart case matching
+set ignorecase "select case-sensitiv search
+set backupcopy=yes "when writing a file and a backup is made,
+set foldmethod=marker "visible text markers rather than invisible
 
 "rust-lang/rust.vim
 "run cargo commands with ! instead of :terminal
-":terminal opens a new splitted windows
+"(:terminal opens a new fixed windows)
 let g:cargo_shell_command_runner = '!'
 
 "ayu-theme/ayu-vim
-"Ayu Set a color scheme
-let ayucolor="light"
-colorscheme ayu
+let ayucolor="light" "Ayu Set a color scheme
 
-"italics in comments. This line must go after setting the colorscheme
+"colorscheme. termguicolors must be set
+colorscheme ayu
+"italics in comments. mus be set after colorscheme
 highlight Comment cterm=italic gui=italic
 
 "Yggdroot/indentLine
