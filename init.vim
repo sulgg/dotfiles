@@ -26,10 +26,10 @@ Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
 
+"Global Config --------------------------------- global_config
+
 "no compatibility with vi
 set nocompatible
-
-"Global Config --------------------------------- global_config
 
 "true color terminal required
 set termguicolors
