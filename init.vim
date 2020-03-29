@@ -28,8 +28,10 @@ call plug#end()
 
 "Global Config --------------------------------- global_config
 
-"no compatibility with vi
-set nocompatible
+set expandtab "Insert space characters whenever the tab key is pressed
+set tabstop=4 "Number of space characters inserted when the tab key is pressed
+set softtabstop=4 "Number of spaces that a <Tab> counts for while editing operations
+set shiftwidth=4 "Change the number of space characters inserted for indentation
 
 "true color terminal required
 set termguicolors
@@ -39,9 +41,6 @@ set noshowmode
 
 "Show line numbers
 set number
-
-"italics in comments. This line must go after setting the colorscheme
-highlight Comment cterm=italic gui=italic
 
 "Hide buffers when they are abandoned
 set hidden
@@ -57,11 +56,6 @@ set smartcase
 
 "Select case-sensitiv search
 set ignorecase
-
-set expandtab "Insert space characters whenever the tab key is pressed
-set tabstop=4 "Number of space characters inserted when the tab key is pressed
-set softtabstop=4 "Number of spaces that a <Tab> counts for while editing operations
-set shiftwidth=4 "Change the number of space characters inserted for indentation
 
 "When writing a file and a backup is made,
 "make a copy of the file and overwrite the original one
@@ -81,6 +75,9 @@ let g:cargo_shell_command_runner = '!'
 "Ayu Set a color scheme
 let ayucolor="light"
 colorscheme ayu
+
+"italics in comments. This line must go after setting the colorscheme
+highlight Comment cterm=italic gui=italic
 
 "Yggdroot/indentLine
 "off by default. Open with <leader>i to open
