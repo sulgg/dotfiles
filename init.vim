@@ -70,9 +70,6 @@ nmap <leader>rc :e $MYVIMRC<CR>
 "insert a semicolon at the end of line from normal mode
 nmap <leader>; A;<C-[>
 
-"insert a colon at the end of line from normal mode
-nmap <leader>, A,<C-[>
-
 "execute shell git log command
 "works only when file is inside project directory
 nmap <leader>gl :!git log --oneline --graph --all --max-count=20<CR>
