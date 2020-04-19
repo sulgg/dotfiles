@@ -11,7 +11,6 @@ Plug 'tpope/vim-sensible' "<-set de configuracion basico<==OJO
 Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'kana/vim-textobj-user'
@@ -60,19 +59,17 @@ highlight Comment cterm=italic gui=italic
 let g:indentLine_enabled = 0
 
 "Key Mappings ----------------------------------- key_mappings
+"remember to always use nnoremap as this guy says:
+"https://learnvimscriptthehardway.stevelosh.com/chapters/05.html
 
 "mapping <LEADER> from '\' to
 let mapleader = ","
 
 "make easy as possible to open vimrc file
-nmap <leader>rc :e $MYVIMRC<CR>
+nnoremap <leader>rc :e $MYVIMRC<CR>
 
 "insert a semicolon at the end of line from normal mode
-nmap <leader>; A;<C-[>
-
-"execute shell git log command
-"works only when file is inside project directory
-nmap <leader>gl :!git log --oneline --graph --all --max-count=20<CR>
+nnoremap <leader>; A;<C-[>
 
 "let C-p and C-n filter command history
 cnoremap <C-p> <up>
@@ -81,29 +78,30 @@ cnoremap <C-n> <down>
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
 
+"insert [count] blank lines in normal mode
+nnoremap <leader>o o<Esc>
+nnoremap <leader>O O<Esc>
+
 "Plugins Key Mappings --------------------------- plugins_key_mappins
 
-"open Git status (tpope/vim-sensible)
-nmap <leader>gs :Gstatus<CR>
-
-"show vertical diff (tpope/vim-sensible)
-nmap <leader>gd :Gvdiff<CR>
+"open git log in quickfix window (tpope/vim-sensible)
+nnoremap <leader>gl :Gclog!<CR>
 
 "undo hunk in line (airblade/vim-gitgutter)
-nmap <leader>gu :GitGutterUndoHunk<CR>
+nnoremap <leader>gu :GitGutterUndoHunk<CR>
 
 "jump to the next marked hunk (airblade/vim-gitgutter)
-nmap <leader>gn :GitGutterNextHunk<CR>
+nnoremap <leader>gn :GitGutterNextHunk<CR>zz
 
 "toggle the indent lines (Yggdroot/indentLine)
-nmap <leader>i :IndentLinesToggle<CR>
+nnoremap <leader>i :IndentLinesToggle<CR>
 
 "toggle NERDTree panel (scrooloose/nerdtree)
-nmap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 "write file and cargo check (rust-lang/rust.vim)
-nmap <leader>. :w<bar>Ccheck<CR>
+nnoremap <leader>. :w<bar>Ccheck<CR>
 
 "cargo run (rust-lang/rust.vim)
-nmap <leader>m :w<bar>Crun<CR>
+nnoremap <leader>m :w<bar>Crun<CR>
 
