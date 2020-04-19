@@ -7,7 +7,7 @@
 "Mis Plugins ------------------------------------------------------ mis_plugins
 "Plugins provided by junegunn/vim-plug 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'tpope/vim-sensible' "<-set de configuracion basico<==OJO
+Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
 Plug 'ayu-theme/ayu-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
@@ -25,7 +25,7 @@ Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
 
 "Mi Config ---------------------------------------------------------- mi_config
-"Must of the config is in tpope/vim-sensible
+"Most of the config is in tpope/vim-sensible
 set expandtab "insert space whenever the <Tab> key is pressed
 set tabstop=4 "spaces inserted when <Tab> key is pressed
 set softtabstop=4 "spaces <Tab> counts for while editing operations
@@ -47,11 +47,12 @@ set foldmethod=marker "visible text markers rather than invisible
 let g:cargo_shell_command_runner = '!'
 
 "ayu-theme/ayu-vim
-let ayucolor="light" "Ayu Set a color scheme
+"could be light or dark
+let ayucolor="light"
 
-"colorscheme. termguicolors must be set
+"colorscheme. termguicolors must be set beforehand
 colorscheme ayu
-"italics in comments. mus be set after colorscheme
+"italics in comments. must be set after colorscheme
 highlight Comment cterm=italic gui=italic
 
 "Yggdroot/indentLine
