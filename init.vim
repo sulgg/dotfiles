@@ -52,7 +52,7 @@ let g:lightline = {
 \                 []]
 \    },
 \    'inactive': {
-\        'left': [['numerobuffer', 'filename']],
+\        'left': [['numerobuffer', 'estadofugitivo', 'filename']],
 \        'right': [[],
 \                 []]
 \    },
