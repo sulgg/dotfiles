@@ -118,9 +118,6 @@ nnoremap <leader>O O<Esc>
 
 "Plugins Key Mappings --------------------------- plugins_key_mappins
 
-"open git log in quickfix window (tpope/vim-sensible)
-nnoremap <leader>gl :Gclog!<CR>
-
 "undo hunk in line (airblade/vim-gitgutter)
 nnoremap <leader>gu :GitGutterUndoHunk<CR>
 
