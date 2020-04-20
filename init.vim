@@ -128,8 +128,8 @@ nnoremap <leader>i :IndentLinesToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 "write file and cargo check (rust-lang/rust.vim)
-nnoremap <leader>. :w<bar>Ccheck<CR>
+nnoremap <leader>. :w<bar>RustFmt<bar>Ccheck<CR>
 
 "cargo run (rust-lang/rust.vim)
-nnoremap <leader>m :w<bar>Crun<CR>
+nnoremap <leader>m :w<bar>RustFmt<bar>Crun<CR>
 
