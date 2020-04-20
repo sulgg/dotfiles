@@ -41,6 +41,39 @@ set ignorecase "select case-sensitiv search
 set backupcopy=yes "when writing a file and a backup is made,
 set foldmethod=marker "visible text markers rather than invisible
 
+"itchyny/lightline.vim
+let g:lightline = {
+\    'colorscheme': 'ayu_mirage',
+\    'active': {
+\        'left': [['mode', 'paste'],
+\                ['numerobuffer', 'estadofugitivo',
+\                  'readonly', 'filename', 'modified']],
+\        'right': [[],
+\                 ['lineinfo'],
+\                 []]
+\    },
+\    'inactive': {
+\        'left': [['numerobuffer', 'filename']],
+\        'right': [[],
+\                 []]
+\    },
+\    'component': {
+\        'numerobuffer': '%n',
+\    },
+\    'component_function': {
+\        'estadofugitivo': 'EstadoFugitivo',
+\    },
+\}
+
+"tpope/vim-fugitive - itchyny/lightline.vim
+"Si esta detached muestra el hash (7 chars), sino el nombre del branch
+function! EstadoFugitivo()
+    if exists('*FugitiveHead')
+        return FugitiveHead(7)
+    endif
+    return ''
+endfunction
+
 "rust-lang/rust.vim
 "run cargo commands with ! instead of :terminal
 "(:terminal opens a new fixed windows)
