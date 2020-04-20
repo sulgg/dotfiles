@@ -2,10 +2,9 @@
 "mis_plugins
 "mi_config
 "key_mappings
-"plugins_key_mappins
 
 "Mis Plugins ------------------------------------------------------ mis_plugins
-"Plugins provided by junegunn/vim-plug 
+"Plugin manager by junegunn/vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
 Plug 'ayu-theme/ayu-vim'
@@ -115,8 +114,6 @@ nnoremap Q <nop>
 "insert [count] blank lines in normal mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
-
-"Plugins Key Mappings --------------------------- plugins_key_mappins
 
 "undo hunk in line (airblade/vim-gitgutter)
 nnoremap <leader>gu :GitGutterUndoHunk<CR>
