@@ -1,8 +1,3 @@
-"Index ------------------------------------------------------------------ index
-"mis_plugins
-"mi_config
-"key_mappings
-
 "Mis Plugins ------------------------------------------------------ mis_plugins
 "Plugin manager by junegunn/vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
@@ -17,7 +12,6 @@ Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
 "Otros Plugins
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
@@ -48,7 +42,7 @@ function! Cabeza()
 endfunction
 
 "Mi super minimalista statusline
-set statusline=%n\ \|\ %{Cabeza()}\ \|\ %t\ %m%r%=%l:%c
+set statusline=[%n]\ %{Cabeza()}\ \|\ %t\ %m%r%=%l:%c
 
 "rust-lang/rust.vim
 "run cargo commands with ! instead of :terminal
@@ -69,7 +63,7 @@ highlight Comment cterm=italic gui=italic
 let g:indentLine_enabled = 0
 
 "Key Mappings ----------------------------------- key_mappings
-"remember to always use nnoremap as this guy says:
+"remember to always use [x]noremap as this guy says:
 "https://learnvimscriptthehardway.stevelosh.com/chapters/05.html
 
 "mapping <LEADER> from '\' to
@@ -93,16 +87,13 @@ nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 
 "undo hunk in line (airblade/vim-gitgutter)
-nnoremap <leader>gu :GitGutterUndoHunk<CR>
+nnoremap <leader>u :GitGutterUndoHunk<CR>
 
 "jump to the next marked hunk (airblade/vim-gitgutter)
-nnoremap <leader>gn :GitGutterNextHunk<CR>zz
+nnoremap <leader>n :GitGutterNextHunk<CR>zz
 
 "toggle the indent lines (Yggdroot/indentLine)
 nnoremap <leader>i :IndentLinesToggle<CR>
-
-"toggle NERDTree panel (scrooloose/nerdtree)
-nnoremap <leader>n :NERDTreeToggle<CR>
 
 "write file and cargo check (rust-lang/rust.vim)
 nnoremap <leader>. :w<bar>RustFmt<bar>Ccheck<CR>
