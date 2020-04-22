@@ -8,7 +8,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
 Plug 'ayu-theme/ayu-vim'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -30,7 +29,6 @@ set tabstop=4 "spaces inserted when <Tab> key is pressed
 set softtabstop=4 "spaces <Tab> counts for while editing operations
 set shiftwidth=4 "spaces inserted for indentation
 set termguicolors "true color terminal required
-set noshowmode "no show status mode. required by powerline likes
 set number "show line numbers
 set hidden "hide buffers when they are abandoned
 set showcmd "show (partial) command in status line
@@ -40,38 +38,16 @@ set ignorecase "select case-sensitiv search
 set backupcopy=yes "when writing a file and a backup is made,
 set foldmethod=marker "visible text markers rather than invisible
 
-"itchyny/lightline.vim
-let g:lightline = {
-\    'colorscheme': 'ayu_mirage',
-\    'active': {
-\        'left': [['mode', 'paste'],
-\                ['numerobuffer', 'estadofugitivo',
-\                  'readonly', 'filename', 'modified']],
-\        'right': [[],
-\                 ['lineinfo'],
-\                 []]
-\    },
-\    'inactive': {
-\        'left': [['numerobuffer', 'estadofugitivo', 'filename']],
-\        'right': [[],
-\                 []]
-\    },
-\    'component': {
-\        'numerobuffer': '%n',
-\    },
-\    'component_function': {
-\        'estadofugitivo': 'EstadoFugitivo',
-\    },
-\}
-
-"tpope/vim-fugitive - itchyny/lightline.vim
+"tpope/vim-fugitive
 "Si esta detached muestra el hash (7 chars), sino el nombre del branch
-function! EstadoFugitivo()
+function! Rama()
     if exists('*FugitiveHead')
         return FugitiveHead(7)
     endif
     return ''
 endfunction
+
+set statusline=%n\ \|\ %{Rama()}\ \|\ %t\ %m%r%=%l:%c
 
 "rust-lang/rust.vim
 "run cargo commands with ! instead of :terminal
