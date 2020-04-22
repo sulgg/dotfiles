@@ -47,6 +47,7 @@ function! Cabeza()
     return ''
 endfunction
 
+"Mi super minimalista statusline
 set statusline=%n\ \|\ %{Cabeza()}\ \|\ %t\ %m%r%=%l:%c
 
 "rust-lang/rust.vim
