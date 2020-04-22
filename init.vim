@@ -40,14 +40,14 @@ set foldmethod=marker "visible text markers rather than invisible
 
 "tpope/vim-fugitive
 "Si esta detached muestra el hash (7 chars), sino el nombre del branch
-function! Rama()
+function! Cabeza()
     if exists('*FugitiveHead')
         return FugitiveHead(7)
     endif
     return ''
 endfunction
 
-set statusline=%n\ \|\ %{Rama()}\ \|\ %t\ %m%r%=%l:%c
+set statusline=%n\ \|\ %{Cabeza()}\ \|\ %t\ %m%r%=%l:%c
 
 "rust-lang/rust.vim
 "run cargo commands with ! instead of :terminal
