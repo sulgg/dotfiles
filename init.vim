@@ -52,14 +52,13 @@ let mapleader = ","
 nnoremap <leader>rc :e $MYVIMRC<CR>
 "insert a semicolon at the end of line from normal mode
 nnoremap <leader>; A;<C-[>
-"let C-p and C-n filter command history
-cnoremap <C-p> <up>
-cnoremap <C-n> <down>
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
 "insert [count] blank lines in normal mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
+"switch from Terminal mode back to Normal mode
+tnoremap <Esc> <C-\><C-n>
 "[airblade/vim-gitgutter] undo hunk in line
 nnoremap <leader>u :GitGutterUndoHunk<CR>
 "[airblade/vim-gitgutter] jump to the next marked hunk
