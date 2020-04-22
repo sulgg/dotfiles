@@ -1,5 +1,4 @@
-"Mis Plugins ------------------------------------------------------ mis_plugins
-"Plugin manager by junegunn/vim-plug
+"Plugin manager by junegunn/vim-plug ---------------------------------- plugins
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
 Plug 'ayu-theme/ayu-vim'
@@ -11,29 +10,34 @@ Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
-"Otros Plugins
+"Others
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
 
-"Mi Config ---------------------------------------------------------- mi_config
-"Most of the config is in tpope/vim-sensible
-set expandtab "insert space whenever the <Tab> key is pressed
-set tabstop=4 "spaces inserted when <Tab> key is pressed
-set softtabstop=4 "spaces <Tab> counts for while editing operations
-set shiftwidth=4 "spaces inserted for indentation
-set termguicolors "true color terminal required
+"Most of the config is in tpope/vim-sensible --------------------------- config
+set termguicolors "true color terminal
+set expandtab "insert space(s) whenever <tab> key is pressed
+set tabstop=4 "number of spaces <tab> counts for
+set softtabstop=4 "number of columns <tab> counts for in insert mode
+set shiftwidth=4 "number of spaces inserted for indentation
 set number "show line numbers
 set hidden "hide buffers when they are abandoned
-set showcmd "show (partial) command in status line
+set showcmd "show (partial) command in the last line of the screen
 set textwidth=79 "after this limit line will broke
 set smartcase "do smart case matching
 set ignorecase "select case-sensitiv search
 set backupcopy=yes "when writing a file and a backup is made,
 set foldmethod=marker "visible text markers rather than invisible
+set statusline=[%n]\ %{Cabeza()}\ \|\ %t\ %m%r%=%l:%c "petit statusline
+let g:netrw_banner = 0 "remove netrw top banner
+let g:netrw_liststyle = 3 "netrw tree style listing
+let g:indentLine_enabled = 0 "[Yggdroot/indentLine] off by default
+let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
+colorscheme ayu "colorscheme. termguicolors must be set beforehand
+highlight Comment cterm=italic gui=italic "must be set after colorscheme
 
-"tpope/vim-fugitive
-"Si esta detached muestra el hash (7 chars), sino el nombre del branch
+"[tpope/vim-fugitive] if detached shows hash (7 chars), else, branch name
 function! Cabeza()
     if exists('*FugitiveHead')
         return FugitiveHead(7)
@@ -41,63 +45,28 @@ function! Cabeza()
     return ''
 endfunction
 
-"Mi super minimalista statusline
-set statusline=[%n]\ %{Cabeza()}\ \|\ %t\ %m%r%=%l:%c
-
-"rust-lang/rust.vim
-"run cargo commands with ! instead of :terminal
-"(:terminal opens a new fixed windows)
-let g:cargo_shell_command_runner = '!'
-
-"ayu-theme/ayu-vim
-"could be light or dark
-let ayucolor="light"
-
-"colorscheme. termguicolors must be set beforehand
-colorscheme ayu
-"italics in comments. must be set after colorscheme
-highlight Comment cterm=italic gui=italic
-
-"Yggdroot/indentLine
-"off by default. Open with <leader>i to open
-let g:indentLine_enabled = 0
-
-"Key Mappings ----------------------------------- key_mappings
-"remember to always use [x]noremap as this guy says:
-"https://learnvimscriptthehardway.stevelosh.com/chapters/05.html
-
-"mapping <LEADER> from '\' to
+"Always use [x]noremap as Steve Losh says ---------------------------- mappings
+"mapping <LEADER> from '\' to ','
 let mapleader = ","
-
 "make easy as possible to open vimrc file
 nnoremap <leader>rc :e $MYVIMRC<CR>
-
 "insert a semicolon at the end of line from normal mode
 nnoremap <leader>; A;<C-[>
-
 "let C-p and C-n filter command history
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
-
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
-
 "insert [count] blank lines in normal mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
-
-"undo hunk in line (airblade/vim-gitgutter)
+"[airblade/vim-gitgutter] undo hunk in line
 nnoremap <leader>u :GitGutterUndoHunk<CR>
-
-"jump to the next marked hunk (airblade/vim-gitgutter)
+"[airblade/vim-gitgutter] jump to the next marked hunk
 nnoremap <leader>n :GitGutterNextHunk<CR>zz
-
-"toggle the indent lines (Yggdroot/indentLine)
+"[Yggdroot/indentLine] toggle the indent lines
 nnoremap <leader>i :IndentLinesToggle<CR>
-
-"write file and cargo check (rust-lang/rust.vim)
+"[rust-lang/rust.vim] write file and cargo check
 nnoremap <leader>. :w<bar>RustFmt<bar>Ccheck<CR>
-
-"cargo run (rust-lang/rust.vim)
+"[rust-lang/rust.vim] cargo run
 nnoremap <leader>m :w<bar>RustFmt<bar>Crun<CR>
-
