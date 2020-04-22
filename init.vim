@@ -29,7 +29,7 @@ set smartcase "do smart case matching
 set ignorecase "select case-sensitiv search
 set backupcopy=yes "when writing a file and a backup is made,
 set foldmethod=marker "visible text markers rather than invisible
-set statusline=[%n]\ %{Cabeza()}\ %t\ %m\ %r%=%l:%c "petit statusline
+set statusline=[%n]%{Cabeza()}%t\ %m\ %r%=%l:%c "petit statusline
 let g:netrw_banner = 0 "remove netrw top banner
 let g:netrw_liststyle = 3 "netrw tree style listing
 let g:indentLine_enabled = 0 "[Yggdroot/indentLine] off by default
@@ -40,9 +40,13 @@ highlight Comment cterm=italic gui=italic "must be set after colorscheme
 "[tpope/vim-fugitive] if detached shows hash (7 chars), else, branch name
 function! Cabeza()
     if exists('*FugitiveHead')
-        return FugitiveHead(7)
+        if FugitiveHead(7) == ''
+            return ' '
+        else
+            return ' ['.FugitiveHead(7).'] '
+        endif
     endif
-    return ''
+    return ' '
 endfunction
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
