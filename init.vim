@@ -57,6 +57,9 @@ nnoremap <leader>rc :e $MYVIMRC<CR>
 nnoremap <leader>; A;<C-[>
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
+"let C-p and C-n filter command history
+cnoremap <C-p> <up>
+cnoremap <C-n> <down>
 "insert [count] blank lines in normal mode
 nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
