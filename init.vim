@@ -41,9 +41,8 @@ highlight Comment cterm=italic gui=italic "must be set after colorscheme
 function! Cabeza()
     if (exists('*FugitiveHead') && !(FugitiveHead(7) == ''))
         return ' ['.FugitiveHead(7).'] '
-    else
-        return ' '
     endif
+    return ' '
 endfunction
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
