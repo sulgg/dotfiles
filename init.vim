@@ -29,23 +29,12 @@ set smartcase "do smart case matching
 set ignorecase "select case-sensitiv search
 set backupcopy=yes "symbolic links are preserved
 set foldmethod=marker "visible text markers rather than invisible
-set statusline=[%n]%{Cabeza()}%t\ %m\ %r%=%l:%c "petit statusline
+set statusline=[%n]\ [%{FugitiveHead(7)}]\ %t\ %m\ %r%=%l:%c "petit statusline
 let g:netrw_banner = 0 "remove netrw top banner
 let g:netrw_liststyle = 3 "netrw tree style listing
 let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
 silent! colorscheme ayu "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic "must be set after colorscheme
-
-"[tpope/vim-fugitive] if detached shows hash (7 chars), else, branch name
-function! Cabeza()
-    if (exists('*FugitiveHead'))
-        let h = FugitiveHead(7)
-        if !(h ==# '')
-            return ' ['.h.'] '
-        endif
-    endif
-    return ' '
-endfunction
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
 "mapping <LEADER> from '\' to ','
