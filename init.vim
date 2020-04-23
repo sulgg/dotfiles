@@ -39,8 +39,11 @@ highlight Comment cterm=italic gui=italic "must be set after colorscheme
 
 "[tpope/vim-fugitive] if detached shows hash (7 chars), else, branch name
 function! Cabeza()
-    if (exists('*FugitiveHead') && !(FugitiveHead(7) == ''))
-        return ' ['.FugitiveHead(7).'] '
+    if (exists('*FugitiveHead'))
+        let h = FugitiveHead(7)
+        if !(h ==# '')
+            return ' ['.h.'] '
+        endif
     endif
     return ' '
 endfunction
