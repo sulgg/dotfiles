@@ -27,7 +27,7 @@ set showcmd "show (partial) command in the last line of the screen
 set textwidth=79 "after this limit line will broke
 set smartcase "do smart case matching
 set ignorecase "select case-sensitiv search
-set backupcopy=yes "when writing a file and a backup is made,
+set backupcopy=no "rename the file and write a new one (fastest option)
 set foldmethod=marker "visible text markers rather than invisible
 set statusline=[%n]%{Cabeza()}%t\ %m\ %r%=%l:%c "petit statusline
 let g:netrw_banner = 0 "remove netrw top banner
