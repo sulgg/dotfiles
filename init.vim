@@ -39,14 +39,11 @@ highlight Comment cterm=italic gui=italic "must be set after colorscheme
 
 "[tpope/vim-fugitive] if detached shows hash (7 chars), else, branch name
 function! Cabeza()
-    if exists('*FugitiveHead')
-        if FugitiveHead(7) == ''
-            return ' '
-        else
-            return ' ['.FugitiveHead(7).'] '
-        endif
+    if (exists('*FugitiveHead') && !(FugitiveHead(7) == ''))
+        return ' ['.FugitiveHead(7).'] '
+    else
+        return ' '
     endif
-    return ' '
 endfunction
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
