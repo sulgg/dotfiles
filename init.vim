@@ -64,6 +64,6 @@ nnoremap <leader>n :GitGutterNextHunk<CR>zz
 "[Yggdroot/indentLine] toggle the indent lines
 nnoremap <leader>i :IndentLinesToggle<CR>
 "[rust-lang/rust.vim] write, format, cargo check and get into Terminal mode
-nnoremap <leader>. :w<bar>RustFmt<bar>Ccheck<CR>i
+nnoremap <leader>. :RustFmt<bar>w<bar>Ccheck<CR>i
 "[rust-lang/rust.vim] write, format, cargo run and get into Terminal mode
-nnoremap <leader>m :w<bar>RustFmt<bar>Crun<CR>i
+nnoremap <leader>m :RustFmt<bar>w<bar>Crun<CR>i
