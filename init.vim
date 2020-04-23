@@ -34,7 +34,7 @@ let g:netrw_banner = 0 "remove netrw top banner
 let g:netrw_liststyle = 3 "netrw tree style listing
 let g:indentLine_enabled = 0 "[Yggdroot/indentLine] off by default
 let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
-colorscheme ayu "colorscheme. termguicolors must be set beforehand
+silent! colorscheme ayu "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic "must be set after colorscheme
 
 "[tpope/vim-fugitive] if detached shows hash (7 chars), else, branch name
