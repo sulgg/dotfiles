@@ -62,8 +62,10 @@ nnoremap <leader>o o<Esc>
 nnoremap <leader>O O<Esc>
 "switch from Terminal mode back to Normal mode but still capable
 "to send an Escape key to the terminal by pressing <C-v><Esc>
-tnoremap <Esc> <C-\><C-n>
-tnoremap <C-v><Esc> <Esc>
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+    tnoremap <C-v><Esc> <Esc>
+endif
 "[airblade/vim-gitgutter] undo hunk in line
 nnoremap <leader>u :GitGutterUndoHunk<CR>
 "[airblade/vim-gitgutter] jump to the next marked hunk
