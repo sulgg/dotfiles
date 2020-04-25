@@ -16,7 +16,6 @@ Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
 
 "Most of the config is in tpope/vim-sensible --------------------------- config
-set termguicolors "true color terminal
 set expandtab "insert space(s) whenever <tab> key is pressed
 set tabstop=4 "number of spaces <tab> counts for
 set softtabstop=4 "number of columns <tab> counts for in insert mode
@@ -32,9 +31,15 @@ set foldmethod=marker "visible text markers rather than invisible
 set statusline=[%n]\ [%{FugitiveHead(7)}]\ %t\ %m\ %r%=%l:%c "petit statusline
 let g:netrw_banner = 0 "remove netrw top banner
 let g:netrw_liststyle = 3 "netrw tree style listing
+
+"Colors. Highlight groups must be set after colorscheme --------------- colors
+set termguicolors "true color terminal
 let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
 silent! colorscheme ayu "colorscheme. termguicolors must be set beforehand
-highlight Comment cterm=italic gui=italic "must be set after colorscheme
+highlight Comment cterm=italic gui=italic
+highlight ErrorMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
+highlight Search ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
+highlight IncSearch ctermfg=Red ctermbg=White  guifg=Red guibg=White 
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
 "mapping <LEADER> from '\' to ','
