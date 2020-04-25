@@ -234,6 +234,14 @@
                 },
                 {
                     "from": {
+                        "key_code": "left_control"
+                    },
+                    "to": {
+                        "key_code": "vk_none"
+                    }
+                },
+                {
+                    "from": {
                         "key_code": "escape"
                     },
                     "to": {
