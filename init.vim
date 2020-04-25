@@ -37,9 +37,11 @@ set termguicolors "true color terminal
 let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
 silent! colorscheme ayu "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic
+highlight Error ctermfg=White ctermbg=Red guifg=White guibg=Red
 highlight ErrorMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
 highlight Search ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
-highlight IncSearch ctermfg=Red ctermbg=White  guifg=Red guibg=White 
+highlight IncSearch ctermfg=Red ctermbg=White  guifg=Red guibg=White
+
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
 "mapping <LEADER> from '\' to ','
