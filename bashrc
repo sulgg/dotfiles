@@ -36,26 +36,24 @@ if [ "$color_prompt" = yes ]; then
 fi
 
 # aliases ####################################################################
-# vi opens neovim (nvim)
+
 alias vi='nvim'
 alias vim='nvim'
-# typos
-alias cd..='cd ..'
-alias cd...='cd ..'
-alias gitl='git log --oneline --decorate --graph --all --max-count=10'
-# ls is based on gnu ls command, not bsd
+
 alias l='exa -l'
 alias ll='exa -la'
 alias lll='exa -la --tree'
-# grep
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-# locations
-alias de='cd ~/Desktop'
+
+alias grep='rg'
+
 alias vf='cd ~/src'
 alias dw='cd ~/Downloads'
-alias usbd='cd /Volumes/usbd'
+alias de='cd ~/Desktop'
+alias usb='cd /Volumes/usbd'
+
+alias cd..='cd ..'
+alias cd...='cd ..'
+alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 
 # environment variables ######################################################
 
