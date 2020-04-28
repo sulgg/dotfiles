@@ -32,13 +32,12 @@ set backupcopy=yes "symbolic links are preserved
 set foldmethod=marker "visible text markers rather than invisible
 set statusline=[%n]\ [%{FugitiveHead(7)}]\ %t\ %m\ %r%=%l:%c "petit statusline
 let g:netrw_banner = 0 "remove netrw top banner
-let g:netrw_liststyle = 3 "netrw tree style listing
 
-"Colors. Highlight groups must be set after colorscheme --------------- colors
+"Colors. Highlight groups must be set after colorscheme ---------------- colors
 set termguicolors "true color terminal
 set background=light
 " let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
-let g:pencil_higher_contrast_ui = 1 "['reedes/vim-colors-pencil'] 0 low / 1 high
+let g:pencil_higher_contrast_ui = 1 "[reedes/vim-colors-pencil] 0 low, 1 high
 silent! colorscheme pencil "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic
 highlight Error ctermfg=White ctermbg=Red guifg=White guibg=Red
@@ -48,29 +47,29 @@ highlight IncSearch ctermfg=Red ctermbg=White  guifg=Red guibg=White
 
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
-"mapping <LEADER> from '\' to ','
-let mapleader = ","
-"make easy as possible to open vimrc file
-nnoremap <leader>rc :e $MYVIMRC<CR>
-"insert a semicolon at the end of line from normal mode
-nnoremap <leader>; A;<C-[>
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
 "let C-p and C-n filter command history
 cnoremap <C-p> <up>
 cnoremap <C-n> <down>
-"insert [count] blank lines in normal mode
-nnoremap <leader>o o<Esc>
-nnoremap <leader>O O<Esc>
 "switch from Terminal mode back to Normal mode but still capable
 "to send an Escape key to the terminal by pressing <C-v><Esc>
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>
-    tnoremap <C-v><Esc> <Esc>
+    tnoremap <C-v><esc> <esc>
 endif
-"[Yggdroot/indentLine] toggle the indent lines
-nnoremap <leader>i :IndentLinesToggle<CR>
-"[rust-lang/rust.vim] write, format, cargo check and get into Terminal mode
-nnoremap <leader>. :RustFmt<bar>w<bar>Ccheck<CR>i
-"[rust-lang/rust.vim] write, format, cargo run and get into Terminal mode
-nnoremap <leader>m :RustFmt<bar>w<bar>Crun<CR>i
+"mapping <LEADER> from '\' to ','
+let mapleader = ","
+"open init.vim/vimrc file
+nnoremap <leader>rc :e $MYVIMRC<cr>
+"insert a semicolon at the end of line
+nnoremap <leader>; A;<esc>
+"insert [count] blank lines
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
+"[Yggdroot/indentLine] toggle indentLine
+nnoremap <leader>i :IndentLinesToggle<cr>
+"[rust-lang/rust.vim] format, write, cargo check and get into Terminal mode
+nnoremap <leader>. :RustFmt<bar>w<bar>Ccheck<cr>i
+"[rust-lang/rust.vim] format, write, cargo run and get into Terminal mode
+nnoremap <leader>m :RustFmt<bar>w<bar>Crun<cr>i
