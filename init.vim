@@ -13,6 +13,7 @@ Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
 " Plug 'ayu-theme/ayu-vim'
 Plug 'cormacrelf/vim-colors-github'
 "Others
+Plug 'lotabout/skim', {'dir': '~/.skim', 'do': './install'}
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 call plug#end()
