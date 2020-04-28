@@ -1,7 +1,6 @@
 "Plugin manager by junegunn/vim-plug ---------------------------------- plugins
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
-Plug 'ayu-theme/ayu-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -10,6 +9,9 @@ Plug 'kana/vim-textobj-entire'
 Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
+"Colors
+" Plug 'ayu-theme/ayu-vim'
+Plug 'reedes/vim-colors-pencil'
 "Others
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
@@ -34,8 +36,10 @@ let g:netrw_liststyle = 3 "netrw tree style listing
 
 "Colors. Highlight groups must be set after colorscheme --------------- colors
 set termguicolors "true color terminal
-let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
-silent! colorscheme ayu "colorscheme. termguicolors must be set beforehand
+set background=light
+" let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
+let g:pencil_higher_contrast_ui = 1 "['reedes/vim-colors-pencil'] 0 low / 1 high
+silent! colorscheme pencil "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic
 highlight Error ctermfg=White ctermbg=Red guifg=White guibg=Red
 highlight ErrorMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
@@ -64,10 +68,6 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     tnoremap <C-v><Esc> <Esc>
 endif
-"[airblade/vim-gitgutter] undo hunk in line
-nnoremap <leader>u :GitGutterUndoHunk<CR>
-"[airblade/vim-gitgutter] jump to the next marked hunk
-nnoremap <leader>n :GitGutterNextHunk<CR>zz
 "[Yggdroot/indentLine] toggle the indent lines
 nnoremap <leader>i :IndentLinesToggle<CR>
 "[rust-lang/rust.vim] write, format, cargo check and get into Terminal mode
