@@ -35,6 +35,13 @@ if [ "$color_prompt" = yes ]; then
     PS1="\[$BBlue\]\w \[$BRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
 fi
 
+#Rust - herramientas cli instaladas
+# -exa Sustituto de ls
+# -fd Sustituto de find
+# -rg Ripgrep. Sustituto de grep
+# -tokei Cuenta el total de lines de codigo
+# -sk Skim. Fuzzy Finder for bash and vim
+
 # aliases ####################################################################
 
 alias vi='nvim'
