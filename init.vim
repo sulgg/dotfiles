@@ -11,7 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
 "Colors
 " Plug 'ayu-theme/ayu-vim'
-Plug 'reedes/vim-colors-pencil'
+Plug 'cormacrelf/vim-colors-github'
 "Others
 Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
@@ -37,8 +37,7 @@ let g:netrw_banner = 0 "remove netrw top banner
 set termguicolors "true color terminal
 set background=light
 " let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
-let g:pencil_higher_contrast_ui = 1 "[reedes/vim-colors-pencil] 0 low, 1 high
-silent! colorscheme pencil "colorscheme. termguicolors must be set beforehand
+silent! colorscheme github "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic
 highlight Error ctermfg=White ctermbg=Red guifg=White guibg=Red
 highlight ErrorMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
