@@ -10,8 +10,7 @@ Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
 "Colors
-" Plug 'ayu-theme/ayu-vim'
-Plug 'cormacrelf/vim-colors-github'
+Plug 'ayu-theme/ayu-vim'
 "Others
 Plug 'lotabout/skim', {'dir': '~/.skim', 'do': './install'}
 Plug 'mattn/emmet-vim', {'for': 'html'}
@@ -37,8 +36,8 @@ let g:netrw_banner = 0 "remove netrw top banner
 "Colors. Highlight groups must be set after colorscheme ---------------- colors
 set termguicolors "true color terminal
 set background=light
-" let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
-silent! colorscheme github "colorscheme. termguicolors must be set beforehand
+let ayucolor="light" "[ayu-theme/ayu-vim] any of light, dark or mirage
+silent! colorscheme ayu "colorscheme. termguicolors must be set beforehand
 highlight Comment cterm=italic gui=italic
 highlight Error ctermfg=White ctermbg=Red guifg=White guibg=Red
 highlight ErrorMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
