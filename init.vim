@@ -57,8 +57,6 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     tnoremap <C-v><esc> <esc>
 endif
-"mapping <LEADER> from '\' to ','
-let mapleader = ","
 "open init.vim/vimrc file
 nnoremap <leader>rc :e $MYVIMRC<cr>
 "insert a semicolon at the end of line
@@ -69,6 +67,8 @@ nnoremap <leader>O O<esc>
 "[Yggdroot/indentLine] toggle indentLine
 nnoremap <leader>i :IndentLinesToggle<cr>
 "[rust-lang/rust.vim] format, write, cargo check and get into Terminal mode
-nnoremap <leader>. :RustFmt<bar>w<bar>Ccheck<cr>i
-"[rust-lang/rust.vim] format, write, cargo run and get into Terminal mode
-nnoremap <leader>m :RustFmt<bar>w<bar>Crun<cr>i
+nnoremap <leader>r :RustFmt<bar>wa<bar>Crun<cr>
+"[rust-lang/rust.vim] format, write, cargo check and get into Terminal mode
+nnoremap <leader>c :RustFmt<bar>wa<bar>Ccheck<cr>
+"[rust-lang/rust.vim] format, write, test under the cursor and get into Terminal mode
+nnoremap <leader>f :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
