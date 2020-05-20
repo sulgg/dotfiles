@@ -50,6 +50,10 @@ alias vim='nvim'
 alias l='exa -l'
 alias ll='exa -la'
 alias lll='exa -la --tree'
+alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
+alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
+alias l3='exa --git-ignore --tree --level=3 --sort=type --reverse'
+alias l4='exa --git-ignore --tree --level=4 --sort=type --reverse'
 
 alias grep='rg'
 
