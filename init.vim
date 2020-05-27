@@ -71,4 +71,6 @@ nnoremap <leader>r :RustFmt<bar>wa<bar>Crun<cr>
 "[rust-lang/rust.vim] format, write, cargo check and get into Terminal mode
 nnoremap <leader>c :RustFmt<bar>wa<bar>Ccheck<cr>
 "[rust-lang/rust.vim] format, write, test under the cursor and get into Terminal mode
-nnoremap <leader>f :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
+nnoremap <leader>t :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
+"[rust-lang/rust.vim] format, write, run all tests
+nnoremap <leader>f :RustFmt<bar>wa<bar>Ctest<cr>
