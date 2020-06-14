@@ -57,8 +57,6 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     tnoremap <C-v><esc> <esc>
 endif
-"open init.vim/vimrc file
-nnoremap <leader>rc :e $MYVIMRC<cr>
 "insert a semicolon at the end of line
 nnoremap <leader>; A;<esc>
 "insert [count] blank lines
@@ -66,11 +64,11 @@ nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
 "[Yggdroot/indentLine] toggle indentLine
 nnoremap <leader>i :IndentLinesToggle<cr>
-"[rust-lang/rust.vim] format, write, cargo check and get into Terminal mode
-nnoremap <leader>r :RustFmt<bar>wa<bar>Crun<cr>
-"[rust-lang/rust.vim] format, write, cargo check and get into Terminal mode
-nnoremap <leader>c :RustFmt<bar>wa<bar>Ccheck<cr>
-"[rust-lang/rust.vim] format, write, test under the cursor and get into Terminal mode
+"[rust-lang/rust.vim] format, write, cargo run, insert
+nnoremap <leader>r :RustFmt<bar>wa<bar>Crun<cr>i
+"[rust-lang/rust.vim] format, write, cargo check, insert
+nnoremap <leader>c :RustFmt<bar>wa<bar>Ccheck<cr>i
+"[rust-lang/rust.vim] format, write, test under the cursor, insert
 nnoremap <leader>t :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
-"[rust-lang/rust.vim] format, write, run all tests
-nnoremap <leader>f :RustFmt<bar>wa<bar>Ctest<cr>
+"[rust-lang/rust.vim] format, write, run full tests, insert
+nnoremap <leader>f :RustFmt<bar>wa<bar>Ctest<cr>i
