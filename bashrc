@@ -57,8 +57,8 @@ alias l4='exa --git-ignore --tree --level=4 --sort=type --reverse'
 
 alias grep='rg'
 
-alias vf='cd ~/src'
-alias dw='cd ~/Downloads'
+alias vf='cd /Volumes/usbd/1_mega/src'
+alias dw='cd /Volumes/usbd/1_downloads'
 alias de='cd ~/Desktop'
 alias usb='cd /Volumes/usbd'
 
