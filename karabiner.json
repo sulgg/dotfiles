@@ -42,27 +42,6 @@
                         ]
                     },
                     {
-                        "description": "Ctrl-[ no hace nada. Para estar obligado a salir de vim con Esc",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "vk_none"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Map fn plus h/j/k/l to Arrows",
                         "manipulators": [
                             {
@@ -274,4 +253,3 @@
         }
     ]
 }
-
