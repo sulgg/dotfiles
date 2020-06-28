@@ -19,7 +19,6 @@
                         "description": "Caps Lock to Escape on single press, Control on press and hold.",
                         "manipulators": [
                             {
-                                "type": "basic",
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
@@ -37,7 +36,8 @@
                                     {
                                         "key_code": "escape"
                                     }
-                                ]
+                                ],
+                                "type": "basic"
                             }
                         ]
                     },
@@ -231,7 +231,7 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "left_control"
+                        "key_code": "escape"
                     },
                     "to": {
                         "key_code": "vk_none"
@@ -239,7 +239,7 @@
                 },
                 {
                     "from": {
-                        "key_code": "escape"
+                        "key_code": "left_control"
                     },
                     "to": {
                         "key_code": "vk_none"
@@ -253,3 +253,4 @@
         }
     ]
 }
+
