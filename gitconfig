@@ -17,29 +17,12 @@
 [merge]
     tool = vimdiff2
 [alias]
+    l = log --pretty=format:'%C(auto)%ad %h %s%d' --graph --all --max-count=10 --date=short
+    ll = log --pretty=format:'%C(auto)%ad %h %s%d [%an]' --graph --all --date=short
     co = checkout
-    ci = commit
+    ci = commit -m
     st = status
     br = branch
     ba = branch -a
     d = diff
     dt= difftool
-
-    #log
-    l  = log --oneline --decorate --graph --all --max-count=10
-    l2 = log --oneline --decorate --graph --all --max-count=20
-    l3 = log --oneline --decorate --graph --all --max-count=30
-    la = log --oneline --decorate --graph --all
-
-    #log (shows author and date)
-    ll  = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=10
-    ll2 = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=20
-    ll3 = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all --max-count=30
-    lla = log --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(yellow)(%Creset%cr%C(yellow))%Creset %C(yellow)<%Creset%an%C(yellow)>%Creset' --graph --all
-
-    type = cat-file -t
-    dump = cat-file -p
-
-    pagerless = config --local less
-    pagercat = config --local cat
-    pagerdefault = config --local less --quit-if-one-screen --no-init
