@@ -64,7 +64,6 @@ alias usb='cd /Volumes/usbd'
 
 alias cd..='cd ..'
 alias cd...='cd ..'
-alias gitl='git log --oneline --decorate --graph --all --max-count=10'
 
 # environment variables ######################################################
 
