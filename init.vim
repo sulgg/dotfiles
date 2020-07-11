@@ -46,6 +46,14 @@ highlight IncSearch ctermfg=Red ctermbg=White  guifg=Red guibg=White
 
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
+"insert corresponding closing character
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap < <><left>
+inoremap ' ''<left>
+inoremap " ""<left>
+inoremap <bar> <bar><bar><left>
 "Q do nothing to avoid entering Ex mode by accident
 nnoremap Q <nop>
 "let C-p and C-n filter command history
