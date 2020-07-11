@@ -4,9 +4,6 @@ Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
-Plug 'glts/vim-textobj-comment'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine', {'on': 'IndentLinesToggle'}
 "Colors
