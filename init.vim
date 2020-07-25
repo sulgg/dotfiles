@@ -77,3 +77,5 @@ nnoremap <leader>c :RustFmt<bar>wa<bar>Ccheck<cr>i
 nnoremap <leader>t :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
 "[rust-lang/rust.vim] format, write, run full tests, insert
 nnoremap <leader>f :RustFmt<bar>wa<bar>Ctest<cr>i
+"[rust-lang/rust.vim] format, write, run cargo bench, insert
+nnoremap <leader>b :RustFmt<bar>wa<bar>Cbench<cr>i
