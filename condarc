@@ -1,0 +1,4 @@
+# Activate/deactivate the base environment
+# during shell initialization for `conda init`
+# wich is in bashrc
+auto_activate_base: false
