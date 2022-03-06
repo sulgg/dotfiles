@@ -10,35 +10,20 @@ shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 
-# promt ######################################################################
+# Todo lo relacionado a prompt lo maneja Starship
+eval "$(starship init bash)"
 
-color_prompt=yes
-
-# # [brew] bash-completation must be installed.
-# # It includes git-prompt.sh and git-completion.bash in order to use
-# # __git_ps1() function to show current git branch when apply
-[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-
-# git-prompt.sh conf vars
-GIT_PS1_SHOWDIRTYSTATE='1'
-GIT_PS1_SHOWSTASHSTATE='1'
-GIT_PS1_SHOWUNTRACKEDFILES='1'
-
-# color constants copied from ~/src/dotfiles/color_constants
-Color_Off='\e[0m'       # Text Reset
-BBlue='\e[1;34m'        # Blue
-BRed='\e[1;31m'         # Red
-
-if [ "$color_prompt" = yes ]; then
-    PS1="\[$BBlue\]\w \[$BRed\]\$(__git_ps1 ' %s ')\[$Color_Off\]\$ "
-fi
-
-#Rust - herramientas cli instaladas
-# -exa Sustituto de ls
-# -fd Sustituto de find
-# -rg Ripgrep. Sustituto de grep
-# -tokei Cuenta el total de lines de codigo
-# -sk Skim. Fuzzy Finder for bash and vim
+# *Rust - herramientas cli brutales*
+# Starship promt increible
+# exa Sustituto de ls
+# fd Sustituto de find
+# rg Ripgrep. Sustituto de grep
+# procs sustituto de ps
+# tealdeer sustituto de man
+# dust sustituto de du
+# tokei Cuenta el total de lines de codigo
+# sk Skim. Fuzzy Finder for bash and vim <- Aprender a usar
+# bat sustituto de cat
 
 # aliases ####################################################################
 
@@ -50,18 +35,12 @@ alias ll='exa -la'
 alias lll='exa -la --tree'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
-alias l3='exa --git-ignore --tree --level=3 --sort=type --reverse'
-alias l4='exa --git-ignore --tree --level=4 --sort=type --reverse'
 
 alias grep='rg'
 
 alias vf='cd /Volumes/usbd/1_mega/src'
 alias dw='cd /Volumes/usbd/1_downloads'
-alias de='cd ~/Desktop'
 alias usb='cd /Volumes/usbd'
-
-alias cd..='cd ..'
-alias cd...='cd ..'
 
 # environment variables ######################################################
 
@@ -108,4 +87,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
