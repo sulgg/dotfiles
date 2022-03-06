@@ -13,6 +13,10 @@ HISTFILESIZE=20000
 # Todo lo relacionado a prompt lo maneja Starship
 eval "$(starship init bash)"
 
+# [brew] bash-completation must be installed.
+# It includes git-prompt.sh and git-completion.bash
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+
 # *Rust - herramientas cli brutales*
 # Starship promt increible
 # exa Sustituto de ls
