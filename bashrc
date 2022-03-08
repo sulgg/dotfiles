@@ -70,6 +70,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 # Cargo is the Rust builder and package manager
 export PATH="$HOME/.cargo/bin:$PATH"
+# bat color theme
+export BAT_THEME="ansi"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
