@@ -15,7 +15,7 @@ eval "$(starship init bash)"
 
 # [brew] bash-completation must be installed.
 # It includes git-prompt.sh and git-completion.bash
-[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # *Rust - herramientas cli brutales*
 # Starship promt increible
@@ -39,12 +39,6 @@ alias ll='exa -la'
 alias lll='exa -la --tree'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
-
-alias grep='rg'
-
-alias vf='cd /Volumes/usbd/1_mega/src'
-alias dw='cd /Volumes/usbd/1_downloads'
-alias usb='cd /Volumes/usbd'
 
 # environment variables ######################################################
 
