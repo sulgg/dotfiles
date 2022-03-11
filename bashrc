@@ -42,12 +42,6 @@ alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
 
 # environment variables ######################################################
 
-# java
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home'
-# To make sure that the correct binaries for that Java version are called, you
-# also should add the following somewhere after the above statement:
-export PATH=$JAVA_HOME/bin:$PATH
-
 # [brew] man pages. export and ${var-default_value} must be passed
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH-/usr/share/man}"
 export MANPATH="/usr/local/opt/findutils/libexec/gnuman/:$MANPATH"
