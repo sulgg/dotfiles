@@ -30,10 +30,6 @@ alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
 
 # environment variables ######################################################
 
-# [brew] man pages. export and ${var-default_value} must be passed
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH-/usr/share/man}"
-export MANPATH="/usr/local/opt/findutils/libexec/gnuman/:$MANPATH"
-
 # [brew]
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
