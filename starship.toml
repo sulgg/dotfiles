@@ -1,0 +1,3 @@
+#Show conda base env when active
+[conda]
+ignore_base = false
