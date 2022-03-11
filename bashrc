@@ -15,7 +15,6 @@ HISTSIZE=10000
 HISTFILESIZE=20000
 
 # aliases ####################################################################
-alias vi='nvim'
 alias vim='nvim'
 alias l='exa -l'
 alias ll='exa -la'
@@ -23,14 +22,8 @@ alias lll='exa -la --tree'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
 
-# [brew] bash-completation must be installed.
-# It includes git-prompt.sh and git-completion.bash
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-# environment variables ######################################################
-
-# [brew] Add Homebrew's executable directory to the front of the PATH
-export PATH="/usr/local/sbin:$PATH"
+# [brew] [bash-completion@2] avoid conflicts with bash-completion:
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 # Since OS Catalina the default shell is zsh, this avoid the warning:
 export BASH_SILENCE_DEPRECATION_WARNING=1
