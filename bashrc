@@ -17,18 +17,6 @@ eval "$(starship init bash)"
 # It includes git-prompt.sh and git-completion.bash
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-# *Rust - herramientas cli brutales*
-# Starship promt increible
-# exa Sustituto de ls
-# fd Sustituto de find
-# rg Ripgrep. Sustituto de grep
-# procs sustituto de ps
-# tealdeer sustituto de man
-# dust sustituto de du
-# tokei Cuenta el total de lines de codigo
-# sk Skim. Fuzzy Finder for bash and vim <- Aprender a usar
-# bat sustituto de cat
-
 # aliases ####################################################################
 
 alias vi='nvim'
