@@ -4,17 +4,7 @@ eval "$(starship init bash)"
 # default editor
 export EDITOR=/usr/local/bin/nvim
 
-# don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=20000
-
-# aliases ####################################################################
+# aliase
 alias vim='nvim'
 alias l='exa -l'
 alias ll='exa -la'
