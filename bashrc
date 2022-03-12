@@ -1,10 +1,10 @@
-# Starship prompt
+# [Starship] prompt
 eval "$(starship init bash)"
 
-# default editor
+# [nvim] default editor
 export EDITOR=/usr/local/bin/nvim
 
-# aliase
+# aliases
 alias vim='nvim'
 alias l='exa -l'
 alias ll='exa -la'
@@ -21,7 +21,7 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # [rust] Cargo is the Rust builder and package manager
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# bat color theme
+# [bat] color theme
 export BAT_THEME="ansi"
 
 # >>> conda initialize >>>
