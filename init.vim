@@ -41,6 +41,8 @@ highlight ErrorMsg ctermfg=White ctermbg=Red guifg=White guibg=Red
 highlight Search ctermfg=Black ctermbg=Yellow guifg=Black guibg=Yellow
 highlight IncSearch ctermfg=Red ctermbg=White  guifg=Red guibg=White
 
+"highlight yank selection using 'Search' higroup
+au TextYankPost * silent! lua vim.highlight.on_yank{higroup="Search", timeout=700}
 
 "Always use [x]noremap as Steve Losh says ---------------------------- mappings
 "insert corresponding closing character
@@ -79,3 +81,7 @@ nnoremap <leader>t :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
 nnoremap <leader>f :RustFmt<bar>wa<bar>Ctest<cr>i
 "[rust-lang/rust.vim] format, write, run cargo bench, insert
 nnoremap <leader>b :RustFmt<bar>wa<bar>Cbench<cr>i
+
+"<esta conf se debe modificar cada vez que se ocupe un conda env diferente :( >
+"Solo para trabajar con el conda env llamado adl
+let g:python3_host_prog='/Volumes/usb1/users/user1/miniconda3/envs/adl/bin/python3'
