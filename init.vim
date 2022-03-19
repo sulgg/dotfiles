@@ -80,7 +80,3 @@ nnoremap <leader>t :RustFmt<bar>wa<bar>RustTest -- --show-output<cr>
 nnoremap <leader>f :RustFmt<bar>wa<bar>Ctest<cr>i
 "[rust-lang/rust.vim] format, write, run cargo bench, insert
 nnoremap <leader>b :RustFmt<bar>wa<bar>Cbench<cr>i
-
-"<esta conf se debe modificar cada vez que se ocupe un conda env diferente :( >
-"Solo para trabajar con el conda env llamado adl
-let g:python3_host_prog='/Volumes/usb1/users/user1/miniconda3/envs/adl/bin/python3'
