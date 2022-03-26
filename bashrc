@@ -1,8 +1,11 @@
+# [apple silicon brew] path
+export PATH="/opt/homebrew/bin:$PATH"
+
 # [Starship] prompt
 eval "$(starship init bash)"
 
-# [nvim] default editor
-export EDITOR=/usr/local/bin/nvim
+# [apple silicon brew] nvim as default editor
+export EDITOR=/opt/homebrew/bin/nvim
 
 # aliases
 alias vim='nvim'
