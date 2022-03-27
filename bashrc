@@ -29,14 +29,14 @@ export BAT_THEME="ansi"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Volumes/usb1/users/user1/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/raiz/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Volumes/usb1/users/user1/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Volumes/usb1/users/user1/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/raiz/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/raiz/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Volumes/usb1/users/user1/miniconda3/bin:$PATH"
+        export PATH="/Users/raiz/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
