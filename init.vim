@@ -1,3 +1,4 @@
+" location of init.vim soft link: ~/.config/nvim
 "Plugin manager by junegunn/vim-plug ---------------------------------- plugins
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
@@ -17,4 +18,5 @@ Plug 'akinsho/bufferline.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
+" location of init.lua soft link: ~/.config/nvim/lua
 lua require('init')
