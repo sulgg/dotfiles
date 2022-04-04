@@ -51,15 +51,15 @@ vim.opt.background = 'light'
 require('ayu').colorscheme()
 require('ayu').setup({})
 
+require('gitsigns').setup()
+
+require('lualine').setup()
+
 require("bufferline").setup {
 	options = {
 		numbers = "buffer_id",
 	}
 }
-
-require('gitsigns').setup()
-
-require('lualine').setup()
 
 require'nvim-treesitter.configs'.setup {
     --deben instalarse via TSInstall
