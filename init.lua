@@ -48,9 +48,13 @@ map('n', '<leader>i', ':IndentBlanklineToggle<cr>')
 vim.opt.termguicolors = true
 vim.opt.background = 'light'
 
--- [marko-cerovac/material.nvim] 
-vim.g.material_style = "lighter"
-vim.cmd 'colorscheme material'
+require('ayu').colorscheme()
+require('ayu').setup({
+    -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+    mirage = false, 
+    -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+    overrides = {}, 
+})
 
 require("bufferline").setup {
 	options = {

@@ -10,7 +10,7 @@ Plug 'rust-lang/rust.vim', {'for': 'rust'}
 "lua
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'marko-cerovac/material.nvim'
+Plug 'Shatur/neovim-ayu'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'windwp/nvim-autopairs'
