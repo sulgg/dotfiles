@@ -49,12 +49,7 @@ vim.opt.termguicolors = true
 vim.opt.background = 'light'
 
 require('ayu').colorscheme()
-require('ayu').setup({
-    -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-    mirage = false, 
-    -- A dictionary with a group names associated with a dictionary with parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
-    overrides = {}, 
-})
+require('ayu').setup({})
 
 require("bufferline").setup {
 	options = {
