@@ -4,9 +4,7 @@ Plug 'tpope/vim-sensible' "<-NEVER DELETE. It is the basic conf set
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'airblade/vim-gitgutter'
 "Others
-Plug 'mattn/emmet-vim', {'for': 'html'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 "lua
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -16,6 +14,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'windwp/nvim-autopairs'
 Plug 'akinsho/bufferline.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
 lua require('init')
