@@ -41,6 +41,8 @@ map('n', '<leader>o', 'o<esc>')
 map('n', '<leader>O', 'O<esc>')
 -- [lukas-reineke/indent-blankline.nvim] toggle indentLine
 map('n', '<leader>i', ':IndentBlanklineToggle<cr>')
+-- [BuferLine] easy selection of a buffer in view
+map('n', 'gb', ':BufferLinePick<CR>', {silent = true})
 
 -- ########################################################
 
@@ -55,11 +57,7 @@ require('gitsigns').setup()
 
 require('lualine').setup()
 
-require("bufferline").setup {
-	options = {
-		numbers = "buffer_id",
-	}
-}
+require("bufferline").setup()
 
 require'nvim-treesitter.configs'.setup {
     --deben instalarse via TSInstall
