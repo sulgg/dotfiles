@@ -1,4 +1,3 @@
--- Most of the config is in tpope/vim-sensible
 --insert space(s) whenever <tab> key is pressed
 vim.opt.expandtab = true
 --number of spaces <tab> counts for
@@ -55,7 +54,14 @@ require('ayu').setup({})
 
 require('gitsigns').setup()
 
-require('lualine').setup()
+local function mifunc()
+	return os.getenv("CONDA_DEFAULT_ENV")
+end
+require('lualine').setup {
+  sections = {
+    lualine_x = {{ mifunc }, 'encoding', 'fileformat', 'filetype'},
+  },
+}
 
 require("bufferline").setup()
 
