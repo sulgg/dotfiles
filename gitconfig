@@ -1,21 +1,28 @@
 [user]
     name = Saul Guillermo
     email = code@saul.gg
+
 [core]
     autocrlf = input
     safecrlf = true
     editor = nvim
-    pager = less --quit-if-one-screen --no-init
+    pager = delta
+
 [push]
     default = simple
+
 [color]
     ui = auto
+
 [diff]
-    tool = vimdiff2
+    colorMoved = default
+
 [difftool]
     prompt = false
+
 [merge]
-    tool = vimdiff2
+    conflictstyle = diff3
+
 [alias]
     l = log --pretty=format:'%C(auto)%ad %h %s%d' --graph --all --max-count=30 --date=short
     ll = log --pretty=format:'%C(auto)%ad %h %s%d [%an]' --graph --all --date=short
@@ -26,3 +33,10 @@
     ba = branch -a
     d = diff
     dt= difftool
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    side-by-side = true
