@@ -21,7 +21,8 @@ vim.opt.backupcopy = 'yes'
 --visible text markers rather than invisible
 vim.opt.foldmethod = 'marker'
 --big font size in gui
-vim.opt.guifont = 'monospace:h20'
+-- vim.opt.guifont = 'monospace:h20'
+vim.opt.guifont = 'MesloLGM Nerd Font:h20'
 
 -- ################### Mappings ###########################
 -- Functional wrapper for mapping custom keybindings
