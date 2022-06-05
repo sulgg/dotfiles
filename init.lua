@@ -70,15 +70,6 @@ require('lualine').setup {
 require("bufferline").setup()
 
 -- ########## firenvim ###################################
--- if vim.fn.exists(vim.g.started_by_firenvim) then
---     vim.opt.laststatus=0
---     vim.opt.showtabline=0
---     require('lualine').setup {
---         options = {
---             disabled_filetypes = {'python'}
---         },
---     }
--- end
 
 local whitelistedSites = {"http://localhost:8888/*"}
 local localSettings = {
