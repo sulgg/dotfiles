@@ -6,6 +6,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 "Others
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 "lua
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
