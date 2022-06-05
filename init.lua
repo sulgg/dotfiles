@@ -64,6 +64,7 @@ require('lualine').setup {
   sections = {
     lualine_x = {{ mifunc }, 'encoding', 'fileformat', 'filetype'},
   },
+  extensions = {'fugitive'},
 }
 
 require("bufferline").setup()
