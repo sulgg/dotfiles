@@ -68,6 +68,32 @@ require('lualine').setup {
 
 require("bufferline").setup()
 
+-- ########## firenvim ###################################
+-- if vim.fn.exists(vim.g.started_by_firenvim) then
+--     vim.opt.laststatus=0
+--     vim.opt.showtabline=0
+--     require('lualine').setup {
+--         options = {
+--             disabled_filetypes = {'python'}
+--         },
+--     }
+-- end
+
+local whitelistedSites = {"http://localhost:8888/*"}
+local localSettings = {
+    [".*"] = {
+        cmdline = "nvim",
+        takeover = "never"
+    }
+}
+for _, site in pairs(whitelistedSites) do
+    localSettings[site] = { takeover = "always" }
+end
+
+vim.g.firenvim_config = {
+    localSettings = localSettings
+}
+
 require'nvim-treesitter.configs'.setup {
     --deben instalarse via TSInstall
     ensure_installed = {
