@@ -9,9 +9,9 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 # aliases
 alias vim='nvim'
-alias l='exa -l'
-alias ll='exa -la'
-alias lll='exa -la --tree'
+alias l='exa'
+alias ll='exa -l'
+alias lll='exa -la'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
 
