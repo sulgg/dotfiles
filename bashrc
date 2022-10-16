@@ -42,3 +42,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 export PATH="/opt/homebrew/sbin:$PATH"
+
+export SPARK_HOME="/opt/homebrew/Cellar/apache-spark/3.3.0/libexec"
