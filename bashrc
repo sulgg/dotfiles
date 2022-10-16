@@ -14,6 +14,8 @@ alias ll='exa -l'
 alias lll='exa -la'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
+#if using kitty terminal, allow to use kitty keymapping in ssh
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
 
 # [brew] [bash-completion@2] avoid conflicts with bash-completion:
 [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
