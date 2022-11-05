@@ -9,8 +9,8 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 # aliases
 alias vim='nvim'
-alias l='exa'
-alias ll='exa -l'
+alias ll='exa'
+alias l='exa -l'
 alias lll='exa -la'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
@@ -24,7 +24,6 @@ alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # [rust] Cargo is the Rust builder and package manager
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # [bat] color theme
 export BAT_THEME="ansi"
@@ -45,3 +44,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 export PATH="/opt/homebrew/sbin:$PATH"
 
+. "$HOME/.cargo/env"
