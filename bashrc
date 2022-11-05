@@ -23,8 +23,6 @@ alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse'
 # Since OS Catalina the default shell is zsh, this avoid the warning:
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# [rust] Cargo is the Rust builder and package manager
-
 # [bat] color theme
 export BAT_THEME="ansi"
 
@@ -44,4 +42,5 @@ unset __conda_setup
 # <<< conda initialize <<<
 export PATH="/opt/homebrew/sbin:$PATH"
 
+# [rust] Cargo is the Rust builder and package manager
 . "$HOME/.cargo/env"
