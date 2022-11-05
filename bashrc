@@ -44,3 +44,6 @@ export PATH="/opt/homebrew/sbin:$PATH"
 
 # [rust] Cargo is the Rust builder and package manager
 . "$HOME/.cargo/env"
+
+# vim is the man pager
+export MANPAGER='nvim +Man!'
