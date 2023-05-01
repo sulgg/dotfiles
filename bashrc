@@ -47,3 +47,6 @@ export PATH="/opt/homebrew/sbin:$PATH"
 
 # vim is the man pager
 export MANPAGER='nvim +Man!'
+
+# postgres
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
