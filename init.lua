@@ -80,8 +80,20 @@ require("lazy").setup(
                 configs.setup()
             end
     },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        opts = {
+            disable_filetype = { "TelescopePrompt" , "vim" },
+            check_ts = true,
+            ts_config = {
+                lua = {'string'},-- it will not add a pair on that treesitter node
+                javascript = {'template_string'},
+                java = false,-- don't check treesitter on java
+            }
+        }
+    },
     'lewis6991/gitsigns.nvim',
-    'windwp/nvim-autopairs',
     }
 )
 
@@ -139,13 +151,5 @@ map('n', 'gb', ':BufferLinePick<CR>', {silent = true})
 
 -- ########################################################
 
-require('nvim-autopairs').setup({
-    disable_filetype = { "TelescopePrompt" , "vim" },
-    check_ts = true,
-    ts_config = {
-        lua = {'string'},-- it will not add a pair on that treesitter node
-        javascript = {'template_string'},
-        java = false,-- don't check treesitter on java
-    }
-})
 local ts_conds = require('nvim-autopairs.ts-conds')
+
