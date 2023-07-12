@@ -75,10 +75,7 @@ require("lazy").setup(
         'akinsho/bufferline.nvim',
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
-        config = function()
-                local configs = require('bufferline')
-                configs.setup()
-            end
+        opts = {}
     },
     {
         'windwp/nvim-autopairs',
