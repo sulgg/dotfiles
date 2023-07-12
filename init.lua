@@ -32,6 +32,7 @@ require("lazy").setup({
 	"tpope/vim-fugitive",
 	"tpope/vim-commentary",
 	"tpope/vim-surround",
+	"lewis6991/gitsigns.nvim",
 	"nvim-tree/nvim-web-devicons",
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -122,7 +123,6 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {},
 	},
-	"lewis6991/gitsigns.nvim",
 })
 
 --colors
