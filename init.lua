@@ -24,7 +24,7 @@ require("lazy").setup(
     'tpope/vim-fugitive',
     'tpope/vim-commentary',
     'tpope/vim-surround',
-    'kyazdani42/nvim-web-devicons',
+    'nvim-tree/nvim-web-devicons',
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -59,7 +59,6 @@ require("lazy").setup(
             configs.colorscheme()
 	    end
     },
-    --TODO: 'kyazdani42/nvim-web-devicons',
     {
         'nvim-lualine/lualine.nvim',
         config = {
@@ -72,9 +71,17 @@ require("lazy").setup(
             },
         }
     },
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = function()
+                local configs = require('bufferline')
+                configs.setup()
+            end
+    },
+    'lewis6991/gitsigns.nvim',
     'windwp/nvim-autopairs',
-    'akinsho/bufferline.nvim',
-    'lewis6991/gitsigns.nvim'
     }
 )
 
@@ -106,7 +113,7 @@ vim.opt.backupcopy = 'yes'
 vim.opt.foldmethod = 'marker'
 --big font size in gui
 -- vim.opt.guifont = 'monospace:h20'
-vim.opt.guifont = 'MesloLGM Nerd Font:h20'
+-- vim.opt.guifont = 'MesloLGM Nerd Font:h20'
 
 -- ################### Mappings ###########################
 -- Functional wrapper for mapping custom keybindings
@@ -131,10 +138,6 @@ map('n', '<leader>i', ':IndentBlanklineToggle<cr>')
 map('n', 'gb', ':BufferLinePick<CR>', {silent = true})
 
 -- ########################################################
-
-require('gitsigns').setup()
-
-require("bufferline").setup()
 
 require('nvim-autopairs').setup({
     disable_filetype = { "TelescopePrompt" , "vim" },
