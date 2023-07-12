@@ -1,3 +1,87 @@
+--lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+--show conda env in lualine
+local function mifunc()
+	return os.getenv("CONDA_DEFAULT_ENV")
+end
+
+-- lazy.nvim conf
+require("lazy").setup(
+    {
+    'tpope/vim-sensible',
+    'tpope/vim-fugitive',
+    'tpope/vim-commentary',
+    'tpope/vim-surround',
+    'kyazdani42/nvim-web-devicons',
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function ()
+            local configs = require("nvim-treesitter.configs")
+            configs.setup({
+                ensure_installed = { "python", "markdown", "css", "html",
+                        "javascript", "lua", "typescript", "yaml", "vim" },
+                sync_install = false,
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = false,
+                    use_languagetree = true,
+                },
+                indent = { enable = true },
+            })
+        end
+    },
+    {
+        'lukas-reineke/indent-blankline.nvim',
+        config = {
+                enabled = 'off',
+                use_treesitter = true,
+                show_current_context = true,
+                show_current_context_start = true,
+            }
+    },
+    {
+        'Shatur/neovim-ayu',
+        config = function()
+            local configs = require('ayu')
+            configs.colorscheme()
+	    end
+    },
+    --TODO: 'kyazdani42/nvim-web-devicons',
+    {
+        'nvim-lualine/lualine.nvim',
+        config = {
+            sections = {
+                lualine_x = {{ mifunc }, 'encoding', 'fileformat', 'filetype'},
+            },
+		extensions = {'fugitive'},
+		options = {
+                theme = 'ayu',
+            },
+        }
+    },
+    'windwp/nvim-autopairs',
+    'akinsho/bufferline.nvim',
+    'lewis6991/gitsigns.nvim'
+    }
+)
+
+--colors
+vim.opt.termguicolors = true
+vim.opt.background = 'light'
+
 --insert space(s) whenever <tab> key is pressed
 vim.opt.expandtab = true
 --number of spaces <tab> counts for
@@ -48,63 +132,9 @@ map('n', 'gb', ':BufferLinePick<CR>', {silent = true})
 
 -- ########################################################
 
---colors
-vim.opt.termguicolors = true
-vim.opt.background = 'light'
-
-require('ayu').colorscheme()
-require('ayu').setup({})
-
 require('gitsigns').setup()
 
-local function mifunc()
-	return os.getenv("CONDA_DEFAULT_ENV")
-end
-require('lualine').setup {
-  sections = {
-    lualine_x = {{ mifunc }, 'encoding', 'fileformat', 'filetype'},
-  },
-  extensions = {'fugitive'},
-}
-
 require("bufferline").setup()
-
--- ########## firenvim ###################################
-
-local whitelistedSites = {"http://localhost:8888/*"}
-local localSettings = {
-    [".*"] = {
-        cmdline = "nvim",
-        takeover = "never"
-    }
-}
-for _, site in pairs(whitelistedSites) do
-    localSettings[site] = { takeover = "always" }
-end
-
-vim.g.firenvim_config = {
-    localSettings = localSettings
-}
-
-require'nvim-treesitter.configs'.setup {
-    --deben instalarse via TSInstall
-    ensure_installed = {
-        "css",
-        "html",
-        "javascript",
-        "lua",
-        "python",
-        "svelte",
-        "typescript",
-        "yaml",
-        "vim"
-    },
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-        use_languagetree = true,
-    },
-}
 
 require('nvim-autopairs').setup({
     disable_filetype = { "TelescopePrompt" , "vim" },
@@ -116,10 +146,3 @@ require('nvim-autopairs').setup({
     }
 })
 local ts_conds = require('nvim-autopairs.ts-conds')
-
-require("indent_blankline").setup {
-    enabled = 'off',
-    use_treesitter = true,
-    show_current_context = true,
-    show_current_context_start = true,
-}
