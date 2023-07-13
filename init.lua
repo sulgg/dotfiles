@@ -1,4 +1,4 @@
--- De vez en cuando dar formato con StyLua asi:
+-- from time to time format this file with stylua:
 -- brew install stylua (si es que no esta instalado)
 -- stylua init.lua
 
