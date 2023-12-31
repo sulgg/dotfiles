@@ -11,7 +11,7 @@ export EDITOR=/opt/homebrew/bin/nvim
 alias vim='nvim'
 alias ll='exa --group-directories-first'
 alias l='exa -l --group-directories-first'
-alias lll='exa -la --group-directories-first'
+alias la='exa -la --group-directories-first'
 alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse --group-directories-first'
 alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse --group-directories-first'
 #if using kitty terminal, allow to use kitty keymapping in ssh
