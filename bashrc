@@ -18,7 +18,7 @@ alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse --group-direct
 [[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
 
 # [brew] [bash-completion@2] avoid conflicts with bash-completion:
-[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 # Since OS Catalina the default shell is zsh, this avoid the warning:
 export BASH_SILENCE_DEPRECATION_WARNING=1
