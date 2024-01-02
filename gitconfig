@@ -17,9 +17,6 @@
 [diff]
     colorMoved = default
 
-[difftool]
-    prompt = false
-
 [merge]
     conflictstyle = diff3
 
@@ -32,7 +29,6 @@
     br = branch
     ba = branch -a
     d = diff
-    dt= difftool
 
 [interactive]
     diffFilter = delta --color-only
@@ -41,4 +37,4 @@
     navigate = true  # use n and N to move between diff sections
     side-by-side = true
 [init]
-	defaultBranch = master
+	defaultBranch = main
