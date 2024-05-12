@@ -37,43 +37,8 @@ require("lazy").setup({
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		config = function()
-			local configs = require("nvim-treesitter.configs")
-			configs.setup({
-				ensure_installed = {
-					"python",
-					"markdown",
-					"css",
-					"html",
-					"javascript",
-					"lua",
-					"typescript",
-					"yaml",
-					"toml",
-					"vim",
-					"diff",
-					"bash",
-					"git_config",
-					"git_rebase",
-					"gitignore",
-					"gitcommit",
-					"json",
-					"regex",
-					"rust",
-					"sql",
-					"vimdoc",
-				},
-				sync_install = false,
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = false,
-					use_languagetree = true,
-				},
-				indent = { enable = true },
-			})
-		end,
-	},
-	{
+    },
+        {
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
 		lazy = false,
@@ -100,14 +65,13 @@ require("lazy").setup({
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		config = {
+		opts = {
+            requires = { 'nvim-tree/nvim-web-devicons', opt = true },
 			sections = {
 				lualine_x = { { mifunc }, "encoding", "fileformat", "filetype" },
 			},
 			extensions = { "fugitive" },
-			options = {
-				theme = "ayu",
-			},
+		    theme = "ayu",
 		},
 	},
 	{
