@@ -57,24 +57,6 @@ require("lazy").setup({
 		},
 	},
 	{
-		"Shatur/neovim-ayu",
-		config = function()
-			local configs = require("ayu")
-			configs.colorscheme()
-		end,
-	},
-	{
-		"nvim-lualine/lualine.nvim",
-		opts = {
-            requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-			sections = {
-				lualine_x = { { mifunc }, "encoding", "fileformat", "filetype" },
-			},
-			extensions = { "fugitive" },
-		    theme = "ayu",
-		},
-	},
-	{
 		"akinsho/bufferline.nvim",
 		version = "*",
 		dependencies = "nvim-tree/nvim-web-devicons",
@@ -85,11 +67,28 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {},
 	},
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000
+    },
+	{
+		"nvim-lualine/lualine.nvim",
+		opts = {
+		    theme = "catppuccin",
+            requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+			sections = {
+				lualine_x = { { mifunc }, "encoding", "fileformat", "filetype" },
+			},
+			extensions = { "fugitive" },
+		},
+	},
 })
 
 --colors
 vim.opt.termguicolors = true
 vim.opt.background = "light"
+vim.cmd.colorscheme "catppuccin"
 
 --insert space(s) whenever <tab> key is pressed
 vim.opt.expandtab = true
