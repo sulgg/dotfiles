@@ -86,11 +86,9 @@ require("lazy").setup({
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		config = {
-			enabled = "off",
-			use_treesitter = true,
-			show_current_context = true,
-			show_current_context_start = true,
+        main = "ibl",
+		opts = {
+			enabled = false,
 		},
 	},
 	{
@@ -173,7 +171,7 @@ map("n", "<leader>;", "A;<esc>")
 map("n", "<leader>o", "o<esc>")
 map("n", "<leader>O", "O<esc>")
 -- [lukas-reineke/indent-blankline.nvim] toggle indentLine
-map("n", "<leader>i", ":IndentBlanklineToggle<cr>")
+map("n", "<leader>i", ":IBLToggle<cr>")
 -- [BuferLine] easy selection of a buffer in view
 map("n", "gb", ":BufferLinePick<CR>", { silent = true })
 
