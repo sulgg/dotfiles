@@ -9,11 +9,11 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 # aliases
 alias vim='nvim'
-alias ll='exa --group-directories-first'
-alias l='exa -l --group-directories-first'
-alias la='exa -la --group-directories-first'
-alias l1='exa --git-ignore --tree --level=1 --sort=type --reverse --group-directories-first'
-alias l2='exa --git-ignore --tree --level=2 --sort=type --reverse --group-directories-first'
+alias ll='eza --group-directories-first'
+alias l='eza -l --group-directories-first'
+alias la='eza -la --group-directories-first'
+alias l1='eza --git-ignore --tree --level=1 --sort=type --reverse --group-directories-first'
+alias l2='eza --git-ignore --tree --level=2 --sort=type --reverse --group-directories-first'
 #if using kitty terminal, allow to use kitty keymapping in ssh
 [[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
 
