@@ -6,7 +6,6 @@
     autocrlf = input
     safecrlf = true
     editor = nvim
-    pager = delta
 
 [push]
     default = simple
@@ -30,12 +29,6 @@
     ba = branch -a
     d = diff
 
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    navigate = true  # use n and N to move between diff sections
-    side-by-side = true
 [init]
 	defaultBranch = main
 [credential]
