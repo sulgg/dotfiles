@@ -9,8 +9,8 @@ export EDITOR=/opt/homebrew/bin/nvim
 
 # aliases
 alias vim='nvim'
-alias ll='eza --group-directories-first'
-alias l='eza -l --group-directories-first'
+alias l='eza --group-directories-first'
+alias ll='eza -l --group-directories-first'
 alias la='eza -la --group-directories-first'
 alias l1='eza --git-ignore --tree --level=1 --sort=type --reverse --group-directories-first'
 alias l2='eza --git-ignore --tree --level=2 --sort=type --reverse --group-directories-first'
