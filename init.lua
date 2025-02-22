@@ -40,7 +40,10 @@ require("lazy").setup(
             "tpope/vim-sensible",
             "tpope/vim-fugitive",
             "lewis6991/gitsigns.nvim",
-            "nvim-tree/nvim-web-devicons",
+            {
+                "nvim-tree/nvim-web-devicons",
+                opts = {}
+            },
             {
                 "nvim-treesitter/nvim-treesitter",
                 build = ":TSUpdate"
