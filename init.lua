@@ -39,7 +39,6 @@ require("lazy").setup(
         spec = {
             "tpope/vim-sensible",
             "tpope/vim-fugitive",
-            "tpope/vim-commentary",
             "lewis6991/gitsigns.nvim",
             "nvim-tree/nvim-web-devicons",
             {
@@ -65,6 +64,10 @@ require("lazy").setup(
                     require("nvim-surround").setup({})
                 end
             },
+	    {
+		    'numToStr/Comment.nvim',
+		    opts = {}
+	    },
             {
                 "lukas-reineke/indent-blankline.nvim",
                 main = "ibl",
