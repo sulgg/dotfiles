@@ -31,13 +31,12 @@ require("lazy").setup({
 	"tpope/vim-sensible",
 	"tpope/vim-fugitive",
 	"tpope/vim-commentary",
-	"tpope/vim-surround",
 	"lewis6991/gitsigns.nvim",
 	"nvim-tree/nvim-web-devicons",
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-    },
+	},
         {
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -50,8 +49,17 @@ require("lazy").setup({
 		end,
 	},
 	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+			})
+		end
+	},
+	{
 		"lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
+		main = "ibl",
 		opts = {
 			enabled = false,
 		},
@@ -67,16 +75,16 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {},
 	},
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000
-    },
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000
+	},
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = {
-		    theme = "catppuccin",
-            requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+			theme = "catppuccin",
+			requires = { 'nvim-tree/nvim-web-devicons', opt = true },
 			sections = {
 				lualine_x = { { mifunc }, "encoding", "fileformat", "filetype" },
 			},
