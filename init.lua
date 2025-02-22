@@ -7,91 +7,101 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
---lazy.nvim
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+    local out = vim.fn.system({"git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath})
+    if vim.v.shell_error ~= 0 then
+        vim.api.nvim_echo(
+            {
+                {"Failed to clone lazy.nvim:\n", "ErrorMsg"},
+                {out, "WarningMsg"},
+                {"\nPress any key to exit..."}
+            },
+            true,
+            {}
+        )
+        vim.fn.getchar()
+        os.exit(1)
+    end
 end
 vim.opt.rtp:prepend(lazypath)
 
 --show conda env in lualine
 local function mifunc()
-	return os.getenv("CONDA_DEFAULT_ENV")
+    return os.getenv("CONDA_DEFAULT_ENV")
 end
 
 -- lazy.nvim conf
-require("lazy").setup({
-	"tpope/vim-sensible",
-	"tpope/vim-fugitive",
-	"tpope/vim-commentary",
-	"lewis6991/gitsigns.nvim",
-	"nvim-tree/nvim-web-devicons",
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-	},
-        {
-		"nvim-tree/nvim-tree.lua",
-		version = "*",
-		lazy = false,
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("nvim-tree").setup({})
-		end,
-	},
-	{
-		"kylechui/nvim-surround",
-		version = "*", -- Use for stability; omit to use `main` branch for the latest features
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({
-			})
-		end
-	},
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {
-			enabled = false,
-		},
-	},
-	{
-		"akinsho/bufferline.nvim",
-		version = "*",
-		dependencies = "nvim-tree/nvim-web-devicons",
-		opts = {},
-	},
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		opts = {},
-	},
-	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000
-	},
-	{
-		"nvim-lualine/lualine.nvim",
-		opts = {
-			theme = "catppuccin",
-			requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-			sections = {
-				lualine_x = { { mifunc }, "encoding", "fileformat", "filetype" },
-			},
-			extensions = { "fugitive" },
-		},
-	},
-})
+require("lazy").setup(
+    {
+        spec = {
+            "tpope/vim-sensible",
+            "tpope/vim-fugitive",
+            "tpope/vim-commentary",
+            "lewis6991/gitsigns.nvim",
+            "nvim-tree/nvim-web-devicons",
+            {
+                "nvim-treesitter/nvim-treesitter",
+                build = ":TSUpdate"
+            },
+            {
+                "nvim-tree/nvim-tree.lua",
+                version = "*",
+                lazy = false,
+                dependencies = {
+                    "nvim-tree/nvim-web-devicons"
+                },
+                config = function()
+                    require("nvim-tree").setup({})
+                end
+            },
+            {
+                "kylechui/nvim-surround",
+                version = "*", -- Use for stability; omit to use `main` branch for the latest features
+                event = "VeryLazy",
+                config = function()
+                    require("nvim-surround").setup({})
+                end
+            },
+            {
+                "lukas-reineke/indent-blankline.nvim",
+                main = "ibl",
+                opts = {
+                    enabled = false
+                }
+            },
+            {
+                "akinsho/bufferline.nvim",
+                version = "*",
+                dependencies = "nvim-tree/nvim-web-devicons",
+                opts = {}
+            },
+            {
+                "windwp/nvim-autopairs",
+                event = "InsertEnter",
+                opts = {}
+            },
+            {
+                "catppuccin/nvim",
+                name = "catppuccin",
+                priority = 1000
+            },
+            {
+                "nvim-lualine/lualine.nvim",
+                opts = {
+                    theme = "catppuccin",
+                    requires = {"nvim-tree/nvim-web-devicons", opt = true},
+                    sections = {
+                        lualine_x = {{mifunc}, "encoding", "fileformat", "filetype"}
+                    },
+                    extensions = {"fugitive"}
+                }
+            }
+        }
+    }
+)
 
 --colors
 vim.opt.termguicolors = true
@@ -127,12 +137,12 @@ vim.opt.foldmethod = "marker"
 -- ################### Mappings ###########################
 -- Functional wrapper for mapping custom keybindings
 function map(mode, lhs, rhs, opts)
-	-- always use noremap as Steve Losh says
-	local options = { noremap = true }
-	if opts then
-		options = vim.tbl_extend("force", options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    -- always use noremap as Steve Losh says
+    local options = {noremap = true}
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 -- Q do nothing in order to avoid entering Ex mode by accident
 map("n", "Q", "<nop>")
@@ -144,19 +154,21 @@ map("n", "<leader>O", "O<esc>")
 -- [lukas-reineke/indent-blankline.nvim] toggle indentLine
 map("n", "<leader>i", ":IBLToggle<cr>")
 -- [BuferLine] easy selection of a buffer in view
-map("n", "gb", ":BufferLinePick<CR>", { silent = true })
+map("n", "gb", ":BufferLinePick<CR>", {silent = true})
 
 -- ########################################################
 
 --nvim-autopairs: You can use treesitter to check for a pair.
 local npairs = require("nvim-autopairs")
 local Rule = require("nvim-autopairs.rule")
-npairs.setup({
-	check_ts = true,
-	ts_config = {
-		lua = { "string" }, -- it will not add a pair on that treesitter node
-		javascript = { "template_string" },
-		java = false, -- don't check treesitter on java
-	},
-})
+npairs.setup(
+    {
+        check_ts = true,
+        ts_config = {
+            lua = {"string"}, -- it will not add a pair on that treesitter node
+            javascript = {"template_string"},
+            java = false -- don't check treesitter on java
+        }
+    }
+)
 local ts_conds = require("nvim-autopairs.ts-conds")
