@@ -64,10 +64,10 @@ require("lazy").setup(
                     require("nvim-surround").setup({})
                 end
             },
-	    {
-		    'numToStr/Comment.nvim',
-		    opts = {}
-	    },
+            {
+                'numToStr/Comment.nvim',
+                opts = {}
+            },
             {
                 "lukas-reineke/indent-blankline.nvim",
                 main = "ibl",
@@ -105,6 +105,9 @@ require("lazy").setup(
         }
     }
 )
+
+require('gitsigns').setup()
+require('Comment').setup()
 
 --colors
 vim.opt.termguicolors = true
