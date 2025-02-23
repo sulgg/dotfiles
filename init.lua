@@ -23,11 +23,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
---show conda env in lualine
-local function mifunc()
-    return os.getenv("CONDA_DEFAULT_ENV")
-end
-
 -- lazy.nvim conf
 require("lazy").setup(
     {
@@ -71,10 +66,7 @@ require("lazy").setup(
                 "nvim-lualine/lualine.nvim",
                 opts = {
                     theme = "catppuccin",
-                    requires = {"nvim-tree/nvim-web-devicons", opt = true},
-                    sections = {
-                        lualine_x = {{mifunc}, "encoding", "fileformat", "filetype"}
-                    },
+                    dependencies = { 'nvim-tree/nvim-web-devicons' }
                 }
             }
         }
