@@ -2,11 +2,6 @@
 -- brew install stylua (si es que no esta instalado)
 -- stylua init.lua
 
--- disable netrw at the very start of your init.lua
--- in order to nvim-tree/nvim-tree.lua works properly
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -49,17 +44,6 @@ require("lazy").setup(
             {
                 "nvim-treesitter/nvim-treesitter",
                 build = ":TSUpdate"
-            },
-            {
-                "nvim-tree/nvim-tree.lua",
-                version = "*",
-                lazy = false,
-                dependencies = {
-                    "nvim-tree/nvim-web-devicons"
-                },
-                config = function()
-                    require("nvim-tree").setup({})
-                end
             },
             {
                 "kylechui/nvim-surround",
