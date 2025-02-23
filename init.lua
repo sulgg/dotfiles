@@ -38,7 +38,6 @@ require("lazy").setup(
     {
         spec = {
             "tpope/vim-sensible",
-            "tpope/vim-fugitive",
             "lewis6991/gitsigns.nvim",
             {
                 "nvim-tree/nvim-web-devicons",
