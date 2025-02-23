@@ -79,12 +79,6 @@ require("lazy").setup(
                 }
             },
             {
-                "akinsho/bufferline.nvim",
-                version = "*",
-                dependencies = "nvim-tree/nvim-web-devicons",
-                opts = {}
-            },
-            {
                 "windwp/nvim-autopairs",
                 event = "InsertEnter",
                 opts = {}
@@ -162,8 +156,6 @@ map("n", "<leader>o", "o<esc>")
 map("n", "<leader>O", "O<esc>")
 -- [lukas-reineke/indent-blankline.nvim] toggle indentLine
 map("n", "<leader>i", ":IBLToggle<cr>")
--- [BuferLine] easy selection of a buffer in view
-map("n", "gb", ":BufferLinePick<CR>", {silent = true})
 
 -- ########################################################
 
