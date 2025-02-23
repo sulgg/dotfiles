@@ -58,13 +58,6 @@ require("lazy").setup(
                 opts = {}
             },
             {
-                "lukas-reineke/indent-blankline.nvim",
-                main = "ibl",
-                opts = {
-                    enabled = false
-                }
-            },
-            {
                 "windwp/nvim-autopairs",
                 event = "InsertEnter",
                 opts = {}
@@ -82,7 +75,6 @@ require("lazy").setup(
                     sections = {
                         lualine_x = {{mifunc}, "encoding", "fileformat", "filetype"}
                     },
-                    extensions = {"fugitive"}
                 }
             }
         }
@@ -140,8 +132,6 @@ map("n", "<leader>;", "A;<esc>")
 -- insert [count] blank lines
 map("n", "<leader>o", "o<esc>")
 map("n", "<leader>O", "O<esc>")
--- [lukas-reineke/indent-blankline.nvim] toggle indentLine
-map("n", "<leader>i", ":IBLToggle<cr>")
 
 -- ########################################################
 
