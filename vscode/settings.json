@@ -1,4 +1,4 @@
-// this fiel should be located in: /Users/raiz/Library/Application Support/Code/User
+// this file should be located in: /Users/raiz/Library/Application Support/Code/User
 {
     "jupyter.jupyterCommandLineArguments": [],
     "notebook.scrolling.revealNextCellOnExecute": "none",
@@ -18,14 +18,14 @@
     //security
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": false,
-    // editor
     //**************************************
+    // editor
     "editor.formatOnSave": false,
     "editor.guides.indentation": false,
     "editor.minimap.enabled": false,
+    //diff
     "diffEditor.ignoreTrimWhitespace": false,
     //**************************************
     "editor.fontFamily": "monolisa, Menlo, Monaco, 'Courier New', monospace",
     "editor.inlayHints.enabled": "offUnlessPressed",
-    //diff
 }
