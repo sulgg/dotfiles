@@ -1,0 +1,28 @@
+// this fiel should be located in: /Users/raiz/Library/Application Support/Code/User
+
+{
+    "jupyter.jupyterCommandLineArguments": [],
+    "notebook.scrolling.revealNextCellOnExecute": "none",
+    "remote.autoForwardPortsSource": "hybrid",
+    "files.autoSave": "onFocusChange",
+    "window.confirmBeforeClose": "keyboardOnly",
+    //workbench
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Catppuccin Latte",
+    "workbench.iconTheme": "catppuccin-latte",
+    "workbench.colorCustomizations": {
+        "editorCursor.foreground": "#000000",
+        // "editorCursor.foreground": "#ffffff",
+        "terminalCursor.foreground": "#000000",
+        // "terminalCursor.foreground": "#ffffff",
+    },
+    //security
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": false,
+    // editor
+    "editor.fontFamily": "monolisa, Menlo, Monaco, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    //diff
+    "diffEditor.ignoreTrimWhitespace": false,
+}
