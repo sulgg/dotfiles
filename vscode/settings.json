@@ -20,6 +20,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": false,
     // editor
+    "editor.guides.indentation": false,
     "editor.fontFamily": "monolisa, Menlo, Monaco, 'Courier New', monospace",
     "editor.minimap.enabled": false,
     "editor.inlayHints.enabled": "offUnlessPressed",
