@@ -11,9 +11,7 @@
     "workbench.iconTheme": "catppuccin-latte",
     "workbench.colorCustomizations": {
         "editorCursor.foreground": "#000000",
-        // "editorCursor.foreground": "#ffffff",
         "terminalCursor.foreground": "#000000",
-        // "terminalCursor.foreground": "#ffffff",
     },
     //security
     "security.workspace.trust.untrustedFiles": "open",
@@ -26,6 +24,8 @@
     //diff
     "diffEditor.ignoreTrimWhitespace": false,
     //**************************************
-    "editor.fontFamily": "monolisa, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Monaspace Argon Light', 'monospace'",
+    "editor.fontLigatures": "'calt', 'cv31', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
+    "editor.fontSize": 13,
     "editor.inlayHints.enabled": "offUnlessPressed",
 }
