@@ -16,16 +16,16 @@
     //security
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": false,
-    //**************************************
+    // terminal
+    "terminal.integrated.lineHeight": 1.4,
     // editor
     "editor.formatOnSave": false,
     "editor.guides.indentation": false,
     "editor.minimap.enabled": false,
-    //diff
-    "diffEditor.ignoreTrimWhitespace": false,
-    //**************************************
     "editor.fontFamily": "'Monaspace Argon Light', 'monospace'",
     "editor.fontLigatures": "'calt', 'cv31', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
     "editor.fontSize": 13,
     "editor.inlayHints.enabled": "offUnlessPressed",
+    //diff
+    "diffEditor.ignoreTrimWhitespace": false
 }
