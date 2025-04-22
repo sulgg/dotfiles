@@ -17,7 +17,9 @@
     "security.workspace.trust.untrustedFiles": "open",
     "redhat.telemetry.enabled": false,
     // terminal
-    "terminal.integrated.lineHeight": 1.4,
+    "terminal.integrated.fontFamily": "'Monaspace Krypton', 'monospace'",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
     // editor
     "editor.formatOnSave": false,
     "editor.guides.indentation": false,
