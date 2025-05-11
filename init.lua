@@ -2,6 +2,9 @@
 -- brew install stylua (si es que no esta instalado)
 -- stylua init.lua
 
+-- Detect if running inside VS Code
+local is_vscode = vim.g.vscode ~= nil
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -27,18 +30,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
     {
         spec = {
-            "lewis6991/gitsigns.nvim",
             {
                 'echasnovski/mini.nvim',
                 version = '*'
-            },
-            {
-                "nvim-tree/nvim-web-devicons",
-                opts = {}
-            },
-            {
-                "nvim-treesitter/nvim-treesitter",
-                build = ":TSUpdate"
             },
             {
                 "kylechui/nvim-surround",
@@ -57,29 +51,44 @@ require("lazy").setup(
                 event = "InsertEnter",
                 opts = {}
             },
-            {
-                "catppuccin/nvim",
-                name = "catppuccin",
-                priority = 1000
-            },
-            {
-                "nvim-lualine/lualine.nvim",
-                opts = {
-                    theme = "catppuccin",
-                    dependencies = { 'nvim-tree/nvim-web-devicons' }
+            -- 💻 Terminal-only plugins
+            (not is_vscode) and {
+                "lewis6991/gitsigns.nvim",
+                {
+                    "nvim-tree/nvim-web-devicons",
+                    opts = {}
+                },
+                {
+                    "nvim-treesitter/nvim-treesitter",
+                    build = ":TSUpdate"
+                },
+                {
+                    "catppuccin/nvim",
+                    name = "catppuccin",
+                    priority = 1000
+                },
+                {
+                    "nvim-lualine/lualine.nvim",
+                    opts = {
+                        theme = "catppuccin",
+                        dependencies = { 'nvim-tree/nvim-web-devicons' }
+                    }
                 }
-            }
+            } or nil,
         }
     }
 )
 
-require('gitsigns').setup()
-require('Comment').setup()
+if not is_vscode then
+    require('gitsigns').setup()
 
---colors
-vim.opt.termguicolors = true
-vim.opt.background = "light"
-vim.cmd.colorscheme "catppuccin"
+    -- Terminal-only UI and plugins
+    vim.opt.termguicolors = true
+    vim.opt.background = "light"
+    vim.cmd.colorscheme("catppuccin")
+end
+
+require('Comment').setup()
 
 --insert space(s) whenever <tab> key is pressed
 vim.opt.expandtab = true
