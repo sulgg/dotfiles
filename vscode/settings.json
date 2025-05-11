@@ -32,5 +32,9 @@
     "git.autoRepositoryDetection":"subFolders",
     "git.repositoryScanMaxDepth":3,
     //diff
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
+    //neovim
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
 }
