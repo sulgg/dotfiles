@@ -10,9 +10,6 @@ PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Path to Oh My Zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
-# source helix zsh completion
-source /Users/raiz/.config/helix/contrib/completion/hx.zsh
-
 HIST_STAMPS="%b-%d %H:%M"
 
 plugins=(starship eza git conda)
