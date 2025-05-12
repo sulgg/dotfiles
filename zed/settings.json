@@ -7,11 +7,37 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Monospace Icon Theme - Dark",
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   "theme": {
-    "mode": "system",
+    "mode": "light",
     "light": "One Light",
     "dark": "One Dark"
+  },
+  "vim_mode": true,
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pylsp", "ruff"],
+      "format_on_save": "off",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
   }
 }
