@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tab_bar": { "show": false },
   "icon_theme": "Monospace Icon Theme - Dark",
   "ui_font_size": 16,
   "buffer_font_size": 14,
