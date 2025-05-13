@@ -23,6 +23,17 @@
       "enabled": false
     }
   },
+  "lsp": {
+    "pylsp": {
+      "settings": {
+        "plugins": {
+          "rope_autoimport": {
+            "enabled": false
+          }
+        }
+      }
+    }
+  },
   "languages": {
     "Python": {
       "language_servers": ["pylsp", "ruff"],
