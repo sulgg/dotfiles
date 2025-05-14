@@ -44,8 +44,13 @@
   "languages": {
     "Python": {
       "language_servers": ["pylsp", "ruff"],
-      "format_on_save": "off",
+      "format_on_save": "on",
       "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true
+          }
+        },
         {
           "language_server": {
             "name": "ruff"
