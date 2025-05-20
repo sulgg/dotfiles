@@ -10,12 +10,13 @@
   "confirm_quit": true,
   "tab_bar": { "show": false },
   "when_closing_with_no_tabs": "keep_window_open",
+  "show_edit_predictions": false,
   "icon_theme": "Monospace Icon Theme - Dark",
   "ui_font_size": 16,
   "buffer_font_size": 14,
   "theme": {
     "mode": "light",
-    "light": "One Light",
+    "light": "Ayu Light",
     "dark": "One Dark"
   },
   "vim_mode": true,
