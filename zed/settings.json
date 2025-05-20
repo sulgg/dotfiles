@@ -11,20 +11,40 @@
   "tab_bar": { "show": false },
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
+
   "icon_theme": "Monospace Icon Theme - Dark",
+
+  "buffer_font_family": "Monaspace Argon",
+  "buffer_font_weight": 300,
   "ui_font_size": 16,
   "buffer_font_size": 14,
+  //for Monospace ligatures
+  "buffer_font_features": {
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true,
+    "ss05": true,
+    "ss06": true,
+    "ss07": true,
+    "ss09": true,
+    "calt": true,
+    "liga": true
+  },
+
   "theme": {
     "mode": "light",
-    "light": "Ayu Light",
+    "light": "One Light",
     "dark": "One Dark"
   },
+
   "vim_mode": true,
   "git": {
     "inline_blame": {
       "enabled": false
     }
   },
+
   "lsp": {
     "pylsp": {
       "settings": {
@@ -42,6 +62,7 @@
       }
     }
   },
+
   "languages": {
     "Python": {
       "language_servers": ["pylsp", "ruff"],
