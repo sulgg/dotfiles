@@ -17,6 +17,9 @@ HIST_STAMPS="%b-%d %H:%M"
 
 plugins=(eza git conda)
 
+# https://github.com/sharkdp/bat#adding-new-themes
+export BAT_THEME="OneHalfLight"
+
 source $ZSH/oh-my-zsh.sh
 
 # https://github.com/sindresorhus/pure
