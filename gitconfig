@@ -6,6 +6,18 @@
     autocrlf = input
     safecrlf = true
     editor = nvim
+    pager = delta # brew install git-delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    side-by-side = true
+    light = true
+
+[merge]
+    conflictstyle = zdiff3
 
 [push]
     default = simple
