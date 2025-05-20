@@ -1,0 +1,24 @@
+[general]
+import = ["~/.config/alacritty/themes/alacritty-theme/themes/ayu_light.toml"]
+
+[window]
+decorations = "none"
+startup_mode = "Maximized"
+
+[font]
+size = 15
+offset = { x = 0, y = 7 }
+normal = { family = "Monaspace Neon", style = "Light" }
+bold = { family = "Monaspace Neon", style = "Light" }
+italic = { family = "Monaspace Neon", style = "Light Italic" }
+bold_italic = { family = "Monaspace Neon", style = "Light Italic" }
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Alt"
+chars = "\u001bb"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Alt"
+chars = "\u001bf"
