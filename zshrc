@@ -15,6 +15,16 @@ export ZSH="$HOME/.oh-my-zsh"
 
 HIST_STAMPS="%b-%d %H:%M"
 
+# bat colorize help
+# Define a function to wrap any command with -h
+h() {
+  "$@" -h 2>&1 | bat --language=help
+}
+# Define a function to wrap any command with --help
+help() {
+  "$@" --help 2>&1 | bat --language=help
+}
+
 plugins=(eza git conda)
 
 # https://github.com/sharkdp/bat#adding-new-themes
