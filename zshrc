@@ -1,3 +1,6 @@
+# pure neew this:
+ZSH_THEME=""
+
 # Path to my local binaries
 PATH="/Users/raiz/.local/bin:$PATH"
 
@@ -12,9 +15,17 @@ export ZSH="$HOME/.oh-my-zsh"
 
 HIST_STAMPS="%b-%d %H:%M"
 
-plugins=(starship eza git conda)
+plugins=(eza git conda)
 
 source $ZSH/oh-my-zsh.sh
+
+# https://github.com/sindresorhus/pure
+autoload -Uz promptinit
+promptinit
+zstyle :prompt:pure:virtualenv color green
+prompt pure
+
+
 
 alias vim='nvim'
 alias alirg='alias | rg'
