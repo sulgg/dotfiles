@@ -8,10 +8,10 @@ startup_mode = "Maximized"
 [font]
 size = 15
 offset = { x = 0, y = 7 }
-normal = { family = "Monaspace Neon", style = "Light" }
-bold = { family = "Monaspace Neon", style = "Light" }
-italic = { family = "Monaspace Neon", style = "Light Italic" }
-bold_italic = { family = "Monaspace Neon", style = "Light Italic" }
+normal = { family = "Monaspace Argon", style = "Light" }
+bold = { family = "Monaspace Argon", style = "Light" }
+italic = { family = "Monaspace Argon", style = "Light Italic" }
+bold_italic = { family = "Monaspace Argon", style = "Light Italic" }
 
 [[keyboard.bindings]]
 key = "Left"
