@@ -7,6 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "always_allow_tool_actions": true,
+    "model_parameters": [],
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking-latest"
+    },
+    "version": "2"
+  },
+  "terminal": {
+    "env": {
+      "TERM_PROGRAM": "zed"
+    }
+  },
+
   "confirm_quit": true,
   "tab_bar": { "show": false },
   "when_closing_with_no_tabs": "keep_window_open",

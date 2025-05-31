@@ -15,14 +15,17 @@ export ZSH="$HOME/.oh-my-zsh"
 
 HIST_STAMPS="%b-%d %H:%M"
 
+# zsh shell to use Zed as the Git editor only when inside the Zed terminal
+if [[ "$TERM_PROGRAM" == "zed" ]]; then
+  export EDITOR="zed --wait"
+  export VISUAL="zed --wait"
+  export GIT_EDITOR="zed --wait"
+fi
+
 # bat colorize help
 # Define a function to wrap any command with -h
 h() {
   "$@" -h 2>&1 | bat --language=help
-}
-# Define a function to wrap any command with --help
-help() {
-  "$@" --help 2>&1 | bat --language=help
 }
 
 plugins=(eza git conda)
