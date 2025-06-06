@@ -1,0 +1,26 @@
+/*  0. Go to about:config and set the pref
+      toolkit.legacyUserProfileCustomizations.stylesheets to true
+    1. Go to about:support
+    2. Go to profile directory
+    3. Go to chrome directory
+    4. Create file userChrome.css (this file)
+    5. Reload firefox */
+
+/* https://github.com/MrOtherGuy/firefox-csshacks
+has some preconfig hacks */
+
+/* bigger for in url bar */
+#urlbar {
+    font-size: 16px !important;
+}
+
+/* Vertical tabs fonts bigger and heavier */
+.tabbrowser-tab .tab-label {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+}
+
+/* Remove Close button (X) on vertical tab bar */
+#tabbrowser-tabs .tab-close-button {
+    display: none !important;
+}
