@@ -94,6 +94,18 @@
           }
         }
       ]
+    },
+    "SQL": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          // sql-formatter must be installed so
+          // I used python `nodeenv` from requeriments.txt (project scope)
+          // in order to install npm packages in an isolated way
+          // then: `npm install sql-formatter`
+          "command": "sql-formatter"
+        }
+      }
     }
   }
 }
