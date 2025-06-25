@@ -8,7 +8,8 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
-    "always_allow_tool_actions": true,
+    "single_file_review": false,
+    "always_allow_tool_actions": false,
     "model_parameters": [],
     "default_model": {
       "provider": "zed.dev",
@@ -25,12 +26,12 @@
   "confirm_quit": true,
   "tab_bar": { "show": false },
   "when_closing_with_no_tabs": "keep_window_open",
-  "show_edit_predictions": false,
+  "show_edit_predictions": true,
 
   "icon_theme": "Monospace Icon Theme - Dark",
 
   "buffer_font_family": "Monaspace Argon",
-  "buffer_font_weight": 400,
+  "buffer_font_weight": 300,
   "ui_font_size": 16,
   "buffer_font_size": 14,
   //for Monospace ligatures
@@ -96,14 +97,18 @@
       ]
     },
     "SQL": {
-      "format_on_save": "on",
+      "format_on_save": "off",
       "formatter": {
         "external": {
           // sql-formatter must be installed so
           // I used python `nodeenv` from requeriments.txt (project scope)
-          // in order to install npm packages in an isolated way
-          // then: `npm install sql-formatter`
-          "command": "sql-formatter"
+          // in order to install npm packages in an isolated way:
+          // ```
+          // nodeenv .nodeenv
+          // source .nodeenv/bin/activate
+          // npm install -g sql-formatter
+          // ```
+          "command": ".nodeenv/bin/sql-formatter"
         }
       }
     }
