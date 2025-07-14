@@ -7,15 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "project_panel": {
+    "dock": "left",
+    "default_width": 200
+  },
+  "outline_panel": {
+    "dock": "left",
+    "default_width": 200
+  },
+  "git_panel": {
+    "dock": "right",
+    "default_width": 200
+  },
   "agent": {
+    "dock": "right",
     "single_file_review": false,
     "always_allow_tool_actions": false,
     "model_parameters": [],
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
   "terminal": {
     "env": {
@@ -26,7 +38,7 @@
   "confirm_quit": true,
   "tab_bar": { "show": false },
   "when_closing_with_no_tabs": "keep_window_open",
-  "show_edit_predictions": true,
+  "show_edit_predictions": false,
 
   "icon_theme": "Monospace Icon Theme - Dark",
 
