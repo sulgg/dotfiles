@@ -13,11 +13,6 @@ PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # Path to Oh My Zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
-# https://github.com/pyenv/pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-
 HIST_STAMPS="%b-%d %H:%M"
 
 # zsh shell to use Zed as the Git editor only when inside the Zed terminal
