@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "project_panel": {
     "dock": "left",
     "default_width": 200
@@ -25,8 +28,8 @@
     "always_allow_tool_actions": false,
     "model_parameters": [],
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
     }
   },
   "terminal": {
