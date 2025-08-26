@@ -43,7 +43,7 @@
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
 
-  "icon_theme": "Monospace Icon Theme - Dark",
+  "icon_theme": "JetBrains New UI Icons (Light)",
 
   "buffer_font_family": "Monaspace Argon",
   "buffer_font_weight": 300,
