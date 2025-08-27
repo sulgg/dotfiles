@@ -1,40 +1,39 @@
-// this file should be located in: /Users/raiz/Library/Application Support/Code/User
 {
-    "jupyter.jupyterCommandLineArguments": [],
-    "notebook.scrolling.revealNextCellOnExecute": "none",
-    "remote.autoForwardPortsSource": "hybrid",
-    "files.autoSave": "onFocusChange",
-    "window.confirmBeforeClose": "keyboardOnly",
-    //workbench
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "Catppuccin Latte",
-    "workbench.iconTheme": "catppuccin-latte",
-    "workbench.colorCustomizations": {
-        "editorCursor.foreground": "#000000",
-        "terminalCursor.foreground": "#000000",
-    },
-    //security
-    "security.workspace.trust.untrustedFiles": "open",
-    "redhat.telemetry.enabled": false,
-    // terminal
-    "terminal.integrated.fontFamily": "'Monaspace Krypton', 'monospace'",
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.lineHeight": 1.2,
-    // editor
-    "editor.formatOnSave": false,
-    "editor.guides.indentation": false,
-    "editor.minimap.enabled": false,
-    "editor.fontFamily": "'Monaspace Argon', 'monospace'",
-    "editor.fontLigatures": "'calt', 'cv31', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
-    "editor.fontSize": 13,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    //git
-    "git.autoRepositoryDetection":"subFolders",
-    "git.repositoryScanMaxDepth":3,
-    //diff
-    "diffEditor.ignoreTrimWhitespace": false,
-    //neovim
-    "extensions.experimental.affinity": {
-        "asvetliakov.vscode-neovim": 1
-    }
+  "jupyter.jupyterCommandLineArguments": [],
+  "notebook.scrolling.revealNextCellOnExecute": "none",
+  "remote.autoForwardPortsSource": "hybrid",
+  "files.autoSave": "onFocusChange",
+  "window.confirmBeforeClose": "keyboardOnly",
+
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "Catppuccin Latte",
+  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#000000",
+    "terminalCursor.foreground": "#000000"
+  },
+
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": false,
+
+  "terminal.integrated.fontFamily": "'Monaspace Krypton', 'monospace'",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
+
+  "editor.formatOnSave": false,
+  "editor.guides.indentation": false,
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "'Monaspace Argon', 'monospace'",
+  "editor.fontLigatures": "'calt', 'cv31', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'ss10', 'liga'",
+  "editor.fontSize": 13,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+
+  "git.autoRepositoryDetection": "subFolders",
+  "git.repositoryScanMaxDepth": 3,
+
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
 }
