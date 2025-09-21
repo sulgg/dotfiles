@@ -43,3 +43,5 @@ prompt pure
 
 alias vim='nvim'
 alias alirg='alias | rg'
+export PATH="/opt/homebrew/opt/unzip/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
