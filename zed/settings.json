@@ -75,28 +75,10 @@
       "enabled": false
     }
   },
-
-  "lsp": {
-    "pylsp": {
-      "settings": {
-        "plugins": {
-          "pycodestyle": {
-            "enabled": false
-          },
-          "rope_autoimport": {
-            "enabled": false
-          },
-          "pylsp_mypy": {
-            "enabled": false
-          }
-        }
-      }
-    }
-  },
-
   "languages": {
     "Python": {
-      "language_servers": ["pylsp", "ruff"],
+      // change lsp when https://github.com/astral-sh/ty reach production ready
+      "language_servers": ["basedpyright", "ruff"],
       "format_on_save": "on",
       "formatter": [
         {
