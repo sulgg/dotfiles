@@ -65,7 +65,7 @@
 
   "theme": {
     "mode": "light",
-    "light": "One Light",
+    "light": "Fleet Light",
     "dark": "One Dark"
   },
 
@@ -78,7 +78,7 @@
   "languages": {
     "Python": {
       // change lsp when https://github.com/astral-sh/ty reach production ready
-      "language_servers": ["basedpyright", "ruff"],
+      "language_servers": ["!basedpyright", "ty", "ruff"],
       "format_on_save": "on",
       "formatter": [
         {
