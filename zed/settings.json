@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tabs": {
+    "git_status": true,
+    "file_icons": true
+  },
+  "title_bar": {
+    "show_branch_name": false,
+    "show_project_items": false,
+    "show_onboarding_banner": false,
+    "show_sign_in": false,
+    "show_user_picture": false,
+    "show_branch_icon": false
+  },
   "autosave": "on_focus_change",
   "features": {
     "edit_prediction_provider": "zed"
@@ -40,7 +52,7 @@
   },
 
   "confirm_quit": true,
-  "tab_bar": { "show": false },
+  "tab_bar": { "show": true },
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
 
@@ -66,7 +78,7 @@
 
   "theme": {
     "mode": "light",
-    "light": "Fleet Light",
+    "light": "Modus Operandi Tritanopia",
     "dark": "One Dark"
   },
 
@@ -82,11 +94,7 @@
       "language_servers": ["!basedpyright", "ty", "ruff"],
       "format_on_save": "on",
       "formatter": [
-        {
-          "code_actions": {
-            "source.organizeImports.ruff": true
-          }
-        },
+        { "code_action": "source.organizeImports.ruff" },
         {
           "language_server": {
             "name": "ruff"
