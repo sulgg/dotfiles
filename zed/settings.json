@@ -60,7 +60,7 @@
     }
   },
   "terminal": {
-    "dock": "bottom",
+    "button": false, // open it with ctrl-` instead
     "env": {
       "TERM_PROGRAM": "zed"
     }
