@@ -7,17 +7,31 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
   "tabs": {
     "git_status": true,
-    "file_icons": true
+    "file_icons": true,
+    "show_diagnostics": "errors"
   },
   "title_bar": {
+    "show_branch_icon": false,
     "show_branch_name": false,
     "show_project_items": false,
     "show_onboarding_banner": false,
-    "show_sign_in": false,
     "show_user_picture": false,
-    "show_branch_icon": false
+    "show_sign_in": false,
+    "show_menus": false
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false,
+    "agent_review": false,
+    "code_actions": false
   },
   "autosave": "on_focus_change",
   "features": {
@@ -25,7 +39,7 @@
   },
   "project_panel": {
     "dock": "left",
-    "default_width": 200
+    "default_width": 250
   },
   "outline_panel": {
     "dock": "left",
@@ -46,13 +60,13 @@
     }
   },
   "terminal": {
+    "dock": "bottom",
     "env": {
       "TERM_PROGRAM": "zed"
     }
   },
 
   "confirm_quit": true,
-  "tab_bar": { "show": true },
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
 
