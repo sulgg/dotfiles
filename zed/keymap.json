@@ -4,5 +4,11 @@
     "bindings": {
       "space 0 0": "repl::Restart"
     }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-`": "workspace::NewCenterTerminal"
+    }
   }
 ]
