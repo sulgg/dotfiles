@@ -6,6 +6,12 @@
     }
   },
   {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "escape": ["workspace::SendKeystrokes", "escape : w enter"]
+    }
+  },
+  {
     "context": "Workspace",
     "bindings": {
       "ctrl-`": "workspace::NewCenterTerminal"
