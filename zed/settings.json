@@ -39,7 +39,7 @@
   },
   "project_panel": {
     "dock": "left",
-    "default_width": 250
+    "default_width": 200
   },
   "outline_panel": {
     "dock": "left",
@@ -56,7 +56,7 @@
     "model_parameters": [],
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "gpt-5-mini"
     }
   },
   "terminal": {
@@ -70,7 +70,9 @@
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
 
-  "icon_theme": "JetBrains New UI Icons (Light)",
+  "icon_theme": "Catppuccin Latte",
+
+  "colorize_brackets": true,
 
   "buffer_font_family": "Monaspace Argon",
   "buffer_font_weight": 300,
@@ -92,7 +94,7 @@
 
   "theme": {
     "mode": "light",
-    "light": "Modus Operandi Tritanopia",
+    "light": "Modus Operandi",
     "dark": "One Dark"
   },
 
