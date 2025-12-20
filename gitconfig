@@ -5,7 +5,6 @@
 [core]
     autocrlf = input
     safecrlf = true
-    editor = zed
     pager = delta # brew install git-delta
 
 [interactive]
