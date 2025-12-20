@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/themes/alacritty-theme/themes/ayu_light.toml"]
+import = ["~/.config/alacritty/themes/themes/catppuccin_latte.toml"]
 
 [window]
 decorations = "none"

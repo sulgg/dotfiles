@@ -1,11 +1,11 @@
 [user]
-    name = Saul Guillermo
-    email = code@saul.gg
+    name = sg
+    email = x@saul.gg
 
 [core]
     autocrlf = input
     safecrlf = true
-    editor = nvim
+    editor = zed
     pager = delta # brew install git-delta
 
 [interactive]
@@ -43,7 +43,3 @@
 
 [init]
 	defaultBranch = main
-[credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-	useHttpPath = true
