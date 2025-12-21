@@ -2,5 +2,6 @@
 [conda]
 ignore_base = false
 
+# do not how long the last command took to execute
 [cmd_duration]
 disabled = true
