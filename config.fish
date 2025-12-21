@@ -1,14 +1,21 @@
-# Homebrew path
+# Homebrew paths
 /opt/homebrew/bin/brew shellenv | source
 
-# Add local binaries to PATH
+# My local binaries
 fish_add_path -g ~/.local/bin
 
-# Aliases
-alias l 'eza -la'
+# Aliases funtions
+function l --description "eza tree listing with optional level depth"
+    if test (count $argv) -eq 0
+        eza --all --git-ignore --tree --level=1 --sort=type --group-directories-first
+    else
+        eza --all --git-ignore --tree --level=$argv[1] --sort=type --group-directories-first $argv[2..-1]
+    end
+end
 
-# man pager with bat colors
+
+# bat colorful man pager
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-# Initialize Starship prompt
+# Starship prompt
 starship init fish | source
