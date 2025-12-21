@@ -7,7 +7,7 @@ fish_add_path -g ~/.local/bin
 # Aliases
 alias l 'eza -la'
 
-# man pager configuration
+# man pager with bat colors
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # Initialize Starship prompt
