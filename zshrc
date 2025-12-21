@@ -5,6 +5,11 @@ PATH="/Users/sg/.local/bin:$PATH"
 export EDITOR='zed --wait'
 export VISUAL='zed --wait'
 
+# bat as default pager
+export PAGER="bat"
+export BAT_PAGER="less -RF"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 # bat colorize help function
 h() {
   "$@" -h 2>&1 | bat --language=help
