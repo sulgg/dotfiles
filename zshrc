@@ -15,14 +15,11 @@ h() {
   "$@" -h 2>&1 | bat --language=help
 }
 
-# https://github.com/sindresorhus/pure
-# Pure: Pretty, minimal and fast ZSH prompt
-autoload -U promptinit; promptinit
-zstyle :prompt:pure:virtualenv color green
-prompt pure
-
 # aliases
 alias l='eza -la'
+
+# https://starship.rs/
+eval "$(starship init zsh)"
 
 # this script check for the brew paths
 eval "$(/opt/homebrew/bin/brew shellenv)"
