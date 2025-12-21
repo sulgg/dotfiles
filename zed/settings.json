@@ -10,12 +10,12 @@
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false
+    "show_tab_bar_buttons": false,
   },
   "tabs": {
     "git_status": true,
     "file_icons": true,
-    "show_diagnostics": "errors"
+    "show_diagnostics": "errors",
   },
   "title_bar": {
     "show_branch_icon": false,
@@ -24,30 +24,30 @@
     "show_onboarding_banner": false,
     "show_user_picture": false,
     "show_sign_in": false,
-    "show_menus": false
+    "show_menus": false,
   },
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
     "selections_menu": false,
     "agent_review": false,
-    "code_actions": false
+    "code_actions": false,
   },
   "autosave": "on_focus_change",
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "project_panel": {
     "dock": "left",
-    "default_width": 200
+    "default_width": 200,
   },
   "outline_panel": {
     "dock": "left",
-    "default_width": 200
+    "default_width": 200,
   },
   "git_panel": {
     "dock": "right",
-    "default_width": 200
+    "default_width": 200,
   },
   "agent": {
     "dock": "right",
@@ -56,23 +56,19 @@
     "model_parameters": [],
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-5-mini"
-    }
+      "model": "gpt-5-mini",
+    },
   },
   "terminal": {
     "button": false, // open it with ctrl-` instead
     "env": {
-      "TERM_PROGRAM": "zed"
-    }
+      "TERM_PROGRAM": "zed",
+    },
   },
 
   "confirm_quit": true,
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
-
-  "icon_theme": "Catppuccin Latte",
-
-  "colorize_brackets": true,
 
   "buffer_font_family": "Monaspace Argon",
   "buffer_font_weight": 300,
@@ -89,20 +85,24 @@
     "ss07": true,
     "ss09": true,
     "calt": true,
-    "liga": true
+    "liga": true,
   },
+
+  "icon_theme": "Catppuccin Latte",
+
+  "colorize_brackets": true,
 
   "theme": {
     "mode": "light",
     "light": "Modus Operandi",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
 
   "vim_mode": true,
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "languages": {
     "Python": {
@@ -113,10 +113,10 @@
         { "code_action": "source.organizeImports.ruff" },
         {
           "language_server": {
-            "name": "ruff"
-          }
-        }
-      ]
+            "name": "ruff",
+          },
+        },
+      ],
     },
     "SQL": {
       // SQL extension must be installed
@@ -131,9 +131,9 @@
           // source .nodeenv/bin/activate
           // npm install -g sql-formatter
           // ```
-          "command": ".nodeenv/bin/sql-formatter"
-        }
-      }
-    }
-  }
+          "command": ".nodeenv/bin/sql-formatter",
+        },
+      },
+    },
+  },
 }
