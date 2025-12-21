@@ -1,3 +1,18 @@
+# this script adds the brew paths
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# brew zsh-completions
+# follow instructions after install zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# https://starship.rs/
+eval "$(starship init zsh)"
+
 # Path to my local binaries
 PATH="/Users/sg/.local/bin:$PATH"
 
@@ -17,9 +32,3 @@ h() {
 
 # aliases
 alias l='eza -la'
-
-# https://starship.rs/
-eval "$(starship init zsh)"
-
-# this script check for the brew paths
-eval "$(/opt/homebrew/bin/brew shellenv)"
