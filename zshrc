@@ -1,8 +1,6 @@
 # Path to my local binaries
 PATH="/Users/sg/.local/bin:$PATH"
 
-HIST_STAMPS="%b-%d %H:%M"
-
 # Zed as the default editor
 export EDITOR='zed --wait'
 export VISUAL='zed --wait'
@@ -19,7 +17,6 @@ zstyle :prompt:pure:virtualenv color green
 prompt pure
 
 # aliases
-alias alirg='alias | rg'
 alias l='eza -la'
 
 # this script check for the brew paths
