@@ -7,12 +7,7 @@ fish_add_path -g ~/.local/bin
 # Aliases
 alias l 'eza -la'
 
-# Editor configuration
-set -gx EDITOR 'zed --wait'
-set -gx VISUAL 'zed --wait'
-
-# Pager configuration
-set -gx PAGER bat
+# man pager configuration
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # Initialize Starship prompt
