@@ -27,9 +27,6 @@
 [diff]
     colorMoved = default
 
-[merge]
-    conflictstyle = diff3
-
 [alias]
     l = log --pretty=format:'%C(auto)%ad %h %s%d' --graph --all --max-count=10 --date=short
     ll = log --pretty=format:'%C(auto)%ad %h %s%d [%an]' --graph --all --date=short
