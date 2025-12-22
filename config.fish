@@ -13,9 +13,8 @@ function l --description "eza tree listing with optional level depth"
     end
 end
 
-
-# bat colorful man pager
+# bat (https://github.com/sharkdp/bat) colorful man pager
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
-# Starship prompt
+# https://starship.rs/
 starship init fish | source
