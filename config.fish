@@ -18,3 +18,8 @@ set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # https://starship.rs/
 starship init fish | source
+
+# Show no welcome msg when init the terminal.
+# Additionally, in macOS,  to avoid the "Last login.." msg,
+# create a .hushlogin file in ~
+set fish_greeting ""
