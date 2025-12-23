@@ -13,8 +13,11 @@ function l --description "eza tree listing with optional level depth"
     end
 end
 
-# bat (https://github.com/sharkdp/bat) colorful man pager
+# https://github.com/sharkdp/bat
+# man pager
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# theme
+set -gx BAT_THEME_DARK "Catppuccin Frappe"
 
 # https://starship.rs/
 starship init fish | source
