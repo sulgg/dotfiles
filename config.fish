@@ -18,6 +18,9 @@ end
 set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
 # theme
 set -gx BAT_THEME_DARK "Catppuccin Frappe"
+# get colorized help pages
+abbr -a --position anywhere -- --help '--help | bat -plhelp'
+abbr -a --position anywhere -- -h '-h | bat -plhelp'
 
 # https://starship.rs/
 starship init fish | source
