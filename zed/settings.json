@@ -39,11 +39,11 @@
   },
   "project_panel": {
     "dock": "left",
-    "default_width": 200,
+    "default_width": 250,
   },
   "outline_panel": {
     "dock": "left",
-    "default_width": 200,
+    "default_width": 250,
   },
   "git_panel": {
     "tree_view": true,
@@ -96,7 +96,7 @@
   "theme": {
     "mode": "light",
     "light": "Modus Operandi",
-    "dark": "One Dark",
+    "dark": "Modus Vivendi",
   },
 
   "vim_mode": true,
