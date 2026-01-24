@@ -2,19 +2,19 @@
   {
     "context": "Editor && vim_mode == normal && !menu",
     "bindings": {
-      "space 0 0": "repl::Restart"
-    }
+      "space 0 0": "repl::Restart",
+    },
   },
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
-      "escape": ["workspace::SendKeystrokes", "escape : w enter"]
-    }
+      "escape": ["workspace::SendKeystrokes", "escape : w enter"],
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "ctrl-`": "workspace::NewCenterTerminal"
-    }
-  }
+      "ctrl-`": "workspace::NewCenterTerminal",
+    },
+  },
 ]
