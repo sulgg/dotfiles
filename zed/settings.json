@@ -66,7 +66,12 @@
       "TERM_PROGRAM": "zed",
     },
   },
-
+  // REPL settings.
+  "soft_wrap": "none",
+  "repl": {
+    "max_columns": 512,
+    "max_lines": 256,
+  },
   "confirm_quit": true,
   "when_closing_with_no_tabs": "keep_window_open",
   "show_edit_predictions": false,
