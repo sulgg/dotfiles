@@ -34,9 +34,6 @@
     "code_actions": false,
   },
   "autosave": "on_focus_change",
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "project_panel": {
     "dock": "left",
     "default_width": 250,
