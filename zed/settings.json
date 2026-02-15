@@ -13,12 +13,6 @@
     "show_tab_bar_buttons": false,
   },
 
-  "tabs": {
-    "git_status": true,
-    "file_icons": true,
-    "show_diagnostics": "errors",
-  },
-
   "title_bar": {
     "show_branch_icon": false,
     "show_branch_name": false,
