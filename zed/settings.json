@@ -48,17 +48,6 @@
     "default_width": 200,
   },
 
-  "agent": {
-    "dock": "right",
-    "single_file_review": false,
-    "always_allow_tool_actions": false,
-    "model_parameters": [],
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-5-mini",
-    },
-  },
-
   "terminal": {
     "button": false, // open it with ctrl-` instead
     "env": {
