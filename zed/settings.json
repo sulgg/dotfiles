@@ -12,11 +12,13 @@
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": false,
   },
+
   "tabs": {
     "git_status": true,
     "file_icons": true,
     "show_diagnostics": "errors",
   },
+
   "title_bar": {
     "show_branch_icon": false,
     "show_branch_name": false,
@@ -26,6 +28,7 @@
     "show_sign_in": false,
     "show_menus": false,
   },
+
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
@@ -33,20 +36,25 @@
     "agent_review": false,
     "code_actions": false,
   },
+
   "autosave": "on_focus_change",
+
   "project_panel": {
     "dock": "left",
     "default_width": 250,
   },
+
   "outline_panel": {
     "dock": "left",
     "default_width": 250,
   },
+
   "git_panel": {
     "tree_view": true,
     "dock": "right",
     "default_width": 200,
   },
+
   "agent": {
     "dock": "right",
     "single_file_review": false,
@@ -57,20 +65,25 @@
       "model": "gpt-5-mini",
     },
   },
+
   "terminal": {
     "button": false, // open it with ctrl-` instead
     "env": {
       "TERM_PROGRAM": "zed",
     },
   },
+
   // REPL settings.
   "soft_wrap": "none",
   "repl": {
     "max_columns": 512,
     "max_lines": 256,
   },
+
   "confirm_quit": true,
+
   "when_closing_with_no_tabs": "keep_window_open",
+
   "show_edit_predictions": false,
 
   "buffer_font_family": "Monaspace Argon",
@@ -91,13 +104,13 @@
     "liga": true,
   },
 
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "JetBrains Icons Light",
 
   "colorize_brackets": true,
 
   "theme": {
     "mode": "light",
-    "light": "Modus Operandi",
+    "light": "Min Light (Solid)",
     "dark": "Modus Vivendi",
   },
 
@@ -107,6 +120,7 @@
       "enabled": false,
     },
   },
+
   "languages": {
     "Python": {
       "language_servers": ["!basedpyright", "ty", "ruff"],
@@ -120,6 +134,7 @@
         },
       ],
     },
+
     "SQL": {
       // SQL extension must be installed
       "format_on_save": "off",
