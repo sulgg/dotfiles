@@ -1,11 +1,3 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
   "tab_bar": {
     "show_nav_history_buttons": false,
@@ -30,8 +22,6 @@
     "code_actions": false,
   },
 
-  "autosave": "on_focus_change",
-
   "project_panel": {
     "dock": "left",
     "default_width": 250,
@@ -48,31 +38,10 @@
     "default_width": 200,
   },
 
-  "terminal": {
-    "button": false, // open it with ctrl-` instead
-    "env": {
-      "TERM_PROGRAM": "zed",
-    },
-  },
-
-  // REPL settings.
-  "soft_wrap": "none",
-  "repl": {
-    "max_columns": 512,
-    "max_lines": 256,
-  },
-
-  "confirm_quit": true,
-
-  "when_closing_with_no_tabs": "keep_window_open",
-
-  "show_edit_predictions": false,
-
   "buffer_font_family": "Monaspace Argon",
   "buffer_font_weight": 300,
-  "ui_font_size": 16,
   "buffer_font_size": 14,
-  //for Monospace ligatures
+  //for Monaspace ligatures
   "buffer_font_features": {
     "ss01": true,
     "ss02": true,
@@ -88,19 +57,42 @@
 
   "icon_theme": "JetBrains Icons Light",
 
-  "colorize_brackets": true,
-
   "theme": {
     "mode": "light",
     "light": "Min Light (Solid)",
     "dark": "Modus Vivendi",
   },
 
+  "colorize_brackets": true,
+
+  "autosave": "on_focus_change",
+
+  "confirm_quit": true,
+
+  "when_closing_with_no_tabs": "keep_window_open",
+
+  "show_edit_predictions": false,
+
   "vim_mode": true,
+
   "git": {
     "inline_blame": {
       "enabled": false,
     },
+  },
+
+  "terminal": {
+    "button": false, // open it with ctrl-` instead
+    "env": {
+      "TERM_PROGRAM": "zed",
+    },
+  },
+
+  // REPL settings.
+  "soft_wrap": "none",
+  "repl": {
+    "max_columns": 512,
+    "max_lines": 256,
   },
 
   "languages": {
