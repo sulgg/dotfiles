@@ -63,6 +63,14 @@
     "dark": "Modus Vivendi",
   },
 
+  // super light indent guide lines
+  "experimental.theme_overrides": {
+    // #RRGGBBAA -AA is transparency
+    // starts from black (000000), then add transparency
+    "editor.indent_guide": "#0000000f",
+    "editor.indent_guide_active": "#0000000f",
+  },
+
   "colorize_brackets": true,
 
   "autosave": "on_focus_change",
