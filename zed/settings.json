@@ -40,7 +40,7 @@
 
   "buffer_font_family": "Monaspace Argon",
   "buffer_font_weight": 300,
-  "buffer_font_size": 14,
+  "buffer_font_size": 13,
   //for Monaspace ligatures
   "buffer_font_features": {
     "ss01": true,
