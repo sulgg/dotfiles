@@ -1,0 +1,6 @@
+id = "zed-polars-syntax"
+name = "Polars Syntax"
+version = "0.0.1"
+schema_version = 1
+authors = ["sg"]
+description = "Custom Polars syntax"

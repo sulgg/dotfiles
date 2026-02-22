@@ -1,0 +1,3 @@
+name = "Python"
+grammar = "python"
+path_suffixes = ["py", "pyi"]
