@@ -67,7 +67,7 @@
     // polars column names in color
     "syntax": {
       "property.polars": {
-        "color": "#ff3232",
+        "color": "#22863A",
       },
     },
     // super light indent guide lines
