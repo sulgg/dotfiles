@@ -346,6 +346,10 @@
 ]
 
 ; --- CUSTOM POLARS OVERRIDE ---
+; This is actually the only part requiered after
+; ; inherits python
+; once Zed make the feature available
+; https://github.com/zed-industries/zed/issues/8795
 ((attribute
   object: (attribute
     object: (identifier) @base
