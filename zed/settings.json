@@ -65,6 +65,11 @@
 
   // super light indent guide lines
   "experimental.theme_overrides": {
+    "syntax": {
+      "property.polars": {
+        "color": "#ff3232",
+      },
+    },
     // #RRGGBBAA -AA is transparency. Black base (000000), then add transparency
     "editor.indent_guide": "#0000000f",
     "editor.indent_guide_active": "#0000000f",
